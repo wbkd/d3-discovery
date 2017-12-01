@@ -3,6 +3,7 @@
     <div class="input-wrapper">
       <input type="text" v-model="search" />
       <button @click="sortByStars">Sort by Stars</button>
+      <input type="checkbox" v-model="checkLicense" />
     </div>
     <div class="projects">
       <Menu />
@@ -14,7 +15,7 @@
 <script>
   import Menu from '../components/Menu';
   import ProjectList from '../components/ProjectList';
-  import repoData from '../../static/data.json';
+  import axios from 'axios';
 
   export default {
     components: {
@@ -26,8 +27,16 @@
       return {
         sort: null,
         search: '',
-        projects: repoData,
+        projects: [],
+        checkLicense: false
       };
+    },
+
+    mounted() {
+      axios.get('../../static/data.json')
+        .then(response => {
+          this.projects = response.data;
+        })
     },
 
     computed: {
@@ -35,8 +44,11 @@
         return this.projects.filter(project => {
           const inDescr = project.description ? project.description.toLowerCase().indexOf(this.search.toLowerCase()) > -1 : false;
           return project.name.toLowerCase().indexOf(this.search.toLowerCase()) > -1 || inDescr;
+        }).filter(project => {
+          if(!this.checkLicense) return true;
+          return project.license === 'MIT License';
         })
-      }
+      },
     },
 
     methods: {
