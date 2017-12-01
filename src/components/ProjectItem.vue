@@ -3,6 +3,7 @@
     <p class="project-title">{{item.name}}</p>
     <p class="project-description">{{item.description}}</p>
     <p class="project-latest">{{item.lastUpdate}}</p>
+    <p class="project-stars">*{{item.stars}}*</p>
     <p class="project-license">{{item.license}}</p>
     <a class="project-website" v-bind:href="item.url">website</a>
   </div>
