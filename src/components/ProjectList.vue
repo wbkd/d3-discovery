@@ -1,8 +1,7 @@
 <template>
   <div class="projects-wrapper">
     <div class="project-list">
-      <projectItem v-for="project in projects" :key="project.name" :item="project">
-      </projectItem>
+      <projectItem v-for="project in projects" :key="project.name" :item="project" />
     </div>
   </div>
 
