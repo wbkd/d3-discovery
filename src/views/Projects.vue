@@ -2,7 +2,7 @@
   <div class="main">
     <div class="input-wrapper">
       <input type="text" v-model="search" />
-      <button @click="sortByStars">Sort by Stars</button>
+      <SortButton :sort-stars="onSortStars" :label="'Sort By Stars'" />
       <input type="checkbox" v-model="checkLicense" />
     </div>
     <div class="projects">
@@ -15,12 +15,14 @@
 <script>
   import Menu from '../components/Menu';
   import ProjectList from '../components/ProjectList';
+  import SortButton from '../components/SortButton';
   import axios from 'axios';
 
   export default {
     components: {
       Menu,
       ProjectList,
+      SortButton
     },
 
     data() {
@@ -52,8 +54,8 @@
     },
 
     methods: {
-      sortByStars() {
-          this.projects.sort((a, b) => b.stars - a.stars);
+      onSortStars() {
+        this.projects.sort((a, b) => b.stars - a.stars);
       }
     },
 
