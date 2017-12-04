@@ -1,8 +1,8 @@
 <template>
   <div class="main">
     <div class="input-wrapper">
-      <input type="text" v-model="search" />
       <SortButton :sort-stars="onSortStars" :label="'Sort By Stars'" />
+      <Search :update="onSearch" />
       <input type="checkbox" v-model="checkLicense" />
     </div>
     <div class="projects">
@@ -16,13 +16,15 @@
   import Menu from '../components/Menu';
   import ProjectList from '../components/ProjectList';
   import SortButton from '../components/SortButton';
+  import Search from '../components/Search';
   import axios from 'axios';
 
   export default {
     components: {
       Menu,
       ProjectList,
-      SortButton
+      SortButton,
+      Search
     },
 
     data() {
@@ -56,6 +58,9 @@
     methods: {
       onSortStars() {
         this.projects.sort((a, b) => b.stars - a.stars);
+      },
+      onSearch(input) {
+        this.search = input;
       }
     },
 
