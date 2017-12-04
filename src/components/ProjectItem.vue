@@ -1,8 +1,6 @@
 <template>
   <div class="project-item">
-    <div v-if="item.url !== '' ">
-      <img class="project-image" v-bind:src="path" />
-    </div>
+    <img v-if="path" class="project-image" v-bind:src="path" />
     <p class="project-title">{{item.name}}</p>
     <p class="project-description">{{item.description}}</p>
     <p class="project-latest">{{item.lastUpdate}}</p>
@@ -17,7 +15,11 @@
     props: ['item'],
     computed: {
       path() {
-        return require(`../../images/${this.item.name}.jpeg`);
+        try {
+          return require(`../../images/${this.item.name}.jpeg`);
+        } catch(err) {
+          return false;
+        }
       }
     }
   };
