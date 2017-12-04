@@ -20,8 +20,11 @@
 
 <style scoped lang="stylus">
   .project-list
+    max-width: 960px
+    margin: 0 auto
+
     display: grid
     grid-template-columns: repeat(4, 1fr) // 1fr 1fr 1fr
     grid-gap: 25px
-    grid-auto-rows: minmax(50px, auto)
+    grid-auto-rows: minmax(100px, auto)
 </style>

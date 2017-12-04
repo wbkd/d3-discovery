@@ -58,7 +58,7 @@
     height: 100vh
     z-index: 0
     width: 300px
-    overflow-y: scroll
+    overflow-y: auto
 
   .menu-header
     padding: 2em 0

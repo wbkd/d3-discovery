@@ -84,9 +84,8 @@
     background-color: #4B5
     position: relative
     z-index: 1
-    width: 100%
     will-change: transform
     min-height: 100vh
-    transform: translateX(300px)
+    margin-left 300px
     overflow: hidden
 </style>
