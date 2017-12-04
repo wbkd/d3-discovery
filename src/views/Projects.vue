@@ -81,7 +81,7 @@
 
 <style scoped lang='stylus'>
   .content
-    background-color: #4B5
+    background-color: #343158
     position: relative
     z-index: 1
     will-change: transform

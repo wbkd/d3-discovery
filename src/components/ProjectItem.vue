@@ -26,6 +26,9 @@
 </script>
 
 <style scoped lang="stylus">
-  .project-image
-    max-width: 100%
+  .project-item
+    background: #fff
+
+    .project-image
+      max-width: 100%
 </style>
