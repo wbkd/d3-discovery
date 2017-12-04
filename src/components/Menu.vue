@@ -5,12 +5,36 @@
       <div>Finding D3 plugins with ease.</div>
     </a>
     <a class="menu-item">Filter by…</a>
+    <vue-slider v-model="value" v-bind="options" @input="onChange"></vue-slider>
+    {{value}}
   </nav>
 </template>
 
 <script>
-  export default {
+  import VueSlider from 'vue-slider-component';
 
+  export default {
+    props: [
+      'slider-update'
+    ],
+    components: {
+      VueSlider
+    },
+    data() {
+      return {
+        value: 0,
+        options: {
+          min: 0,
+          max: 5000,
+          tooltip: false
+        }
+      }
+    },
+    methods: {
+      onChange(value) {
+        this.sliderUpdate(value);
+      }
+    }
   };
 </script>
 

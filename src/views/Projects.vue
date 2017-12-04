@@ -1,12 +1,12 @@
 <template>
   <div class="main">
     <div class="input-wrapper">
-      <input type="text" v-model="search" />
       <SortButton :sort-stars="onSortStars" :label="'Sort By Stars'" />
-      <input type="checkbox" v-model="checkLicense" />
+      <Search :update="onSearch" />
+      <CheckBox :update="onCheck"/>
     </div>
     <div class="projects">
-      <Menu />
+      <Menu :slider-update="onSlide" />
       <ProjectList :projects="filteredProjects" />
     </div>
   </div>
@@ -16,13 +16,18 @@
   import Menu from '../components/Menu';
   import ProjectList from '../components/ProjectList';
   import SortButton from '../components/SortButton';
+  import Search from '../components/Search';
+  import CheckBox from '../components/CheckBox';
   import axios from 'axios';
+
 
   export default {
     components: {
       Menu,
       ProjectList,
-      SortButton
+      SortButton,
+      Search,
+      CheckBox
     },
 
     data() {
@@ -30,7 +35,8 @@
         sort: null,
         search: '',
         projects: [],
-        checkLicense: false
+        checkLicense: false,
+        sliderValue: 0
       };
     },
 
@@ -49,13 +55,25 @@
         }).filter(project => {
           if(!this.checkLicense) return true;
           return project.license === 'MIT License';
-        })
+        }).filter(project => {
+          return project.stars > this.sliderValue;
+          }
+        );
       },
     },
 
     methods: {
       onSortStars() {
         this.projects.sort((a, b) => b.stars - a.stars);
+      },
+      onSearch(input) {
+        this.search = input;
+      },
+      onCheck(input) {
+        this.checkLicense = input;
+      },
+      onSlide(value) {
+        this.sliderValue = value;
       }
     },
 
