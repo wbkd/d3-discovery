@@ -9,8 +9,10 @@
     <SortButton :sort-stars="this.sortStars" :label="'Sort By Stars'" />
     <CheckBox :update="this.update" />
 
-    <vue-slider v-model="value" v-bind="options" @input="onChange"></vue-slider>
-    {{value}}
+    <div class="menu-slider">
+      <vue-slider v-model="value" v-bind="options" @input="onChange"></vue-slider>
+      {{value}}
+    </div>
   </nav>
 </template>
 
@@ -39,7 +41,8 @@
           min: 0,
           max: 5000,
           tooltip: false
-        }
+        },
+        width: 'auto'
       }
     },
     methods: {
@@ -58,11 +61,15 @@
     height: 100vh
     z-index: 0
     width: 300px
-    overflow-y: auto
+    background: #403A62
+    padding: 50px 0
+
+  .menu-slider
+    margin: 10px
 
   .menu-header
     padding: 2em 0
-    background-color: #eee
+    color: #fff
 
   h1
     margin: 0
