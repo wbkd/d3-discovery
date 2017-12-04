@@ -56,7 +56,7 @@
           if(!this.checkLicense) return true;
           return project.license === 'MIT License';
         }).filter(project => {
-          return project.stars > this.sliderValue;
+          return project.stars > this.sliderValue[0] && project.stars < this.sliderValue[1];
           }
         );
       },

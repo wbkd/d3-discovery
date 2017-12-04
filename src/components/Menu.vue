@@ -4,7 +4,7 @@
       <h1>D3 Discovery</h1>
       <div>Finding D3 plugins with ease.</div>
     </a>
-    <a class="menu-item">Filter by…</a>
+    <span class="menu-item">Filter by Stars</span>
     <vue-slider v-model="value" v-bind="options" @input="onChange"></vue-slider>
     {{value}}
   </nav>
@@ -22,7 +22,7 @@
     },
     data() {
       return {
-        value: 0,
+        value: [0, 5000],
         options: {
           min: 0,
           max: 5000,
