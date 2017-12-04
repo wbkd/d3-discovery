@@ -22,6 +22,7 @@
   .project-list
     max-width: 960px
     margin: 0 auto
+    padding-top: 100px
 
     display: grid
     grid-template-columns: repeat(4, 1fr) // 1fr 1fr 1fr

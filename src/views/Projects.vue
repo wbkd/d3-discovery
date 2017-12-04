@@ -2,8 +2,8 @@
   <div class="main">
     <Menu :slider-update="onSlide" :sort-stars="onSortStars" :update="onCheck" />
 
-    <div class="content">
-      <header>
+    <div class="main__content">
+      <header class="content__header">
         <button class="button button__menu">☰</button>
         <Search :update="onSearch" />
       </header>
@@ -80,7 +80,7 @@
 </script>
 
 <style scoped lang='stylus'>
-  .content
+  .main__content
     background-color: #343158
     position: relative
     z-index: 1
@@ -88,4 +88,26 @@
     min-height: 100vh
     margin-left 300px
     overflow: hidden
+
+  .content__header
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    height: 40px
+    background-color: #eee
+    z-index: 100
+
+    padding: 10px
+
+    display: flex
+    justify-content: flex-start
+    align-items center
+
+  .button__menu
+    height: 30px
+    appearance none
+    flex: 0 0 20px
+
+
 </style>
