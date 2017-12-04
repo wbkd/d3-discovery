@@ -6,7 +6,7 @@
       <CheckBox :update="onCheck"/>
     </div>
     <div class="projects">
-      <Menu />
+      <Menu :slider-update="onSlide" />
       <ProjectList :projects="filteredProjects" />
     </div>
   </div>
@@ -19,6 +19,7 @@
   import Search from '../components/Search';
   import CheckBox from '../components/CheckBox';
   import axios from 'axios';
+
 
   export default {
     components: {
@@ -34,7 +35,8 @@
         sort: null,
         search: '',
         projects: [],
-        checkLicense: false
+        checkLicense: false,
+        sliderValue: 0
       };
     },
 
@@ -53,7 +55,10 @@
         }).filter(project => {
           if(!this.checkLicense) return true;
           return project.license === 'MIT License';
-        })
+        }).filter(project => {
+          return project.stars > this.sliderValue;
+          }
+        );
       },
     },
 
@@ -66,6 +71,9 @@
       },
       onCheck(input) {
         this.checkLicense = input;
+      },
+      onSlide(value) {
+        this.sliderValue = value;
       }
     },
 
