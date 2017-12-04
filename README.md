@@ -8,6 +8,9 @@
 # install dependencies
 npm install
 
+# crawl screenshots from the repos for the view layer
+npm run screens
+
 # serve with hot reload at localhost:8080
 npm run dev
 
