@@ -5,6 +5,10 @@
       <div>Finding D3 plugins with ease.</div>
     </a>
     <span class="menu-item">Filter by Stars</span>
+
+    <SortButton :sort-stars="this.sortStars" :label="'Sort By Stars'" />
+    <CheckBox :update="this.update" />
+
     <vue-slider v-model="value" v-bind="options" @input="onChange"></vue-slider>
     {{value}}
   </nav>
@@ -12,14 +16,22 @@
 
 <script>
   import VueSlider from 'vue-slider-component';
+  import SortButton from './SortButton';
+  import CheckBox from './CheckBox';
 
   export default {
     props: [
-      'slider-update'
+      'slider-update',
+      'sort-stars',
+      'update'
     ],
+
     components: {
-      VueSlider
+      VueSlider,
+      SortButton,
+      CheckBox
     },
+
     data() {
       return {
         value: [0, 5000],
@@ -40,9 +52,13 @@
 
 <style scoped lang="stylus">
   .menu
+    position: fixed
+    top: 0
+    left: 0
+    height: 100vh
     z-index: 0
     width: 300px
-    overflow-y: hidden
+    overflow-y: scroll
 
   .menu-header
     padding: 2em 0
@@ -50,6 +66,7 @@
 
   h1
     margin: 0
+
   .menu-item
     display block
 

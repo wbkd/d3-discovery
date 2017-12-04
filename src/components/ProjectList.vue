@@ -1,10 +1,7 @@
 <template>
-  <div class="projects-wrapper">
-    <div class="project-list">
-      <projectItem v-for="project in projects" :key="project.name" :item="project" />
-    </div>
+  <div class="project-list">
+    <projectItem v-for="project in projects" :key="project.name" :item="project" />
   </div>
-
 </template>
 
 <script>
@@ -22,13 +19,9 @@
 </script>
 
 <style scoped lang="stylus">
-  .projects-wrapper
-    flex: 1 1 100%
-    z-index: 1
-
   .project-list
     display: grid
     grid-template-columns: repeat(4, 1fr) // 1fr 1fr 1fr
     grid-gap: 25px
-    grid-auto-rows: minmax(100px, auto)
+    grid-auto-rows: minmax(50px, auto)
 </style>

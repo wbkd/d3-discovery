@@ -1,33 +1,29 @@
 <template>
   <div class="main">
-    <div class="input-wrapper">
-      <SortButton :sort-stars="onSortStars" :label="'Sort By Stars'" />
-      <Search :update="onSearch" />
-      <CheckBox :update="onCheck"/>
-    </div>
-    <div class="projects">
-      <Menu :slider-update="onSlide" />
+    <Menu :slider-update="onSlide" :sort-stars="onSortStars" :update="onCheck" />
+
+    <div class="content">
+      <header>
+        <button class="button button__menu">☰</button>
+        <Search :update="onSearch" />
+      </header>
       <ProjectList :projects="filteredProjects" />
     </div>
   </div>
 </template>
 
 <script>
-  import Menu from '../components/Menu';
-  import ProjectList from '../components/ProjectList';
-  import SortButton from '../components/SortButton';
-  import Search from '../components/Search';
-  import CheckBox from '../components/CheckBox';
   import axios from 'axios';
 
+  import Menu from '../components/Menu';
+  import ProjectList from '../components/ProjectList';
+  import Search from '../components/Search';
 
   export default {
     components: {
       Menu,
-      ProjectList,
-      SortButton,
       Search,
-      CheckBox
+      ProjectList
     },
 
     data() {
@@ -84,13 +80,13 @@
 </script>
 
 <style scoped lang='stylus'>
-  .projects
-    display: flex
-    flex-flow: row nowrap
-    align-items: stretch
-    height 100vh
-
-  .input-wrapper
-    text-align: left
-    margin-bottom: 60px
+  .content
+    background-color: #4B5
+    position: relative
+    z-index: 1
+    width: 100%
+    will-change: transform
+    min-height: 100vh
+    transform: translateX(300px)
+    overflow: hidden
 </style>
