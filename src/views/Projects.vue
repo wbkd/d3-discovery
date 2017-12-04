@@ -3,7 +3,7 @@
     <div class="input-wrapper">
       <SortButton :sort-stars="onSortStars" :label="'Sort By Stars'" />
       <Search :update="onSearch" />
-      <input type="checkbox" v-model="checkLicense" />
+      <CheckBox :update="onCheck"/>
     </div>
     <div class="projects">
       <Menu />
@@ -17,6 +17,7 @@
   import ProjectList from '../components/ProjectList';
   import SortButton from '../components/SortButton';
   import Search from '../components/Search';
+  import CheckBox from '../components/CheckBox';
   import axios from 'axios';
 
   export default {
@@ -24,7 +25,8 @@
       Menu,
       ProjectList,
       SortButton,
-      Search
+      Search,
+      CheckBox
     },
 
     data() {
@@ -61,6 +63,9 @@
       },
       onSearch(input) {
         this.search = input;
+      },
+      onCheck(input) {
+        this.checkLicense = input;
       }
     },
 
