@@ -27,8 +27,8 @@
         search: '',
         projects: [],
         checkLicense: false,
-        sliderValue: 0,
-        menuOpen: true,
+        sliderValue: [0, 5000],
+        menuOpen: false,
       };
     },
     mounted() {
