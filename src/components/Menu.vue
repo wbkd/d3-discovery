@@ -1,5 +1,5 @@
 <template>
-  <nav class="menu">
+  <nav class="menu" v-bind:class="{ 'menu--open': this.menuOpen }">
     <a class="menu-item menu-header">
       <h1>D3 Discovery</h1>
       <div>Finding D3 plugins with ease.</div>
@@ -25,31 +25,30 @@
     props: [
       'slider-update',
       'sort-stars',
-      'update'
+      'update',
+      'menuOpen',
     ],
-
     components: {
       VueSlider,
       SortButton,
-      CheckBox
+      CheckBox,
     },
-
     data() {
       return {
         value: [0, 5000],
         options: {
           min: 0,
           max: 5000,
-          tooltip: false
+          tooltip: false,
         },
-        width: 'auto'
-      }
+        width: 'auto',
+      };
     },
     methods: {
       onChange(value) {
         this.sliderUpdate(value);
-      }
-    }
+      },
+    },
   };
 </script>
 
@@ -63,6 +62,11 @@
     width: 300px
     background: #403A62
     padding: 50px 0
+    transform: translateX(-300px)
+    transition: transform .4s;
+
+  .menu--open
+    transform: translateX(0)
 
   .menu-slider
     margin: 10px

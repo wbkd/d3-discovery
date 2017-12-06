@@ -6,13 +6,12 @@
   export default {
     props: [
       'sort-stars',
-      'label'
+      'label',
     ],
-
     methods: {
       onClick() {
         this.sortStars();
-      }
-    }
+      },
+    },
   };
 </script>
