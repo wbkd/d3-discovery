@@ -8,7 +8,7 @@
       :update="onCheck"
     />
     <div class="main__content">
-      <Header :on-menu-button-click="onMenuButtonClick" :on-search-change="onSearchChange"  :menu-open="menuOpen" />
+      <Header :on-menu-button-click="onMenuButtonClick" :on-search-change="onSearchChange" :menu-open="menuOpen" />
       <ProjectList :projects="filteredProjects" />
     </div>
   </div>
@@ -33,8 +33,13 @@
         search: '',
         projects: [],
         checkLicense: false,
+<<<<<<< HEAD
         sliderValue: null,
         menuOpen: false,
+=======
+        sliderValue: [0, 5000],
+        menuOpen: window.innerWidth > 786,
+>>>>>>> e2297143ab1f1b3d817365845745253bb70347d1
       };
     },
     mounted() {
@@ -79,20 +84,9 @@
 </script>
 
 <style scoped lang='stylus'>
-  .main
-    overflow-y: hidden
   .main__content
     background-color: #343158
     position: relative
     z-index: 1
     min-height: 100vh
-    overflow: hidden
-    transform: translateX(0)
-    transition: transform .4s;
-
-  .main__menu--isvisible
-    .main__content
-      transform: translateX(300px)
-      transition: transform .4s;
-
 </style>

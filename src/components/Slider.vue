@@ -14,22 +14,22 @@
       sliderTitle: String,
       sliderValue: Array,
       sliderUpdate: Function,
-      options: Object
+      options: Object,
     },
     components: {
-      VueSlider
+      VueSlider,
     },
     data() {
       return {
-        value: this.sliderValue
-      }
+        value: this.sliderValue,
+      };
     },
     methods: {
       onChange(value) {
         this.sliderUpdate(value);
-      }
-    }
-  }
+      },
+    },
+  };
 </script>
 
 <style scoped lang="stylus">
