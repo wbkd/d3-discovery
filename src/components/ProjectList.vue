@@ -22,7 +22,6 @@
   .project-list
     max-width: 960px
     margin: 0 auto
-    padding-top: 65px
 
     display: grid
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))

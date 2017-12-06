@@ -25,13 +25,19 @@
 <style scoped lang="stylus">
   .search
     flex: 2 0 50%
+    padding-right: 1em
 
   .search__input
     appearance: none
     padding: 5px 8px
-    width: 90%
-    height: 30px
+    width: 100%
+    height: 40px
     max-width 960px
     background: #fff
 
+    font-size: 16px
+
+  @media screen and (min-width: 786px)
+    .search
+      padding-right: 0
 </style>

@@ -9,6 +9,10 @@
     />
     <div class="main__content">
       <Header :on-menu-button-click="onMenuButtonClick" :on-search-change="onSearchChange" :menu-open="menuOpen" />
+      <div class="content__info">
+        <div class="info__filter">No filter selected</div>
+        <div class="info__search">{{filteredProjects.length || 0}} plugins found</div>
+      </div>
       <ProjectList :projects="filteredProjects" />
     </div>
   </div>
@@ -74,7 +78,7 @@
       onMenuButtonClick() {
         this.menuOpen = !this.menuOpen;
       },
-    }
+    },
   };
 </script>
 
@@ -82,11 +86,29 @@
   .main__content
     background-color: #343158
     position: relative
-    z-index: 1
     min-height: 100vh
     padding: 1em
     flex-grow: 1
 
+  .content__info
+    display: flex
+    justify-content: flex-start
+    flex-flow: row nowrap
+    max-width: 960px
+    margin: 0 auto
+
+    color: #eee
+    margin-bottom: 1em
+
+  .info__filter
+  .info__search
+    width: 50%
+
+  .info__filter
+    text-align: left
+
+  .info__search
+    text-align: right
   @media screen and (min-width: 786px)
     .main
       display: flex
