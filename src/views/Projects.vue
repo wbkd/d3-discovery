@@ -23,9 +23,8 @@
     components: {
       Menu,
       Search,
-      ProjectList
+      ProjectList,
     },
-
     data() {
       return {
         sort: null,
@@ -33,32 +32,27 @@
         projects: [],
         checkLicense: false,
         sliderValue: 0,
-        menuOpen: false
+        menuOpen: false,
       };
     },
-
     mounted() {
       axios.get('../../static/data.json')
-        .then(response => {
+        .then((response) => {
           this.projects = response.data;
-        })
+        });
     },
-
     computed: {
       filteredProjects() {
-        return this.projects.filter(project => {
+        return this.projects.filter((project) => {
           const inDescr = project.description ? project.description.toLowerCase().indexOf(this.search.toLowerCase()) > -1 : false;
           return project.name.toLowerCase().indexOf(this.search.toLowerCase()) > -1 || inDescr;
-        }).filter(project => {
-          if(!this.checkLicense) return true;
+        }).filter((project) => {
+          if (!this.checkLicense) return true;
           return project.license === 'MIT License';
-        }).filter(project => {
-          return project.stars > this.sliderValue[0] && project.stars < this.sliderValue[1];
-          }
+        }).filter(project => project.stars > this.sliderValue[0] && project.stars < this.sliderValue[1],
         );
       },
     },
-
     methods: {
       onSortStars() {
         this.projects.sort((a, b) => b.stars - a.stars);
@@ -72,11 +66,10 @@
       onSlide(value) {
         this.sliderValue = value;
       },
-      onMenuButtonClick(evt) {
-        this.menuOpen = !this.menuOpen
-      }
+      onMenuButtonClick() {
+        this.menuOpen = !this.menuOpen;
+      },
     },
-
     asyncData({ store }) {
       return store.dispatch('getProjects');
     },

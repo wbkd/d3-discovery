@@ -26,31 +26,29 @@
       'slider-update',
       'sort-stars',
       'update',
-      'menuOpen'
+      'menuOpen',
     ],
-
     components: {
       VueSlider,
       SortButton,
-      CheckBox
+      CheckBox,
     },
-
     data() {
       return {
         value: [0, 5000],
         options: {
           min: 0,
           max: 5000,
-          tooltip: false
+          tooltip: false,
         },
-        width: 'auto'
-      }
+        width: 'auto',
+      };
     },
     methods: {
       onChange(value) {
         this.sliderUpdate(value);
-      }
-    }
+      },
+    },
   };
 </script>
 

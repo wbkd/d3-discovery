@@ -5,17 +5,17 @@
 <script>
   export default {
     props: [
-      'update'
+      'update',
     ],
     methods: {
       onCheck() {
         this.update(this.userInput);
-      }
+      },
     },
     data() {
       return {
-        userInput: ''
-      }
-    }
+        userInput: '',
+      };
+    },
   };
 </script>

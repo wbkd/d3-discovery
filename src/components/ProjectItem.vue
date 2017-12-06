@@ -12,16 +12,18 @@
 
 <script>
   export default {
-    props: ['item'],
+    props: [
+      'item',
+    ],
     computed: {
       path() {
         try {
           return require(`../../images/${this.item.name}.jpeg`);
-        } catch(err) {
+        } catch (err) {
           return false;
         }
-      }
-    }
+      },
+    },
   };
 </script>
 

@@ -10,18 +10,18 @@
 <script>
   export default {
     props: [
-      'update'
+      'update',
     ],
     methods: {
       onInput() {
         this.update(this.userInput);
-      }
+      },
     },
     data() {
       return {
-        userInput: ''
-      }
-    }
+        userInput: '',
+      };
+    },
   };
 </script>
 
