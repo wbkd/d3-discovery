@@ -4,15 +4,15 @@
       <h1>D3 Discovery</h1>
       <div>Finding D3 plugins with ease.</div>
     </a>
-    <span class="menu-item">Filter by Stars</span>
 
     <SortButton :sort-stars="this.sortStars" :label="'Sort By Stars'" />
     <CheckBox :update="this.update" />
-
-    <div class="menu-slider">
-      <vue-slider v-model="value" v-bind="options" @input="onChange"></vue-slider>
-      {{value}}
-    </div>
+    <Slider
+      :slider-title="'Filter by Stars...'"
+      :slider-value="value"
+      :options="options"
+      :slider-update="this.sliderUpdate"
+    />
   </nav>
 </template>
 
@@ -20,6 +20,7 @@
   import VueSlider from 'vue-slider-component';
   import SortButton from './SortButton';
   import CheckBox from './CheckBox';
+  import Slider from './Slider';
 
   export default {
     props: {
@@ -32,6 +33,7 @@
       VueSlider,
       SortButton,
       CheckBox,
+      Slider,
     },
     data() {
       return {
@@ -43,12 +45,7 @@
         },
         width: 'auto',
       };
-    },
-    methods: {
-      onChange(value) {
-        this.sliderUpdate(value);
-      },
-    },
+    }
   };
 </script>
 
@@ -63,9 +60,7 @@
     background: #403A62
     padding: 50px 0
     transition: transform .4s;
-
-  .menu-slider
-    margin: 10px
+    color: #fff
 
   .menu-header
     padding: 2em 0
