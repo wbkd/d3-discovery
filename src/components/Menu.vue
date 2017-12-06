@@ -1,20 +1,22 @@
 <template>
   <transition name="slide">
     <nav class="menu" v-if="this.menuOpen">
-      <a class="menu-item menu-header">
-        <h1>D3 Discovery</h1>
-        <div>Finding D3 plugins with ease.</div>
-      </a>
+      <div class="menu__inner">
+        <a class="menu-item menu-header">
+          <h1>D3 Discovery</h1>
+          <div>Finding D3 plugins with ease.</div>
+        </a>
 
-      <SortButton :sort-stars="this.sortStars" :label="'Sort By Stars'" />
-      <CheckBox :update="this.update" />
-      <Slider
-        :slider-title="'Filter by Stars...'"
-        :slider-value="value"
-        :options="options"
-        :slider-update="this.sliderUpdate"
-      />
-      <Histogram />
+        <SortButton :sort-stars="this.sortStars" :label="'Sort By Stars'" />
+        <CheckBox :update="this.update" />
+        <Slider
+          :slider-title="'Filter by Stars...'"
+          :slider-value="value"
+          :options="options"
+          :slider-update="this.sliderUpdate"
+        />
+        <Histogram />
+      </div>
     </nav>
   </transition>
 </template>
@@ -32,7 +34,7 @@
       sortStars: Function,
       update: Function,
       menuOpen: Boolean,
-      sliderValue: Array
+      sliderValue: Array,
     },
     components: {
       VueSlider,
@@ -64,7 +66,6 @@
     z-index: 10
     width: 250px
     background: #403A62
-    padding: 50px 0
     color: #fff
     transition: all .4s cubic-bezier(0.770, 0.000, 0.175, 1.000)
 
@@ -89,4 +90,14 @@
 
   .slide-leave-active
     margin-left: -250px
+
+  @media screen and (min-width: 786px)
+    .menu
+      position: relative
+      flex: 0 0 250px
+      align-self: stretch
+
+    .menu__inner
+      position: fixed
+      width: 250px
 </style>

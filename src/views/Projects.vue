@@ -34,7 +34,7 @@
         projects: [],
         checkLicense: false,
         sliderValue: null,
-        menuOpen: window.innerWidth > 786
+        menuOpen: window.innerWidth > 768,
       };
     },
     mounted() {
@@ -84,4 +84,11 @@
     position: relative
     z-index: 1
     min-height: 100vh
+    padding: 1em
+    flex-grow: 1
+
+  @media screen and (min-width: 786px)
+    .main
+      display: flex
+      align-items: stretch
 </style>
