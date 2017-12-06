@@ -33,13 +33,8 @@
         search: '',
         projects: [],
         checkLicense: false,
-<<<<<<< HEAD
         sliderValue: null,
-        menuOpen: false,
-=======
-        sliderValue: [0, 5000],
-        menuOpen: window.innerWidth > 786,
->>>>>>> e2297143ab1f1b3d817365845745253bb70347d1
+        menuOpen: window.innerWidth > 786
       };
     },
     mounted() {

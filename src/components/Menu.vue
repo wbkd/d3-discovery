@@ -14,6 +14,7 @@
         :options="options"
         :slider-update="this.sliderUpdate"
       />
+      <Histogram />
     </nav>
   </transition>
 </template>
@@ -23,6 +24,7 @@
   import SortButton from './SortButton';
   import CheckBox from './CheckBox';
   import Slider from './Slider';
+  import Histogram from './Histogram';
 
   export default {
     props: {
@@ -37,6 +39,7 @@
       SortButton,
       CheckBox,
       Slider,
+      Histogram
     },
     data() {
       return {
