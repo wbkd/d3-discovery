@@ -28,7 +28,7 @@
         projects: [],
         checkLicense: false,
         sliderValue: [0, 5000],
-        menuOpen: window.innerWidth > 786,
+        menuOpen: window.innerWidth > 768,
       };
     },
     mounted() {
@@ -78,4 +78,5 @@
     position: relative
     z-index: 1
     min-height: 100vh
+    padding: 1em
 </style>

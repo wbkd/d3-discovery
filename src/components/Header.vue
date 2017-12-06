@@ -23,7 +23,7 @@
     },
     data() {
       return {
-        isVisible: window.innerWidth <= 786,
+        isVisible: window.innerWidth <= 768,
       };
     },
   };
@@ -35,7 +35,7 @@
     top: 0
     left: 0
     right: 0
-    padding: 15px
+    padding: 1em
     z-index: 100
     background-color: #343158
 

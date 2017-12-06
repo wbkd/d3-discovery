@@ -29,9 +29,9 @@
   .search__input
     appearance: none
     padding: 5px 8px
-    width: 50%
+    width: 90%
     height: 30px
-    max-width 300px
+    max-width 960px
     background: #fff
 
 </style>
