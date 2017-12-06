@@ -9,9 +9,9 @@
 
 <script>
   export default {
-    props: [
-      'update',
-    ],
+    props: {
+      update: Function,
+    },
     methods: {
       onInput() {
         this.update(this.userInput);

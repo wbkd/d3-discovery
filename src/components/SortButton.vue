@@ -4,10 +4,10 @@
 
 <script>
   export default {
-    props: [
-      'sort-stars',
-      'label',
-    ],
+    props: {
+      sortStars: Function,
+      label: String,
+    },
     methods: {
       onClick() {
         this.sortStars();

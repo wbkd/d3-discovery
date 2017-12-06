@@ -1,12 +1,8 @@
 <template>
   <div class="main" v-bind:class="{ 'main__menu--isvisible': menuOpen }">
-    <Menu :menuOpen="menuOpen" :slider-update="onSlide" :sort-stars="onSortStars" :update="onCheck" />
-
+    <Menu :menu-open="menuOpen" :slider-update="onSlide" :sort-stars="onSortStars" :update="onCheck" />
     <div class="main__content">
-      <header class="content__header">
-        <button class="button button__menu" @click="onMenuButtonClick">☰</button>
-        <Search :update="onSearch" />
-      </header>
+      <Header :on-menu-button-click="onMenuButtonClick" :on-search-change="onSearchChange" />
       <ProjectList :projects="filteredProjects" />
     </div>
   </div>
@@ -16,14 +12,14 @@
   import axios from 'axios';
 
   import Menu from '../components/Menu';
+  import Header from '../components/Header';
   import ProjectList from '../components/ProjectList';
-  import Search from '../components/Search';
 
   export default {
     components: {
       Menu,
-      Search,
       ProjectList,
+      Header,
     },
     data() {
       return {
@@ -57,7 +53,7 @@
       onSortStars() {
         this.projects.sort((a, b) => b.stars - a.stars);
       },
-      onSearch(input) {
+      onSearchChange(input) {
         this.search = input;
       },
       onCheck(input) {
@@ -87,26 +83,6 @@
     overflow: hidden
     transform: translateX(0)
     transition: transform .4s;
-
-  .content__header
-    position: fixed
-    top: 0
-    left: 0
-    right: 0
-    height: 40px
-    background-color: #eee
-    z-index: 100
-
-    padding: 10px
-
-    display: flex
-    justify-content: flex-start
-    align-items center
-
-  .button__menu
-    height: 30px
-    appearance none
-    flex: 0 0 20px
 
   .main__menu--isvisible
     .main__content

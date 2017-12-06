@@ -9,10 +9,9 @@
 
   export default {
     name: 'project-list',
-    props: [
-      'projects',
-    ],
-    // define components to use in this template
+    props: {
+      projects: Array,
+    },
     components: {
       ProjectItem,
     },

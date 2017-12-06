@@ -4,9 +4,9 @@
 
 <script>
   export default {
-    props: [
-      'update',
-    ],
+    props: {
+      update: Function,
+    },
     methods: {
       onCheck() {
         this.update(this.userInput);

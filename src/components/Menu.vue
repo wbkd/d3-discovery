@@ -22,12 +22,12 @@
   import CheckBox from './CheckBox';
 
   export default {
-    props: [
-      'slider-update',
-      'sort-stars',
-      'update',
-      'menuOpen',
-    ],
+    props: {
+      sliderUpdate: Function,
+      sortStars: Function,
+      update: Function,
+      menuOpen: Boolean,
+    },
     components: {
       VueSlider,
       SortButton,
