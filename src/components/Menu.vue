@@ -1,5 +1,5 @@
 <template>
-  <nav class="menu">
+  <nav class="menu" v-bind:class="{ 'menu--open': this.menuOpen }">
     <a class="menu-item menu-header">
       <h1>D3 Discovery</h1>
       <div>Finding D3 plugins with ease.</div>
@@ -25,7 +25,8 @@
     props: [
       'slider-update',
       'sort-stars',
-      'update'
+      'update',
+      'menuOpen'
     ],
 
     components: {
@@ -63,6 +64,11 @@
     width: 300px
     background: #403A62
     padding: 50px 0
+    transform: translateX(-300px)
+    transition: transform .4s;
+
+  .menu--open
+    transform: translateX(0)
 
   .menu-slider
     margin: 10px

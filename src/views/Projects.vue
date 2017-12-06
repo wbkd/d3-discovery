@@ -1,10 +1,10 @@
 <template>
-  <div class="main">
-    <Menu :slider-update="onSlide" :sort-stars="onSortStars" :update="onCheck" />
+  <div class="main" v-bind:class="{ 'main__menu--isvisible': menuOpen }">
+    <Menu :menuOpen="menuOpen" :slider-update="onSlide" :sort-stars="onSortStars" :update="onCheck" />
 
     <div class="main__content">
       <header class="content__header">
-        <button class="button button__menu">☰</button>
+        <button class="button button__menu" @click="onMenuButtonClick">☰</button>
         <Search :update="onSearch" />
       </header>
       <ProjectList :projects="filteredProjects" />
@@ -32,7 +32,8 @@
         search: '',
         projects: [],
         checkLicense: false,
-        sliderValue: 0
+        sliderValue: 0,
+        menuOpen: false
       };
     },
 
@@ -70,6 +71,9 @@
       },
       onSlide(value) {
         this.sliderValue = value;
+      },
+      onMenuButtonClick(evt) {
+        this.menuOpen = !this.menuOpen
       }
     },
 
@@ -80,14 +84,16 @@
 </script>
 
 <style scoped lang='stylus'>
+  .main
+    overflow-y: hidden
   .main__content
     background-color: #343158
     position: relative
     z-index: 1
-    will-change: transform
     min-height: 100vh
-    margin-left 300px
     overflow: hidden
+    transform: translateX(0)
+    transition: transform .4s;
 
   .content__header
     position: fixed
@@ -109,5 +115,8 @@
     appearance none
     flex: 0 0 20px
 
-
+  .main__menu--isvisible
+    .main__content
+      transform: translateX(300px)
+      transition: transform .4s;
 </style>
