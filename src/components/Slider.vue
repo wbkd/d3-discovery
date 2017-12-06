@@ -31,6 +31,7 @@
     },
   };
 </script>
+
 <style scoped lang="stylus">
   .menu-slider
     margin: 10px

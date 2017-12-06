@@ -1,6 +1,12 @@
 <template>
   <div class="main" v-bind:class="{ 'main__menu--isvisible': menuOpen }">
-    <Menu :menu-open="menuOpen" :slider-update="onSlide" :sort-stars="onSortStars" :update="onCheck" />
+    <Menu v-if="this.sliderValue"
+      :menu-open="menuOpen"
+      :slider-update="onSlide"
+      :slider-value="this.sliderValue"
+      :sort-stars="onSortStars"
+      :update="onCheck"
+    />
     <div class="main__content">
       <Header :on-menu-button-click="onMenuButtonClick" :on-search-change="onSearchChange" :menu-open="menuOpen" />
       <ProjectList :projects="filteredProjects" />
@@ -27,7 +33,7 @@
         search: '',
         projects: [],
         checkLicense: false,
-        sliderValue: [0, 5000],
+        sliderValue: null,
         menuOpen: window.innerWidth > 768,
       };
     },
@@ -35,6 +41,9 @@
       axios.get('../../static/data.json')
         .then((response) => {
           this.projects = response.data;
+          const max = Math.max(...this.projects.map(d => d.stars));
+          const min = Math.min(...this.projects.map(d => d.stars));
+          this.sliderValue = [min, max];
         });
     },
     computed: {
@@ -65,10 +74,7 @@
       onMenuButtonClick() {
         this.menuOpen = !this.menuOpen;
       },
-    },
-    asyncData({ store }) {
-      return store.dispatch('getProjects');
-    },
+    }
   };
 </script>
 

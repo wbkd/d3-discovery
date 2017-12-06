@@ -30,6 +30,7 @@
       sortStars: Function,
       update: Function,
       menuOpen: Boolean,
+      sliderValue: Array
     },
     components: {
       VueSlider,
@@ -39,10 +40,10 @@
     },
     data() {
       return {
-        value: [0, 5000],
+        value: this.sliderValue,
         options: {
-          min: 0,
-          max: 5000,
+          min: this.sliderValue[0],
+          max: this.sliderValue[1],
           tooltip: false,
         },
         width: 'auto',
