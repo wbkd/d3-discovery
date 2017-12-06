@@ -1,10 +1,7 @@
 <template>
   <div class="search">
-    <form class="search__form">
-      <input class="search__input" type="search" v-model="userInput" @input="onInput" />
-    </form>
+    <input class="search__input" type="search" v-model="userInput" @input="onInput" placeholder="Search…" />
   </div>
-
 </template>
 
 <script>
@@ -27,8 +24,14 @@
 
 <style scoped lang="stylus">
   .search
-    flex-grow: 1
+    flex: 2 0 50%
+
   .search__input
+    appearance: none
+    padding: 5px 8px
+    width: 50%
+    height: 30px
+    max-width 300px
     background: #fff
-    width: 300px
+
 </style>

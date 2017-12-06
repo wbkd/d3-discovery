@@ -1,6 +1,10 @@
 <template>
   <div class="header">
-    <button class="button button__menu" @click="this.onMenuButtonClick">☰</button>
+    <div class="button button__menu" v-bind:class="{ 'button__menu--active': this.menuOpen }" @click="this.onMenuButtonClick">
+      <div class="button__menu__bar bar1"></div>
+      <div class="button__menu__bar bar2"></div>
+      <div class="button__menu__bar bar3"></div>
+    </div>
     <Search :update="this.onSearchChange" />
   </div>
 </template>
@@ -14,6 +18,7 @@
     props: {
       onMenuButtonClick: Function,
       onSearchChange: Function,
+      menuOpen: Boolean,
     },
   };
 </script>
@@ -24,20 +29,34 @@
     top: 0
     left: 0
     right: 0
-    height: 40px
-    background-color: #eee
+    padding: 15px
     z-index: 100
-
-    padding: 10px
 
     display: flex
     justify-content: flex-start
     align-items center
 
   .button__menu
-    height: 30px
-    appearance none
-    flex: 0 0 20px
+    flex: 0 0 auto
+
+    display: inline-block
+    cursor: pointer
+
+  .button__menu__bar
+    width: 30px
+    height: 3px
+    background-color: #eee
+    margin: 6px 0
+    transition: 0.4s
+
+  .button__menu--active
+    .bar1
+      transform: rotate(-45deg) translate(-5px, 6px)
+    .bar2
+      opacity: 0
+    .bar3
+      transform: rotate(45deg) translate(-7px, -8px)
+
 </style>
 
 

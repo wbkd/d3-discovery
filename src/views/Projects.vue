@@ -2,7 +2,7 @@
   <div class="main" v-bind:class="{ 'main__menu--isvisible': menuOpen }">
     <Menu :menu-open="menuOpen" :slider-update="onSlide" :sort-stars="onSortStars" :update="onCheck" />
     <div class="main__content">
-      <Header :on-menu-button-click="onMenuButtonClick" :on-search-change="onSearchChange" />
+      <Header :on-menu-button-click="onMenuButtonClick" :on-search-change="onSearchChange"  :menu-open="menuOpen" />
       <ProjectList :projects="filteredProjects" />
     </div>
   </div>
@@ -28,7 +28,7 @@
         projects: [],
         checkLicense: false,
         sliderValue: 0,
-        menuOpen: false,
+        menuOpen: true,
       };
     },
     mounted() {
@@ -88,4 +88,5 @@
     .main__content
       transform: translateX(300px)
       transition: transform .4s;
+
 </style>
