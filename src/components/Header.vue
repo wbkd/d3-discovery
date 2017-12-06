@@ -1,11 +1,12 @@
 <template>
   <div class="header">
-    <div class="button button__menu" v-bind:class="{ 'button__menu--active': this.menuOpen }" @click="this.onMenuButtonClick">
+    <Search :update="this.onSearchChange" />
+
+    <div v-show="isVisible" class="button button__menu" v-bind:class="{ 'button__menu--active': this.menuOpen }" @click="this.onMenuButtonClick">
       <div class="button__menu__bar bar1"></div>
       <div class="button__menu__bar bar2"></div>
       <div class="button__menu__bar bar3"></div>
     </div>
-    <Search :update="this.onSearchChange" />
   </div>
 </template>
 <script>
@@ -20,6 +21,11 @@
       onSearchChange: Function,
       menuOpen: Boolean,
     },
+    data() {
+      return {
+        isVisible: window.innerWidth <= 786,
+      };
+    },
   };
 </script>
 
@@ -31,6 +37,7 @@
     right: 0
     padding: 15px
     z-index: 100
+    background-color: #343158
 
     display: flex
     justify-content: flex-start

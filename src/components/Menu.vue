@@ -1,19 +1,21 @@
 <template>
-  <nav class="menu" v-if="this.menuOpen">
-    <a class="menu-item menu-header">
-      <h1>D3 Discovery</h1>
-      <div>Finding D3 plugins with ease.</div>
-    </a>
+  <transition name="slide">
+    <nav class="menu" v-if="this.menuOpen">
+      <a class="menu-item menu-header">
+        <h1>D3 Discovery</h1>
+        <div>Finding D3 plugins with ease.</div>
+      </a>
 
-    <SortButton :sort-stars="this.sortStars" :label="'Sort By Stars'" />
-    <CheckBox :update="this.update" />
-    <Slider
-      :slider-title="'Filter by Stars...'"
-      :slider-value="value"
-      :options="options"
-      :slider-update="this.sliderUpdate"
-    />
-  </nav>
+      <SortButton :sort-stars="this.sortStars" :label="'Sort By Stars'" />
+      <CheckBox :update="this.update" />
+      <Slider
+        :slider-title="'Filter by Stars...'"
+        :slider-value="value"
+        :options="options"
+        :slider-update="this.sliderUpdate"
+      />
+    </nav>
+  </transition>
 </template>
 
 <script>
@@ -45,7 +47,7 @@
         },
         width: 'auto',
       };
-    }
+    },
   };
 </script>
 
@@ -54,13 +56,13 @@
     position: fixed
     top: 0
     left: 0
-    height: 100vh
-    z-index: 0
-    width: 300px
+    bottom: 0
+    z-index: 10
+    width: 250px
     background: #403A62
     padding: 50px 0
-    transition: transform .4s;
     color: #fff
+    transition: all .4s cubic-bezier(0.770, 0.000, 0.175, 1.000)
 
   .menu-header
     padding: 2em 0
@@ -72,4 +74,15 @@
   .menu-item
     display block
 
+  .slide-enter
+    margin-left: -250px
+
+  .slide-enter-active
+    margin-left: 0px
+
+  .slide-leave-to
+    margin-left: -250px
+
+  .slide-leave-active
+    margin-left: -250px
 </style>
