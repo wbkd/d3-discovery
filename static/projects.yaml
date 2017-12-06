@@ -1,0 +1,1754 @@
+projects:
+  - name: billboard
+    repo: 'https://github.com/naver/billboard.js'
+    description: >-
+      Re-usable easy interface JavaScript chart library, based on D3 v4+ (fork
+      of C3)
+    category: charts
+  - name: britecharts
+    repo: 'https://github.com/eventbrite/britecharts/'
+    description: >-
+      Client-side reusable Charting Library based on D3.js v4 that allows easy
+      and intuitive use of charts and components that can be composed together
+      creating amazing visualizations.
+    category: charts
+    homepage: 'http://eventbrite.github.io/britecharts/'
+    license: Apache License 2.0
+    stars: 2903
+    owner: eventbrite
+    issues: 45
+    pullRequests: 0
+    watchers: 189
+    lastUpdate: '2017-12-04T21:03:25Z'
+    url: 'https://github.com/eventbrite/britecharts'
+    size: 45837
+  - name: bullet chart
+    repo: 'https://github.com/d3/d3-plugins/tree/master/bullet'
+    description: Bullet chart
+    category: charts
+  - name: cirrus.js
+    repo: 'https://github.com/planet-os/cirrusjs'
+    description: A multi-renderer charts library
+    category: charts
+  - name: cubism
+    repo: 'https://github.com/square/cubism'
+    description: 'Cubism.js: A JavaScript library for time series visualization.'
+    category: charts
+    homepage: 'http://square.github.com/cubism/'
+    license: Other
+    stars: 4610
+    owner: square
+    issues: 31
+    pullRequests: 13
+    watchers: 166
+    lastUpdate: '2017-06-27T22:04:34Z'
+    url: 'https://github.com/square/cubism'
+    size: 1811
+  - name: cola.js
+    repo: 'https://github.com/tgdwyer/WebCola'
+    description: Layout for graph visualization and exploration
+    category: charts
+  - name: c3
+    repo: 'https://github.com/c3js/c3'
+    description: A D3-based reusable chart library
+    category: charts
+    homepage: c3js.org
+    license: MIT License
+    stars: 7339
+    owner: c3js
+    issues: 770
+    pullRequests: 83
+    watchers: 309
+    lastUpdate: '2017-12-05T04:38:09Z'
+    url: 'https://github.com/c3js/c3'
+    size: 7326
+  - name: dagre-d3
+    repo: 'https://github.com/cpettitt/dagre-d3'
+    description: A D3-based renderer for Dagre
+    category: charts
+    homepage: null
+    license: MIT License
+    stars: 1108
+    owner: cpettitt
+    issues: 139
+    pullRequests: 13
+    watchers: 88
+    lastUpdate: '2017-02-21T00:45:02Z'
+    url: 'https://github.com/cpettitt/dagre-d3'
+    size: 6008
+  - name: dc
+    repo: 'https://github.com/dc-js/dc.js'
+    description: For heavy amounts of data
+    category: charts
+  - name: dimple
+    repo: 'https://github.com/PMSI-AlignAlytics/dimple'
+    description: An object-oriented API for business analytics
+    category: charts
+    homepage: null
+    license: MIT License
+    stars: 2579
+    owner: PMSI-AlignAlytics
+    issues: 134
+    pullRequests: 6
+    watchers: 117
+    lastUpdate: '2017-06-02T02:40:34Z'
+    url: 'https://github.com/PMSI-AlignAlytics/dimple'
+    size: 11924
+  - name: d2b
+    repo: 'https://github.com/d2bjs/d2b'
+    description: Reusable d3-based chart library.
+    category: charts
+    homepage: 'http://d2bjs.org'
+    license: BSD 3-clause "New" or "Revised" License
+    stars: 17
+    owner: d2bjs
+    issues: 0
+    pullRequests: 0
+    watchers: 5
+    lastUpdate: '2017-08-24T16:53:29Z'
+    url: 'https://github.com/d2bjs/d2b'
+    size: 6670
+  - name: d3.chart
+    repo: 'https://github.com/misoproject/d3.chart'
+    description: A framework for creating reusable charts with d3.js.
+    category: charts
+    homepage: 'http://misoproject.com/d3-chart'
+    license: MIT License
+    stars: 752
+    owner: misoproject
+    issues: 27
+    pullRequests: 2
+    watchers: 58
+    lastUpdate: '2016-01-23T21:46:55Z'
+    url: 'https://github.com/misoproject/d3.chart'
+    size: 711
+  - name: d3.chart.sankey
+    repo: 'https://github.com/q-m/d3.chart.sankey'
+    description: Reusable D3 Sankey diagram using d3.Chart
+    category: charts
+    homepage: 'http://bl.ocks.org/cab9b01816490edb7083'
+    license: MIT License
+    stars: 69
+    owner: q-m
+    issues: 7
+    pullRequests: 0
+    watchers: 6
+    lastUpdate: '2017-01-16T08:39:59Z'
+    url: 'https://github.com/q-m/d3.chart.sankey'
+    size: 350
+  - name: d3-bar
+    repo: 'https://github.com/tj/d3-bar'
+    description: D3 bar chart
+    category: charts
+    homepage: null
+    license: MIT License
+    stars: 144
+    owner: tj
+    issues: 3
+    pullRequests: 0
+    watchers: 5
+    lastUpdate: '2016-11-16T15:48:51Z'
+    url: 'https://github.com/tj/d3-bar'
+    size: 148
+  - name: d3-beeswarm
+    repo: 'https://github.com/Kcnarf/d3-beeswarm'
+    description: D3 plugin which computes a 'beeswarm' arrangement
+    category: charts
+    homepage: ''
+    license: Do What The F*ck You Want To Public License
+    stars: 15
+    owner: Kcnarf
+    issues: 2
+    pullRequests: 0
+    watchers: 3
+    lastUpdate: '2017-11-28T14:02:01Z'
+    url: 'https://github.com/Kcnarf/d3-beeswarm'
+    size: 50
+  - name: d3-bumps-chart
+    repo: 'https://github.com/johnwalley/d3-bumps-chart'
+    description: A d3 plugin for visualizing bumps charts
+    category: charts
+    homepage: ''
+    license: BSD 3-clause "New" or "Revised" License
+    stars: 3
+    owner: johnwalley
+    issues: 5
+    pullRequests: 0
+    watchers: 3
+    lastUpdate: '2017-11-19T18:39:25Z'
+    url: 'https://github.com/johnwalley/d3-bumps-chart'
+    size: 269
+  - name: d3-circle
+    repo: 'https://github.com/tj/d3-circle'
+    description: D3 circle chart
+    category: charts
+    homepage: null
+    license: MIT License
+    stars: 115
+    owner: tj
+    issues: 0
+    pullRequests: 0
+    watchers: 7
+    lastUpdate: '2016-11-16T15:47:48Z'
+    url: 'https://github.com/tj/d3-circle'
+    size: 85
+  - name: d3-dot
+    repo: 'https://github.com/tj/d3-dot'
+    description: D3 dot chart
+    category: charts
+    homepage: null
+    license: MIT License
+    stars: 114
+    owner: tj
+    issues: 0
+    pullRequests: 0
+    watchers: 5
+    lastUpdate: '2016-09-27T15:47:35Z'
+    url: 'https://github.com/tj/d3-dot'
+    size: 39
+  - name: d3-heatmap
+    repo: 'https://github.com/tj/d3-heatmap'
+    description: 'D3 heatmap '
+    category: charts
+    homepage: null
+    license: MIT License
+    stars: 198
+    owner: tj
+    issues: 1
+    pullRequests: 0
+    watchers: 7
+    lastUpdate: '2016-06-03T20:58:46Z'
+    url: 'https://github.com/tj/d3-heatmap'
+    size: 116
+  - name: d3-line
+    repo: 'https://github.com/tj/d3-line'
+    description: D3 line chart
+    category: charts
+    homepage: null
+    license: MIT License
+    stars: 107
+    owner: tj
+    issues: 2
+    pullRequests: 0
+    watchers: 6
+    lastUpdate: '2016-11-16T15:49:26Z'
+    url: 'https://github.com/tj/d3-line'
+    size: 277
+  - name: d3-flame-graph
+    repo: 'https://github.com/spiermar/d3-flame-graph'
+    description: A D3.js plugin that produces flame graphs from hierarchical data.
+    category: charts
+    homepage: ''
+    license: Apache License 2.0
+    stars: 239
+    owner: spiermar
+    issues: 17
+    pullRequests: 0
+    watchers: 12
+    lastUpdate: '2017-11-18T22:59:51Z'
+    url: 'https://github.com/spiermar/d3-flame-graph'
+    size: 1129
+  - name: d3-horizon-chart
+    repo: 'https://github.com/kmandov/d3-horizon-chart'
+    description: D3.js plug-in that draws horizon charts using canvas
+    category: charts
+    homepage: 'http://kmandov.github.io/d3-horizon-chart/'
+    license: MIT License
+    stars: 42
+    owner: kmandov
+    issues: 1
+    pullRequests: 0
+    watchers: 3
+    lastUpdate: '2016-09-26T15:15:59Z'
+    url: 'https://github.com/kmandov/d3-horizon-chart'
+    size: 653
+  - name: d3-message-sequence
+    repo: 'https://github.com/koudelka/d3-message-sequence'
+    description: Dynamic message sequence charts for d3.
+    category: charts
+    homepage: ''
+    license: MIT License
+    stars: 56
+    owner: koudelka
+    issues: 0
+    pullRequests: 1
+    watchers: 4
+    lastUpdate: '2017-02-19T01:51:40Z'
+    url: 'https://github.com/koudelka/d3-message-sequence'
+    size: 1082
+  - name: d3-plus
+    repo: 'https://github.com/alexandersimoes/d3plus'
+    description: >-
+      An extension to the D3 library that allows fast and easy creation of data
+      visualizations
+    category: charts
+  - name: d3-timeline
+    repo: 'https://github.com/commodityvectors/d3-timeline'
+    description: 'A simple D3 Timeline chart '
+    category: charts
+    homepage: ''
+    license: MIT License
+    stars: 586
+    owner: commodityvectors
+    issues: 9
+    pullRequests: 2
+    watchers: 26
+    lastUpdate: '2017-10-25T08:43:53Z'
+    url: 'https://github.com/commodityvectors/d3-timeline'
+    size: 995
+  - name: d3fc
+    repo: 'https://github.com/d3fc/d3fc'
+    description: >-
+      A collection of components that make it easy to build interactive charts
+      with D3
+    category: charts
+    homepage: 'https://d3fc.io/'
+    license: MIT License
+    stars: 376
+    owner: d3fc
+    issues: 48
+    pullRequests: 2
+    watchers: 34
+    lastUpdate: '2017-10-16T16:20:55Z'
+    url: 'https://github.com/d3fc/d3fc'
+    size: 6465
+  - name: D3Funnel
+    repo: 'https://github.com/jakezatecky/d3-funnel'
+    description: A funnel and pyramid chart library
+    category: charts
+  - name: d3panels
+    repo: 'https://github.com/kbroman/d3panels'
+    description: 'A library of d3-based graphic panels, written in CoffeeScript'
+    category: charts
+    homepage: 'http://kbroman.org/d3panels'
+    license: MIT License
+    stars: 25
+    owner: kbroman
+    issues: 0
+    pullRequests: 0
+    watchers: 3
+    lastUpdate: '2017-05-18T21:34:43Z'
+    url: 'https://github.com/kbroman/d3panels'
+    size: 1926
+  - name: d3pie
+    repo: 'https://github.com/benkeen/d3pie'
+    description: A configurable pie chart lib and generator built on d3.js
+    category: charts
+    homepage: 'http://d3pie.org'
+    license: MIT License
+    stars: 312
+    owner: benkeen
+    issues: 68
+    pullRequests: 9
+    watchers: 33
+    lastUpdate: '2017-09-22T14:52:43Z'
+    url: 'https://github.com/benkeen/d3pie'
+    size: 2586
+  - name: D3xter
+    repo: 'https://github.com/NathanEpstein/D3xter'
+    description: 'Straight forward plotting built on D3 '
+    category: charts
+    homepage: 'http://d3xterjs.github.io'
+    license: null
+    stars: 347
+    owner: NathanEpstein
+    issues: 0
+    pullRequests: 0
+    watchers: 21
+    lastUpdate: '2016-08-06T17:38:38Z'
+    url: 'https://github.com/NathanEpstein/D3xter'
+    size: 567
+  - name: d3 timeseries
+    repo: 'https://github.com/mcaule/d3-timeseries'
+    description: Time series charting library
+    category: charts
+  - name: D4
+    repo: 'https://github.com/heavysixer/d4'
+    description: Re-usable charts DSL
+    category: charts
+  - name: dTree
+    repo: 'https://github.com/ErikGartner/dTree'
+    description: >-
+      A library for visualizing data trees with multiple parents (such as family
+      trees) built on top of D3
+    category: charts
+    homepage: 'https://treehouse.gartner.io/ErikGartner/58e58be650453b6d49d7'
+    license: MIT License
+    stars: 95
+    owner: ErikGartner
+    issues: 23
+    pullRequests: 0
+    watchers: 9
+    lastUpdate: '2017-05-03T17:50:14Z'
+    url: 'https://github.com/ErikGartner/dTree'
+    size: 173
+  - name: epoch
+    repo: 'https://github.com/epochjs/epoch'
+    description: 'A general purpose, real-time visualization library.'
+    category: charts
+    homepage: 'http://epochjs.github.io/epoch'
+    license: MIT License
+    stars: 4898
+    owner: epochjs
+    issues: 58
+    pullRequests: 6
+    watchers: 207
+    lastUpdate: '2017-09-21T15:00:23Z'
+    url: 'https://github.com/epochjs/epoch'
+    size: 2131
+  - name: EventDrops
+    repo: 'https://github.com/marmelab/EventDrops'
+    description: A time based / event series interactive visualization using d3.js
+    category: charts
+    homepage: 'http://marmelab.com/EventDrops/'
+    license: MIT License
+    stars: 825
+    owner: marmelab
+    issues: 29
+    pullRequests: 6
+    watchers: 43
+    lastUpdate: '2017-11-30T18:26:02Z'
+    url: 'https://github.com/marmelab/EventDrops'
+    size: 2208
+  - name: fancycharts
+    repo: 'https://github.com/ahoiin/Fancycharts.js'
+    description: Library to visualize percentage values
+    category: charts
+  - name: firespray
+    repo: 'https://github.com/boundary/firespray'
+    description: Blazingly fast streaming charts
+    category: charts
+    homepage: ''
+    license: MIT License
+    stars: 88
+    owner: boundary
+    issues: 2
+    pullRequests: 0
+    watchers: 35
+    lastUpdate: '2015-04-08T16:57:38Z'
+    url: 'https://github.com/boundary/firespray'
+    size: 3472
+  - name: forest-d3
+    repo: 'https://github.com/robinfhu/forest-d3'
+    description: >-
+      My attempt at implementing a better time series charting library, based on
+      d3.js
+    category: charts
+    homepage: 'http://charting.robinforest.net'
+    license: MIT License
+    stars: 51
+    owner: robinfhu
+    issues: 18
+    pullRequests: 0
+    watchers: 6
+    lastUpdate: '2016-02-04T15:09:27Z'
+    url: 'https://github.com/robinfhu/forest-d3'
+    size: 473
+  - name: Gantt-Chart
+    repo: 'https://github.com/dk8996/Gantt-Chart'
+    description: 'Gantt chart library using D3.js.  '
+    category: charts
+    homepage: 'Gantt chart library using D3.js.  '
+    license: Apache License 2.0
+    stars: 275
+    owner: dk8996
+    issues: 10
+    pullRequests: 8
+    watchers: 26
+    lastUpdate: '2017-08-05T05:27:01Z'
+    url: 'https://github.com/dk8996/Gantt-Chart'
+    size: 223
+  - name: insights
+    repo: 'https://github.com/ignacioola/insights'
+    description: A JavaScript library to visualize and navigate graphs
+    category: charts
+    homepage: ''
+    license: null
+    stars: 185
+    owner: ignacioola
+    issues: 11
+    pullRequests: 2
+    watchers: 15
+    lastUpdate: '2017-10-06T10:58:54Z'
+    url: 'https://github.com/ignacioola/insights'
+    size: 1134
+  - name: kotojs
+    repo: 'https://github.com/kotojs/kotojs'
+    description: A framework for building reusable components with d3.js
+    category: charts
+    homepage: 'http://kotojs.org'
+    license: MIT License
+    stars: 276
+    owner: kotojs
+    issues: 5
+    pullRequests: 0
+    watchers: 9
+    lastUpdate: '2017-03-22T03:02:58Z'
+    url: 'https://github.com/kotojs/kotojs'
+    size: 3238
+  - name: metricsgraphics
+    repo: 'https://github.com/mozilla/metrics-graphics'
+    description: Optimized for visualizing time-series data
+    category: charts
+  - name: micropolar
+    repo: 'https://github.com/biovisualize/micropolar/'
+    description: A tiny polar charts library made with D3.js
+    category: charts
+    homepage: null
+    license: MIT License
+    stars: 113
+    owner: biovisualize
+    issues: 7
+    pullRequests: 4
+    watchers: 9
+    lastUpdate: '2017-04-17T07:13:34Z'
+    url: 'https://github.com/biovisualize/micropolar'
+    size: 897
+  - name: mpld3
+    repo: 'https://github.com/mpld3/mpld3'
+    description: D3 Renderings of Matplotlib Graphics
+    category: charts
+    homepage: 'http://mpld3.github.io'
+    license: BSD 3-clause "New" or "Revised" License
+    stars: 1547
+    owner: mpld3
+    issues: 174
+    pullRequests: 10
+    watchers: 87
+    lastUpdate: '2017-11-16T13:40:32Z'
+    url: 'https://github.com/mpld3/mpld3'
+    size: 4123
+  - name: neo4jd3
+    repo: 'https://github.com/eisman/neo4jd3'
+    description: Neo4j graph visualization using D3.js
+    category: charts
+    homepage: 'https://eisman.github.io/neo4jd3/'
+    license: MIT License
+    stars: 108
+    owner: eisman
+    issues: 12
+    pullRequests: 1
+    watchers: 15
+    lastUpdate: '2017-10-24T13:16:47Z'
+    url: 'https://github.com/eisman/neo4jd3'
+    size: 3966
+  - name: nvd3
+    repo: 'https://github.com/novus/nvd3'
+    description: A reusable charting library written in d3.js
+    category: charts
+    homepage: 'http://nvd3.org/'
+    license: Other
+    stars: 6270
+    owner: novus
+    issues: 487
+    pullRequests: 31
+    watchers: 336
+    lastUpdate: '2017-11-23T03:06:46Z'
+    url: 'https://github.com/novus/nvd3'
+    size: 15954
+  - name: peek
+    repo: 'https://github.com/mtmacdonald/peek'
+    description: A chart library based on D3.js
+    category: charts
+    homepage: 'http://mtmacdonald.github.io/peek/'
+    license: Other
+    stars: 64
+    owner: mtmacdonald
+    issues: 15
+    pullRequests: 1
+    watchers: 7
+    lastUpdate: '2016-02-12T15:09:39Z'
+    url: 'https://github.com/mtmacdonald/peek'
+    size: 625
+  - name: plotly
+    repo: 'https://github.com/plotly/plotly.js/'
+    description: High level charting library
+    category: charts
+  - name: plottablejs
+    repo: 'https://github.com/palantir/plottable'
+    description: 'Flexible, interactive charts for the web'
+    category: charts
+  - name: pykcharts
+    repo: 'https://github.com/pykih/PykCharts.js'
+    description: Redefined chart library built with React and D3
+    category: charts
+    homepage: 'http://recharts.org'
+    license: null
+    stars: 0
+    owner: pykih
+    issues: 0
+    pullRequests: 0
+    watchers: 3
+    lastUpdate: '2017-08-01T17:25:12Z'
+    url: 'https://github.com/pykih/pykcharts'
+    size: 3056
+  - name: radar chart
+    repo: 'https://github.com/alangrafu/radar-chart-d3'
+    description: Radar chart module
+    category: charts
+  - name: rickshaw
+    repo: 'https://github.com/shutterstock/rickshaw'
+    description: ' JavaScript toolkit for creating interactive real-time graphs'
+    category: charts
+    homepage: 'http://code.shutterstock.com/rickshaw/'
+    license: MIT License
+    stars: 6159
+    owner: shutterstock
+    issues: 171
+    pullRequests: 34
+    watchers: 221
+    lastUpdate: '2017-12-04T19:50:29Z'
+    url: 'https://github.com/shutterstock/rickshaw'
+    size: 2184
+  - name: sankey
+    repo: 'https://github.com/d3/d3-plugins/tree/master/sankey'
+    description: Plugin to create Sankey Diagrams
+    category: charts
+  - name: taucharts
+    repo: 'https://github.com/TargetProcess/tauCharts'
+    description: Charts with a focus on design and flexibility
+    category: charts
+  - name: techanjs
+    repo: 'https://github.com/andredumas/techan.js'
+    description: 'A visual, stock charting and technical analysis'
+    category: charts
+  - name: uvCharts
+    repo: 'https://github.com/imaginea/uvCharts'
+    description: Simple yet powerful JavaScript Charting library built using d3.js
+    category: charts
+    homepage: 'http://imaginea.github.com/uvCharts'
+    license: MIT License
+    stars: 234
+    owner: Imaginea
+    issues: 35
+    pullRequests: 5
+    watchers: 34
+    lastUpdate: '2017-10-13T12:26:36Z'
+    url: 'https://github.com/Imaginea/uvCharts'
+    size: 2630
+  - name: vega
+    repo: 'https://github.com/vega/vega'
+    description: A visualization grammar.
+    category: charts
+    homepage: 'http://vega.github.io/vega'
+    license: BSD 3-clause "New" or "Revised" License
+    stars: 5434
+    owner: vega
+    issues: 138
+    pullRequests: 0
+    watchers: 277
+    lastUpdate: '2017-12-01T01:03:39Z'
+    url: 'https://github.com/vega/vega'
+    size: 48239
+  - name: vega-lite
+    repo: 'https://github.com/vega/vega-lite'
+    description: 'A grammar of interactive graphics, built on Vega.'
+    category: charts
+    homepage: 'https://vega.github.io/vega-lite/'
+    license: BSD 3-clause "New" or "Revised" License
+    stars: 982
+    owner: vega
+    issues: 178
+    pullRequests: 5
+    watchers: 56
+    lastUpdate: '2017-11-30T10:13:23Z'
+    url: 'https://github.com/vega/vega-lite'
+    size: 57785
+  - name: venn.js
+    repo: 'https://github.com/benfred/venn.js'
+    description: Area proportional Venn and Euler diagrams in JavaScript
+    category: charts
+    homepage: ''
+    license: MIT License
+    stars: 549
+    owner: benfred
+    issues: 14
+    pullRequests: 1
+    watchers: 35
+    lastUpdate: '2017-11-28T17:39:46Z'
+    url: 'https://github.com/benfred/venn.js'
+    size: 368
+  - name: visavail
+    repo: 'https://github.com/flrs/visavail'
+    description: A D3.js Time Data Availability Visualization
+    category: charts
+    homepage: 'http://bit.ly/1tevllL'
+    license: MIT License
+    stars: 90
+    owner: flrs
+    issues: 4
+    pullRequests: 0
+    watchers: 3
+    lastUpdate: '2017-10-11T13:54:40Z'
+    url: 'https://github.com/flrs/visavail'
+    size: 1155
+  - name: vizabi
+    repo: 'https://github.com/Gapminder/vizabi'
+    description: A framework for building visual data exploration tools
+    category: charts
+  - name: xkcdgraphs
+    repo: 'https://github.com/imkevinxu/xkcdgraphs'
+    description: Instant XKCD-style Graphs created in Javascript D3 for your enjoyment
+    category: charts
+    homepage: 'http://xkcdgraphs.com/'
+    license: null
+    stars: 312
+    owner: imkevinxu
+    issues: 0
+    pullRequests: 1
+    watchers: 12
+    lastUpdate: '2017-10-28T03:59:28Z'
+    url: 'https://github.com/imkevinxu/xkcdgraphs'
+    size: 303
+  - name: angular-nvd3
+    repo: 'https://github.com/krispo/angular-nvd3'
+    description: >-
+      AngularJS directive for NVD3 reusable charting library (based on D3).
+      Easily customize your charts via JSON API.
+    category: third party
+    homepage: 'http://krispo.github.io/angular-nvd3'
+    license: MIT License
+    stars: 1280
+    owner: krispo
+    issues: 371
+    pullRequests: 3
+    watchers: 84
+    lastUpdate: '2017-08-16T16:14:16Z'
+    url: 'https://github.com/krispo/angular-nvd3'
+    size: 5377
+  - name: d3act
+    repo: 'https://github.com/AnSavvides/d3act'
+    description: d3 with React
+    category: third party
+    homepage: null
+    license: MIT License
+    stars: 299
+    owner: AnSavvides
+    issues: 8
+    pullRequests: 1
+    watchers: 21
+    lastUpdate: '2017-05-24T00:58:02Z'
+    url: 'https://github.com/AnSavvides/d3act'
+    size: 184
+  - name: d3 simplecharts
+    repo: 'https://github.com/mrBigJS/d3-simpleCharts'
+    description: A d3 wordpress plugin
+    category: third party
+  - name: ember charts
+    repo: 'https://github.com/Addepar/ember-charts/'
+    description: Charts for Ember
+    category: third party
+  - name: n3-charts
+    repo: 'https://github.com/n3-charts/line-chart'
+    description: Charts for Angular
+    category: third party
+  - name: nivo
+    repo: 'https://github.com/plouc/nivo'
+    description: >-
+      nivo provides a rich set of dataviz components, built on top of the
+      awesome d3 and Reactjs libraries
+    category: third party
+    homepage: 'http://nivo.rocks'
+    license: MIT License
+    stars: 1833
+    owner: plouc
+    issues: 21
+    pullRequests: 3
+    watchers: 30
+    lastUpdate: '2017-12-05T21:42:44Z'
+    url: 'https://github.com/plouc/nivo'
+    size: 41971
+  - name: numberpicture
+    repo: 'https://github.com/finnfiddle/number-picture'
+    description: Collection of React components for composing visualizations
+    category: third party
+  - name: react-d3
+    repo: 'https://github.com/esbullington/react-d3'
+    description: Modular React charts made with d3.js
+    category: third party
+    homepage: 'https://reactiva.github.io/react-d3-website/'
+    license: MIT License
+    stars: 1679
+    owner: esbullington
+    issues: 12
+    pullRequests: 1
+    watchers: 71
+    lastUpdate: '2016-06-07T08:22:56Z'
+    url: 'https://github.com/esbullington/react-d3'
+    size: 4407
+  - name: react-d3-components
+    repo: 'https://github.com/codesuki/react-d3-components'
+    description: D3 Components for React
+    category: third party
+    homepage: 'http://codesuki.github.io/react-d3-components/example.html'
+    license: MIT License
+    stars: 1294
+    owner: codesuki
+    issues: 43
+    pullRequests: 2
+    watchers: 47
+    lastUpdate: '2017-10-04T23:21:08Z'
+    url: 'https://github.com/codesuki/react-d3-components'
+    size: 2982
+  - name: react-d3-library
+    repo: 'https://github.com/react-d3-library/react-d3-library'
+    description: Open source library for using D3 in React
+    category: third party
+    homepage: 'http://react-d3-library.github.io/'
+    license: null
+    stars: 766
+    owner: react-d3-library
+    issues: 8
+    pullRequests: 0
+    watchers: 31
+    lastUpdate: '2017-03-12T00:03:46Z'
+    url: 'https://github.com/react-d3-library/react-d3-library'
+    size: 3064
+  - name: react-stockcharts
+    repo: 'https://github.com/rrag/react-stockcharts'
+    description: Highly customizable stock charts with ReactJS and d3
+    category: third party
+    homepage: 'http://rrag.github.io/react-stockcharts'
+    license: Other
+    stars: 1127
+    owner: rrag
+    issues: 15
+    pullRequests: 1
+    watchers: 90
+    lastUpdate: '2017-11-30T00:29:43Z'
+    url: 'https://github.com/rrag/react-stockcharts'
+    size: 8707
+  - name: react-vis
+    repo: 'https://github.com/uber-common/react-vis'
+    description: >-
+      A collection of react components to render common data visualization
+      charts
+    category: third party
+  - name: recharts
+    repo: 'https://github.com/recharts/recharts'
+    description: Redefined chart library built with React and D3
+    category: third party
+    homepage: 'http://recharts.org'
+    license: MIT License
+    stars: 7379
+    owner: recharts
+    issues: 175
+    pullRequests: 8
+    watchers: 140
+    lastUpdate: '2017-12-06T03:39:17Z'
+    url: 'https://github.com/recharts/recharts'
+    size: 3339
+  - name: semiotic
+    repo: 'https://github.com/emeeks/semiotic'
+    description: A data visualization framework combining React & D3
+    category: third party
+    homepage: null
+    license: Other
+    stars: 994
+    owner: emeeks
+    issues: 9
+    pullRequests: 0
+    watchers: 30
+    lastUpdate: '2017-12-04T20:36:59Z'
+    url: 'https://github.com/emeeks/semiotic'
+    size: 4077
+  - name: victory
+    repo: 'https://github.com/FormidableLabs/victory'
+    description: >-
+      A collection of composable React components for building interactive data
+      visualizations
+    category: third party
+    homepage: 'http://formidable.com/open-source/victory/'
+    license: MIT License
+    stars: 5323
+    owner: FormidableLabs
+    issues: 149
+    pullRequests: 0
+    watchers: 119
+    lastUpdate: '2017-11-15T03:58:46Z'
+    url: 'https://github.com/FormidableLabs/victory'
+    size: 12544
+  - name: vx
+    repo: 'https://github.com/hshoff/vx'
+    description: react + d3 = vx | visualization components
+    category: third party
+    homepage: 'https://vx-demo.now.sh/'
+    license: MIT License
+    stars: 3121
+    owner: hshoff
+    issues: 26
+    pullRequests: 2
+    watchers: 78
+    lastUpdate: '2017-12-06T05:45:17Z'
+    url: 'https://github.com/hshoff/vx'
+    size: 6401
+  - name: carto map
+    repo: 'https://github.com/emeeks/d3-carto-map'
+    description: A mapping API that uses D3 geospatial functionality
+    category: maps
+  - name: composite-projections
+    repo: 'https://github.com/rveciana/d3-composite-projections'
+    description: Set of projections for showing countries' distant lands together
+    category: maps
+  - name: datamaps
+    repo: 'https://github.com/markmarkoh/datamaps'
+    description: >-
+      Customizable SVG map visualizations for the web in a single Javascript
+      file using D3.js
+    category: maps
+    homepage: 'http://datamaps.github.io'
+    license: MIT License
+    stars: 2588
+    owner: markmarkoh
+    issues: 110
+    pullRequests: 19
+    watchers: 123
+    lastUpdate: '2017-08-21T00:07:10Z'
+    url: 'https://github.com/markmarkoh/datamaps'
+    size: 73878
+  - name: d3 cartogram
+    repo: 'https://github.com/shawnbot/topogram'
+    description: Cartograms with D3 & TopoJSON
+    category: maps
+  - name: d3 exploder
+    repo: 'https://github.com/bsouthga/d3-exploder'
+    description: Lets you easily move and resize geographic features
+    category: maps
+  - name: d3 geo projection
+    repo: 'https://github.com/d3/d3-geo-projection'
+    description: Extended geographic projections
+    category: maps
+  - name: d3 geomap
+    repo: 'https://github.com/yaph/d3-geomap'
+    description: Library for creating geographic maps
+    category: maps
+  - name: d3.geo2rect
+    repo: 'https://github.com/sebastian-meier/d3.geo2rect'
+    description: 'Morphing geojson polygons into rectangles '
+    category: maps
+    homepage: null
+    license: GNU General Public License v3.0
+    stars: 148
+    owner: sebastian-meier
+    issues: 2
+    pullRequests: 1
+    watchers: 10
+    lastUpdate: '2017-02-15T23:02:43Z'
+    url: 'https://github.com/sebastian-meier/d3.geo2rect'
+    size: 1902
+  - name: earthjs.js
+    repo: 'https://github.com/earthjs/earthjs'
+    description: >-
+      Easy building orthographic globe, using D3v4 with SVG, Canvas &
+      WebGL(Threejs)
+    category: maps
+  - name: mapmap.js
+    repo: 'https://github.com/floledermann/mapmap.js'
+    description: A data-driven API for interactive thematic maps
+    category: maps
+    homepage: ''
+    license: GNU Affero General Public License v3.0
+    stars: 80
+    owner: floledermann
+    issues: 19
+    pullRequests: 0
+    watchers: 10
+    lastUpdate: '2016-10-28T10:37:11Z'
+    url: 'https://github.com/floledermann/mapmap.js'
+    size: 532
+  - name: mapsense.js
+    repo: 'https://github.com/mapsense/mapsense.js'
+    description: Mapsense.js
+    category: maps
+    homepage: ''
+    license: BSD 3-clause "New" or "Revised" License
+    stars: 82
+    owner: mapsense
+    issues: 3
+    pullRequests: 5
+    watchers: 23
+    lastUpdate: '2015-09-17T00:08:19Z'
+    url: 'https://github.com/mapsense/mapsense.js'
+    size: 22675
+  - name: maptable
+    repo: 'https://github.com/Packet-Clearing-House/maptable'
+    description: >-
+      JS library which converts any dataset to an interactive set of components:
+      a choropleth or heat map, filters and table
+    category: maps
+    homepage: ''
+    license: MIT License
+    stars: 48
+    owner: Packet-Clearing-House
+    issues: 14
+    pullRequests: 0
+    watchers: 4
+    lastUpdate: '2017-09-14T16:22:43Z'
+    url: 'https://github.com/Packet-Clearing-House/maptable'
+    size: 4862
+  - name: simple map
+    repo: 'https://github.com/MinnPost/simple-map-d3'
+    description: Easy choropleth style maps
+    category: maps
+  - name: spam
+    repo: 'https://github.com/newsappsio/spam'
+    description: A D3 library to create maps with Canvas
+    category: maps
+    homepage: ''
+    license: MIT License
+    stars: 88
+    owner: newsappsio
+    issues: 1
+    pullRequests: 1
+    watchers: 6
+    lastUpdate: '2017-10-14T09:11:34Z'
+    url: 'https://github.com/newsappsio/spam'
+    size: 6036
+  - name: leaflet-d3
+    repo: 'https://github.com/Asymmetrik/leaflet-d3'
+    description: Collection of plugins for using d3.js with Leaflet
+    category: third party
+    homepage: ''
+    license: MIT License
+    stars: 149
+    owner: Asymmetrik
+    issues: 2
+    pullRequests: 0
+    watchers: 29
+    lastUpdate: '2017-09-02T22:17:49Z'
+    url: 'https://github.com/Asymmetrik/leaflet-d3'
+    size: 591
+  - name: React D3 Map
+    repo: 'https://github.com/react-d3/react-d3-basic'
+    description: Library For Building Composable And Declarative Maps
+    category: third party
+  - name: Wikimaps-D3js Atlas
+    repo: 'https://github.com/WikimapsAtlas/make-modules'
+    description: >-
+      Command line utility and D3js based library to generate raster, topojson
+      and svg maps
+    category: third party
+  - name: chroniton
+    repo: 'https://github.com/tmcw/chroniton'
+    description: Time slider input for time-based visualizations and data
+    category: utils
+  - name: d3kit-timeline
+    repo: 'https://github.com/kristw/d3kit-timeline'
+    description: A simple timeline component that labels do not overlap.
+    category: utils
+    homepage: 'http://kristw.github.io/d3kit-timeline/index.html'
+    license: Apache License 2.0
+    stars: 229
+    owner: kristw
+    issues: 1
+    pullRequests: 1
+    watchers: 21
+    lastUpdate: '2017-10-17T07:37:48Z'
+    url: 'https://github.com/kristw/d3kit-timeline'
+    size: 602
+  - name: d3scription
+    repo: 'https://github.com/GlobalWebIndex/d3scription'
+    description: D3.js tooltip plugin made simple. With single-page apps in mind.
+    category: utils
+    homepage: null
+    license: MIT License
+    stars: 23
+    owner: GlobalWebIndex
+    issues: 0
+    pullRequests: 0
+    watchers: 7
+    lastUpdate: '2017-03-08T12:22:09Z'
+    url: 'https://github.com/GlobalWebIndex/d3scription'
+    size: 367
+  - name: d3-annotation
+    repo: 'https://github.com/susielu/d3-annotation'
+    description: >-
+      Use d3-annotation with built-in annotation types, or extend it to make
+      custom annotations. It is made for d3-v4 in SVG.
+    category: utils
+    homepage: 'http://d3-annotation.susielu.com/'
+    license: Apache License 2.0
+    stars: 460
+    owner: susielu
+    issues: 8
+    pullRequests: 0
+    watchers: 18
+    lastUpdate: '2017-10-09T20:16:59Z'
+    url: 'https://github.com/susielu/d3-annotation'
+    size: 4509
+  - name: d3-area-label
+    repo: 'https://github.com/curran/d3-area-label'
+    description: A library for placing labels in areas.
+    category: utils
+    homepage: ''
+    license: BSD 3-clause "New" or "Revised" License
+    stars: 29
+    owner: curran
+    issues: 3
+    pullRequests: 0
+    watchers: 2
+    lastUpdate: '2017-08-16T10:46:25Z'
+    url: 'https://github.com/curran/d3-area-label'
+    size: 85
+  - name: d3-breadcrumbs
+    repo: 'https://github.com/bumbeishvili/d3-breadcrumbs'
+    description: null
+    category: utils
+    homepage: null
+    license: null
+    stars: 1
+    owner: bumbeishvili
+    issues: 1
+    pullRequests: 0
+    watchers: 2
+    lastUpdate: '2017-11-28T06:19:51Z'
+    url: 'https://github.com/bumbeishvili/d3-breadcrumbs'
+    size: 296
+  - name: d3-component
+    repo: 'https://github.com/curran/d3-component'
+    description: A lightweight component abstraction for D3.js.
+    category: utils
+    homepage: ''
+    license: BSD 3-clause "New" or "Revised" License
+    stars: 57
+    owner: curran
+    issues: 7
+    pullRequests: 0
+    watchers: 6
+    lastUpdate: '2017-03-27T08:20:31Z'
+    url: 'https://github.com/curran/d3-component'
+    size: 198
+  - name: d3-extended
+    repo: 'https://github.com/wbkd/d3-extended'
+    description: Extends D3 with some common jQuery functions and more
+    category: utils
+    homepage: 'http://wbkd.github.io/d3-extended/'
+    license: MIT License
+    stars: 260
+    owner: wbkd
+    issues: 1
+    pullRequests: 0
+    watchers: 20
+    lastUpdate: '2017-08-30T13:52:22Z'
+    url: 'https://github.com/wbkd/d3-extended'
+    size: 942
+  - name: d3-helpers
+    repo: 'https://github.com/bahmutov/d3-helpers'
+    description: Little utility D3 functions
+    category: utils
+    homepage: null
+    license: MIT License
+    stars: 24
+    owner: bahmutov
+    issues: 3
+    pullRequests: 0
+    watchers: 2
+    lastUpdate: '2014-11-25T20:56:50Z'
+    url: 'https://github.com/bahmutov/d3-helpers'
+    size: 308
+  - name: d3-history
+    repo: 'https://github.com/vijithassar/d3-history'
+    description: proper URL bar history for D3.js
+    category: utils
+    homepage: null
+    license: BSD 3-clause "New" or "Revised" License
+    stars: 38
+    owner: vijithassar
+    issues: 0
+    pullRequests: 0
+    watchers: 3
+    lastUpdate: '2017-11-29T08:01:28Z'
+    url: 'https://github.com/vijithassar/d3-history'
+    size: 11
+  - name: d3-iconarray
+    repo: 'https://github.com/tomgp/d3-iconarray'
+    description: A D3 module for making grids of icons
+    category: utils
+    homepage: ''
+    license: BSD 3-clause "New" or "Revised" License
+    stars: 56
+    owner: tomgp
+    issues: 0
+    pullRequests: 0
+    watchers: 5
+    lastUpdate: '2016-03-03T19:11:26Z'
+    url: 'https://github.com/tomgp/d3-iconarray'
+    size: 367
+  - name: d3-kit
+    repo: 'https://github.com/twitter/d3kit'
+    description: A set of tools to speed D3 related project development
+    category: utils
+  - name: d3-Labeler
+    repo: 'https://github.com/tinker10/D3-Labeler'
+    description: Plug-in for automatic label placement
+    category: utils
+  - name: d3-lasso
+    repo: 'https://github.com/skokenes/d3-lasso'
+    description: A lasso plugin for d3
+    category: utils
+    homepage: null
+    license: BSD 3-clause "New" or "Revised" License
+    stars: 52
+    owner: skokenes
+    issues: 2
+    pullRequests: 0
+    watchers: 5
+    lastUpdate: '2016-10-04T19:34:21Z'
+    url: 'https://github.com/skokenes/d3-lasso'
+    size: 124
+  - name: d3-legend
+    repo: 'https://github.com/susielu/d3-legend'
+    description: 'A reusable d3 legend component. '
+    category: utils
+    homepage: 'http://d3-legend.susielu.com/'
+    license: Apache License 2.0
+    stars: 543
+    owner: susielu
+    issues: 7
+    pullRequests: 0
+    watchers: 18
+    lastUpdate: '2017-11-17T01:12:05Z'
+    url: 'https://github.com/susielu/d3-legend'
+    size: 1641
+  - name: d3-loom
+    repo: 'https://github.com/nbremer/d3-loom'
+    description: d3 plugin to create a loom chart layout (for d3-v4)
+    category: utils
+    homepage: ''
+    license: null
+    stars: 53
+    owner: nbremer
+    issues: 0
+    pullRequests: 0
+    watchers: 3
+    lastUpdate: '2017-08-02T08:23:15Z'
+    url: 'https://github.com/nbremer/d3-loom'
+    size: 443
+  - name: d3-nelson-rules
+    repo: 'https://github.com/kiernanmcgowan/d3-nelson-rules'
+    description: Utility to apply nelsons rules of process control to a set of data
+    category: utils
+  - name: d3-peaks
+    repo: 'https://github.com/efekarakus/d3-peaks'
+    description: Find peaks in a noisy signal
+    category: utils
+    homepage: null
+    license: BSD 3-clause "New" or "Revised" License
+    stars: 44
+    owner: efekarakus
+    issues: 0
+    pullRequests: 0
+    watchers: 2
+    lastUpdate: '2016-03-25T03:05:39Z'
+    url: 'https://github.com/efekarakus/d3-peaks'
+    size: 94
+  - name: d3-ring-note
+    repo: 'https://github.com/armollica/d3-ring-note'
+    description: D3 plugin for placing circle and text annotation
+    category: utils
+    homepage: ''
+    license: null
+    stars: 97
+    owner: armollica
+    issues: 2
+    pullRequests: 0
+    watchers: 5
+    lastUpdate: '2016-05-25T00:18:19Z'
+    url: 'https://github.com/armollica/d3-ring-note'
+    size: 73
+  - name: d3-scale-cluster
+    repo: 'https://github.com/schnerd/d3-scale-cluster'
+    description: D3 scale that clusters data into discrete groups
+    category: utils
+    homepage: null
+    license: MIT License
+    stars: 77
+    owner: schnerd
+    issues: 1
+    pullRequests: 0
+    watchers: 8
+    lastUpdate: '2017-05-26T20:54:10Z'
+    url: 'https://github.com/schnerd/d3-scale-cluster'
+    size: 31
+  - name: d3-sparql
+    repo: 'https://github.com/zazuko/d3-sparql'
+    description: >-
+      Query a SPARQL endpoint with a SELECT query & get the data in a
+      d3js-useful format 
+    category: utils
+    homepage: ''
+    license: BSD 3-clause "New" or "Revised" License
+    stars: 30
+    owner: zazuko
+    issues: 3
+    pullRequests: 0
+    watchers: 7
+    lastUpdate: '2017-08-01T18:44:57Z'
+    url: 'https://github.com/zazuko/d3-sparql'
+    size: 26
+  - name: d3-starterkit
+    repo: 'https://github.com/1wheel/d3-starterkit'
+    description: 'Snippets and conventions for d3 '
+    category: utils
+    homepage: null
+    license: MIT License
+    stars: 122
+    owner: 1wheel
+    issues: 0
+    pullRequests: 0
+    watchers: 10
+    lastUpdate: '2017-08-13T15:15:30Z'
+    url: 'https://github.com/1wheel/d3-starterkit'
+    size: 156
+  - name: d3-tip
+    repo: 'https://github.com/Caged/d3-tip'
+    description: d3 tooltips
+    category: utils
+    homepage: 'http://labratrevenge.com/d3-tip'
+    license: MIT License
+    stars: 972
+    owner: Caged
+    issues: 26
+    pullRequests: 10
+    watchers: 43
+    lastUpdate: '2017-10-30T20:15:31Z'
+    url: 'https://github.com/Caged/d3-tip'
+    size: 381
+  - name: d3-tipy
+    repo: 'https://github.com/tj/d3-tipy'
+    description: D3 tooltip
+    category: utils
+    homepage: null
+    license: MIT License
+    stars: 85
+    owner: tj
+    issues: 0
+    pullRequests: 0
+    watchers: 5
+    lastUpdate: '2016-11-16T15:49:04Z'
+    url: 'https://github.com/tj/d3-tipy'
+    size: 99
+  - name: d3-tooltip
+    repo: 'https://github.com/bumbeishvili/d3-tooltip'
+    description: null
+    category: utils
+    homepage: null
+    license: null
+    stars: 0
+    owner: bumbeishvili
+    issues: 0
+    pullRequests: 0
+    watchers: 1
+    lastUpdate: '2017-11-10T11:08:01Z'
+    url: 'https://github.com/bumbeishvili/d3-tooltip'
+    size: 262
+  - name: d3-trail
+    repo: 'https://github.com/bmschmidt/D3-trail'
+    description: A layout for creating better path elements
+    category: utils
+  - name: d3-xray
+    repo: 'https://github.com/vijithassar/d3-xray'
+    description: view the data bound to a D3.js project simply by mousing over elements
+    category: utils
+    homepage: ''
+    license: MIT License
+    stars: 23
+    owner: vijithassar
+    issues: 0
+    pullRequests: 0
+    watchers: 3
+    lastUpdate: '2017-04-27T07:00:48Z'
+    url: 'https://github.com/vijithassar/d3-xray'
+    size: 4
+  - name: d3.slider
+    repo: 'https://github.com/MasterMaps/d3-slider'
+    description: jQuery UI inspired slider
+    category: utils
+  - name: d3.svg.circularbrush
+    repo: 'https://github.com/emeeks/d3.svg.circularbrush'
+    description: A brush for selecting cyclical data
+    category: utils
+    homepage: null
+    license: The Unlicense
+    stars: 46
+    owner: emeeks
+    issues: 0
+    pullRequests: 0
+    watchers: 4
+    lastUpdate: '2015-12-30T22:49:26Z'
+    url: 'https://github.com/emeeks/d3.svg.circularbrush'
+    size: 726
+  - name: d3.svg.ribbon
+    repo: 'https://github.com/emeeks/d3.svg.ribbon'
+    description: An area interpolator based on points and their radii
+    category: utils
+    homepage: null
+    license: The Unlicense
+    stars: 19
+    owner: emeeks
+    issues: 0
+    pullRequests: 0
+    watchers: 2
+    lastUpdate: '2015-08-23T16:47:25Z'
+    url: 'https://github.com/emeeks/d3.svg.ribbon'
+    size: 844
+  - name: iopctrl
+    repo: 'https://github.com/metormote/iopctrl'
+    description: A minimal ui-component lib for D3
+    category: utils
+    homepage: iop.io
+    license: MIT License
+    stars: 34
+    owner: metormote
+    issues: 1
+    pullRequests: 0
+    watchers: 8
+    lastUpdate: '2014-05-15T12:33:21Z'
+    url: 'https://github.com/metormote/iopctrl'
+    size: 983
+  - name: jetpack
+    repo: 'https://github.com/gka/d3-jetpack'
+    description: Nifty convenience wrappers that speed up your daily work
+    category: utils
+  - name: kodama
+    repo: 'https://github.com/DarkMarmot/kodama'
+    description: D3 Tooltip and jQuery plugin
+    category: utils
+    homepage: null
+    license: Apache License 2.0
+    stars: 54
+    owner: DarkMarmot
+    issues: 1
+    pullRequests: 2
+    watchers: 5
+    lastUpdate: '2017-05-09T16:39:06Z'
+    url: 'https://github.com/DarkMarmot/kodama'
+    size: 488
+  - name: swoopyarrows
+    repo: 'https://github.com/bizweekgraphics/swoopyarrows'
+    description: swoopyarrows makes swoopy arrows between things
+    category: utils
+    homepage: 'http://bizweekgraphics.com/swoopyarrows'
+    license: The Unlicense
+    stars: 82
+    owner: bizweekgraphics
+    issues: 5
+    pullRequests: 0
+    watchers: 22
+    lastUpdate: '2017-05-02T20:09:22Z'
+    url: 'https://github.com/bizweekgraphics/swoopyarrows'
+    size: 1135
+  - name: swoopyDrag
+    repo: 'https://github.com/1wheel/swoopy-drag'
+    description: Artisanal label placement for d3 graphics
+    category: utils
+  - name: textures
+    repo: 'https://github.com/riccardoscalco/textures'
+    description: Textures.js is a JavaScript library for creating SVG patterns
+    category: utils
+    homepage: 'http://riccardoscalco.github.io/textures/'
+    license: MIT License
+    stars: 4282
+    owner: riccardoscalco
+    issues: 8
+    pullRequests: 1
+    watchers: 106
+    lastUpdate: '2017-11-01T15:58:44Z'
+    url: 'https://github.com/riccardoscalco/textures'
+    size: 4800
+  - name: chess-dataviz
+    repo: 'https://github.com/ebemunk/chess-dataviz'
+    description: chess visualization library written for d3.js
+    category: miscellaneous
+    homepage: 'https://ebemunk.github.io/chess-dataviz/'
+    license: null
+    stars: 32
+    owner: ebemunk
+    issues: 0
+    pullRequests: 0
+    watchers: 6
+    lastUpdate: '2016-12-11T02:11:27Z'
+    url: 'https://github.com/ebemunk/chess-dataviz'
+    size: 1599
+  - name: codeflower
+    repo: 'https://github.com/fzaninotto/CodeFlower'
+    description: Bird's eye view of the whole code
+    category: miscellaneous
+  - name: comic.js
+    repo: 'https://github.com/balint42/comic.js'
+    description: Cartoon style drawing for HTML5 Canvas & Raphael.js & D3.js & SVG.js
+    category: miscellaneous
+    homepage: ''
+    license: MIT License
+    stars: 113
+    owner: balint42
+    issues: 4
+    pullRequests: 0
+    watchers: 6
+    lastUpdate: '2016-05-17T22:45:20Z'
+    url: 'https://github.com/balint42/comic.js'
+    size: 1029
+  - name: dragit
+    repo: 'https://github.com/romsson/dragit'
+    description: A toolkit to enable the manipulation of data graphics
+    category: miscellaneous
+    homepage: 'http://romsson.github.io/dragit/'
+    license: BSD 3-clause "New" or "Revised" License
+    stars: 153
+    owner: romsson
+    issues: 9
+    pullRequests: 0
+    watchers: 12
+    lastUpdate: '2016-05-17T13:54:28Z'
+    url: 'https://github.com/romsson/dragit'
+    size: 1622
+  - name: d3moji
+    repo: 'https://github.com/mathisonian/d3moji'
+    description: First class emoji support for D3
+    category: miscellaneous
+    homepage: ''
+    license: MIT License
+    stars: 99
+    owner: mathisonian
+    issues: 3
+    pullRequests: 0
+    watchers: 3
+    lastUpdate: '2017-02-12T00:55:12Z'
+    url: 'https://github.com/mathisonian/d3moji'
+    size: 2729
+  - name: d3-cloud
+    repo: 'https://github.com/jasondavies/d3-cloud'
+    description: Create word clouds in JavaScript.
+    category: miscellaneous
+    homepage: 'https://www.jasondavies.com/wordcloud/'
+    license: BSD 3-clause "New" or "Revised" License
+    stars: 2306
+    owner: jasondavies
+    issues: 23
+    pullRequests: 9
+    watchers: 125
+    lastUpdate: '2017-08-25T15:40:12Z'
+    url: 'https://github.com/jasondavies/d3-cloud'
+    size: 508
+  - name: d3-context-menu
+    repo: 'https://github.com/patorjk/d3-context-menu'
+    description: >-
+      A plugin for d3.js that allows you to easy use context-menus in your
+      visualizations.
+    category: miscellaneous
+    homepage: null
+    license: MIT License
+    stars: 63
+    owner: patorjk
+    issues: 8
+    pullRequests: 2
+    watchers: 6
+    lastUpdate: '2017-05-23T11:35:10Z'
+    url: 'https://github.com/patorjk/d3-context-menu'
+    size: 17
+  - name: d3-force-gravity
+    repo: 'https://github.com/sohamkamani/d3-force-gravity'
+    description: >-
+      Implement gravitational attraction (or force-field-like repulsion) using
+      d3-force
+    category: miscellaneous
+    homepage: ''
+    license: null
+    stars: 17
+    owner: sohamkamani
+    issues: 0
+    pullRequests: 0
+    watchers: 2
+    lastUpdate: '2016-08-12T14:26:49Z'
+    url: 'https://github.com/sohamkamani/d3-force-gravity'
+    size: 652
+  - name: d3-resume
+    repo: 'https://github.com/glena/d3-resume'
+    description: D3.js based resume visualizer
+    category: miscellaneous
+    homepage: null
+    license: GNU General Public License v2.0
+    stars: 24
+    owner: glena
+    issues: 1
+    pullRequests: 0
+    watchers: 3
+    lastUpdate: '2015-04-08T12:24:33Z'
+    url: 'https://github.com/glena/d3-resume'
+    size: 186
+  - name: d3.sketchy
+    repo: 'https://github.com/sebastian-meier/d3.sketchy'
+    description: 'A tool to create sketchy backgrounds, shapes and lines'
+    category: miscellaneous
+    homepage: null
+    license: MIT License
+    stars: 216
+    owner: sebastian-meier
+    issues: 3
+    pullRequests: 0
+    watchers: 7
+    lastUpdate: '2015-08-03T10:33:37Z'
+    url: 'https://github.com/sebastian-meier/d3.sketchy'
+    size: 2135
+  - name: d3plus-text
+    repo: 'https://github.com/d3plus/d3plus-text'
+    description: A smart SVG text box with line wrapping and automatic font size scaling.
+    category: miscellaneous
+    homepage: ''
+    license: MIT License
+    stars: 33
+    owner: d3plus
+    issues: 13
+    pullRequests: 0
+    watchers: 5
+    lastUpdate: '2017-11-16T02:11:16Z'
+    url: 'https://github.com/d3plus/d3plus-text'
+    size: 642
+  - name: graph-scroll
+    repo: 'https://github.com/1wheel/graph-scroll'
+    description: 'experiments using scrolling instead of steppers '
+    category: miscellaneous
+    homepage: null
+    license: MIT License
+    stars: 386
+    owner: 1wheel
+    issues: 0
+    pullRequests: 2
+    watchers: 12
+    lastUpdate: '2017-11-28T22:26:32Z'
+    url: 'https://github.com/1wheel/graph-scroll'
+    size: 528
+  - name: jsdocs2diagram
+    repo: 'https://github.com/amcmillan01/jsdoc2diagram'
+    description: Create tree diagram from jsdoc
+    category: miscellaneous
+  - name: mermaid
+    repo: 'https://github.com/knsv/mermaid'
+    description: >-
+      Generation of diagram and flowchart from text in a similar manner as
+      markdown
+    category: miscellaneous
+    homepage: 'http://knsv.github.io/mermaid/'
+    license: MIT License
+    stars: 14726
+    owner: knsv
+    issues: 204
+    pullRequests: 3
+    watchers: 392
+    lastUpdate: '2017-12-03T03:52:58Z'
+    url: 'https://github.com/knsv/mermaid'
+    size: 30729
+  - name: netvis
+    repo: 'https://github.com/dborzov/netvis'
+    description: >-
+      d3.js-based tool to visualize network communication for arbitrary
+      protocols
+    category: miscellaneous
+    homepage: 'http://www.borzov.ca/netvis/'
+    license: MIT License
+    stars: 10
+    owner: dborzov
+    issues: 0
+    pullRequests: 0
+    watchers: 3
+    lastUpdate: '2015-02-20T03:59:13Z'
+    url: 'https://github.com/dborzov/netvis'
+    size: 2136
+  - name: d3-node
+    repo: 'https://github.com/d3-node/d3-node'
+    description: "Server-side D3 for static chart/map generation ✨\U0001F4CA"
+    category: server side
+    homepage: 'https://bradoyler.com/projects/d3-node/'
+    license: null
+    stars: 363
+    owner: d3-node
+    issues: 1
+    pullRequests: 0
+    watchers: 9
+    lastUpdate: '2017-11-24T03:42:13Z'
+    url: 'https://github.com/d3-node/d3-node'
+    size: 813
+  - name: Snippets for Atom
+    repo: 'https://github.com/martgnz/d3-snippets'
+    description: !<tag:yaml.org,2002:js/undefined> ''
+    category: code editors
+  - name: Snippets for Sublime Text 2
+    repo: 'https://github.com/fabriciotav/d3-snippets-for-sublime-text-2'
+    description: !<tag:yaml.org,2002:js/undefined> ''
+    category: code editors
+  - name: Adam Pearce - 1wheel
+    repo: 'https://bl.ocks.org/1wheel'
+    description: '1wheel](https://bl.ocks.org/1wheel)'
+    category: bl.ocks.org profiles
+  - name: Colin Eberhardt - ColinEberhardt
+    repo: 'https://bl.ocks.org/ColinEberhardt'
+    description: 'ColinEberhardt](https://bl.ocks.org/ColinEberhardt)'
+    category: bl.ocks.org profiles
+  - name: Harry Stevens - HarryStevens
+    repo: 'https://bl.ocks.org/HarryStevens'
+    description: 'HarryStevens](https://bl.ocks.org/HarryStevens)'
+    category: bl.ocks.org profiles
+  - name: Luis Sevillano - LuisSevillano
+    repo: 'https://bl.ocks.org/LuisSevillano'
+    description: 'LuisSevillano](https://bl.ocks.org/LuisSevillano)'
+    category: bl.ocks.org profiles
+  - name: Peter Cook - d3indepth
+    repo: 'https://bl.ocks.org/d3indepth'
+    description: 'd3indepth](https://bl.ocks.org/d3indepth)'
+    category: bl.ocks.org profiles
+  - name: Elijah Meeks - emeeks
+    repo: 'https://bl.ocks.org/emeeks'
+    description: 'emeeks](https://bl.ocks.org/emeeks)'
+    category: bl.ocks.org profiles
+  - name: Ian Johnson - enjalot
+    repo: 'https://bl.ocks.org/enjalot'
+    description: 'enjalot](https://bl.ocks.org/enjalot)'
+    category: bl.ocks.org profiles
+  - name: Philippe Rivière - fil
+    repo: 'https://bl.ocks.org/fil'
+    description: 'fil](https://bl.ocks.org/fil)'
+    category: bl.ocks.org profiles
+  - name: Mike Bostock - mbostock
+    repo: 'https://bl.ocks.org/mbostock'
+    description: 'mbostock](https://bl.ocks.org/mbostock)'
+    category: bl.ocks.org profiles
+  - name: Micah Stubbs - micahstubbs
+    repo: 'https://bl.ocks.org/micahstubbs'
+    description: 'micahstubbs](https://bl.ocks.org/micahstubbs)'
+    category: bl.ocks.org profiles
+  - name: Nadieh Bremer - nbremer
+    repo: 'https://bl.ocks.org/nbremer'
+    description: 'nbremer](https://bl.ocks.org/nbremer)'
+    category: bl.ocks.org profiles
+  - name: Matteo Abrate - nitaku
+    repo: 'https://bl.ocks.org/nitaku'
+    description: 'nitaku](https://bl.ocks.org/nitaku)'
+    category: bl.ocks.org profiles
+  - name: Susie Lu - susielu
+    repo: 'https://bl.ocks.org/susielu'
+    description: 'susielu](https://bl.ocks.org/susielu)'
+    category: bl.ocks.org profiles
+  - name: Shirley Wu - sxywu
+    repo: 'https://bl.ocks.org/sxywu'
+    description: 'sxywu](https://bl.ocks.org/sxywu)'
+    category: bl.ocks.org profiles
+  - name: Kai Chang - syntagmatic
+    repo: 'https://bl.ocks.org/syntagmatic'
+    description: 'syntagmatic](https://bl.ocks.org/syntagmatic)'
+    category: bl.ocks.org profiles
+  - name: Tom Shanley - tomshanley
+    repo: 'https://bl.ocks.org/tomshanley'
+    description: 'tomshanley](https://bl.ocks.org/tomshanley)'
+    category: bl.ocks.org profiles
+  - name: Vasco Asturiano - vasturiano
+    repo: 'https://bl.ocks.org/vasturiano'
+    description: 'vasturiano](https://bl.ocks.org/vasturiano)'
+    category: bl.ocks.org profiles
+  - name: Noah Veltman - veltman
+    repo: 'https://bl.ocks.org/veltman'
+    description: 'veltman](https://bl.ocks.org/veltman)'
+    category: bl.ocks.org profiles
+  - name: Zan Armstrong - zanarmstrong
+    repo: 'https://bl.ocks.org/zanarmstrong'
+    description: 'zanarmstrong](https://bl.ocks.org/zanarmstrong)'
+    category: bl.ocks.org profiles
