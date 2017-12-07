@@ -5,7 +5,7 @@ const path = require('path');
 const puppeteer = require('puppeteer');
 const devices = require('puppeteer/DeviceDescriptors');
 
-const dataPath = path.resolve(__dirname, '../static/data.json');
+const dataPath = path.resolve(__dirname, '../../static/data.json');
 const data = require(dataPath);
 
 let browser;
@@ -24,7 +24,7 @@ async function run(data, page, currentIndex) {
       await page.emulate(devices['iPhone 6 landscape']);
       await page.goto(url);
 
-      const filename = path.resolve(__dirname, `../images/${data[currentIndex].name}.jpeg`);
+      const filename = path.resolve(__dirname, `../../images/${data[currentIndex].name}.jpeg`);
 
       await page.screenshot({ path: filename, quality: 80 });
       run(data, page, currentIndex + 1);

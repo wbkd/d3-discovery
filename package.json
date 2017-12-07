@@ -9,7 +9,7 @@
     "start": "npm run dev",
     "lint": "eslint --ext .js,.vue src",
     "build": "node build/build.js",
-    "screens": "node scripts/crawlScreens.js"
+    "screens": "node src/scripts/crawlScreens.js"
   },
   "dependencies": {
     "axios": "^0.17.1",
