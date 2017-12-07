@@ -20,12 +20,12 @@
 
 <style scoped lang="stylus">
   .project-list
-    max-width: 960px
+    max-width: 980px
     margin: 0 auto
 
     display: grid
-    grid-template-columns: repeat(auto-fit, minmax(200px, max-content))
+    grid-template-columns: repeat(auto-fit, minmax(220px, max-content))
 
     justify-content: space-between
-    grid-gap: 1em
+    grid-gap: 1em 2em
 </style>

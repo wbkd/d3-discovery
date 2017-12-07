@@ -94,7 +94,7 @@
     display: flex
     justify-content: flex-start
     flex-flow: row nowrap
-    max-width: 960px
+    max-width: 980px
     margin: 0 auto
 
     color: #eee

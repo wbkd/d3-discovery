@@ -12,6 +12,7 @@ export default {
 </script>
 
 <style>
+  @import url('https://fonts.googleapis.com/css?family=Roboto');
   * {
     box-sizing: border-box;
   }
@@ -22,10 +23,12 @@ export default {
   }
 
   #app {
-    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    font-family: 'Roboto', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
-    color: #2c3e50;
+    color: #737373;
+    font-size: 16px;
+    line-height: 1.33;
   }
 </style>
