@@ -1,8 +1,11 @@
 <template>
   <div class="histogram">
     <div class="histogram-title">Test Histogram</div>
-    <div v-for="(bar, index) in dataHistogram">
-      <div class="bar" v-bind:style="{width: bar*5+'px'}">
+    <div class="bar-container" :style="{height: (Math.max(...dataHistogram)*heightFactor)+'px'}">
+      <div
+        v-for="(bar, index) in dataHistogram"
+        class="bar"
+        v-bind:style="{height: bar === 0 ? '1px' : bar*heightFactor+'px', left: index*1.8+'px'}">
         <!-- {{index + 1}}:{{bar}} -->
       </div>
     </div>
@@ -20,7 +23,8 @@
       return {
         bars: [1, 5, 1, 4, 5],
         max: 5,
-        min: 1
+        min: 1,
+        heightFactor: 4
       }
     },
     computed: {
@@ -46,8 +50,14 @@
   .histogram
     margin: 10px
 
-    .bar
-      height: 2px
-      background: black
-      font-size: 6px
+    .bar-container
+      position: relative
+
+      .bar
+        background: black
+        font-size: 6px
+        width: 1.8px
+        float: left
+        position: absolute
+        bottom: 0
 </style>
