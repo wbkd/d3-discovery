@@ -6,6 +6,7 @@
       :slider-value="this.sliderValue"
       :sort-stars="onSortStars"
       :update="onCheck"
+      :data="projects"
     />
     <div class="main__content">
       <Header :on-menu-button-click="onMenuButtonClick" :on-search-change="onSearchChange" :menu-open="menuOpen" />

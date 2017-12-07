@@ -15,7 +15,7 @@
           :options="options"
           :slider-update="this.sliderUpdate"
         />
-        <Histogram />
+        <Histogram :data="this.data" :max-value="sliderValue[1]" :min-value="sliderValue[0]" />
       </div>
     </nav>
   </transition>
@@ -35,6 +35,7 @@
       update: Function,
       menuOpen: Boolean,
       sliderValue: Array,
+      data: Array
     },
     components: {
       VueSlider,
