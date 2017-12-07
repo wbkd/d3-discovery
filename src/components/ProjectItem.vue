@@ -67,6 +67,8 @@
   .project__image
     max-width: 100%
     cursor: pointer
+    box-shadow: 0 1px 4px 0px rgba(0, 0, 0, 0.1)
+
 
   .project__stars
   .project__issues
@@ -80,7 +82,7 @@
     bottom: 15px
 
   .project__container
-    padding: 5px 15px 15px 15px
+    padding: 5px 10px 10px 10px
 
   .project__title
     font-size: 16px
@@ -95,6 +97,7 @@
   .project__latest
     display: flex
     justify-content: space-between
+    font-size: 12px
 
   .project__license
     margin-bottom: 10px
