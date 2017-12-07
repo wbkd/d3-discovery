@@ -33,7 +33,6 @@
   .header
     width: 100%
     padding: 1em 0
-    background-color: #343158
 
     display: flex
     justify-content: flex-start

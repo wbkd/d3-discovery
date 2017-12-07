@@ -42,6 +42,9 @@
         }
       },
       getFormattedDate() {
+        console.log('------------------------------------');
+        console.log(this.item);
+        console.log('------------------------------------');
         const day = new Date(Date.parse(this.item.lastUpdate)).getDay();
         const month = new Date(Date.parse(this.item.lastUpdate)).getMonth();
         const year = new Date(Date.parse(this.item.lastUpdate)).getFullYear();
@@ -60,6 +63,7 @@
     border-radius: 2px
     overflow: hidden
     font-size: 14px
+    max-width: 250px
 
   .project__image__wrapper
     position: relative
@@ -68,7 +72,6 @@
     max-width: 100%
     cursor: pointer
     box-shadow: 0 1px 4px 0px rgba(0, 0, 0, 0.1)
-
 
   .project__stars
   .project__issues

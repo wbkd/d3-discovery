@@ -2,9 +2,13 @@
   <transition name="slide">
     <nav class="menu" v-if="this.menuOpen">
       <div class="menu__inner">
-        <a class="menu-item menu-header">
-          <h1>D3 Discovery</h1>
-          <div>Finding D3 plugins with ease.</div>
+        <a class="menu-item menu__header">
+          <img class="menu__logo" src="../assets/tele.png" />
+          <div class="menu__header__wrapper">
+            <h1 class="menu__headline">D3 Discovery</h1>
+            <div class="menu__subheadline">Finding D3 plugins with ease.</div>
+          </div>
+
         </a>
 
         <SortButton :sort-stars="this.sortStars" :label="'Sort By Stars'" />
@@ -35,14 +39,14 @@
       update: Function,
       menuOpen: Boolean,
       sliderValue: Array,
-      data: Array
+      data: Array,
     },
     components: {
       VueSlider,
       SortButton,
       CheckBox,
       Slider,
-      Histogram
+      Histogram,
     },
     data() {
       return {
@@ -66,20 +70,35 @@
     bottom: 0
     z-index: 10
     width: 250px
-    background: #403A62
+    background: rgba(255, 255, 255, .05)
     color: #fff
     transition: all .4s cubic-bezier(0.770, 0.000, 0.175, 1.000)
 
-  .menu-header
-    padding: 2em 0
+  .menu__header
+    padding: 1em 0
     color: #fff
+    display: flex
+    flex-flow: row wrap
+    align-items: flex-end
+    text-align: left
 
-  h1
+  .menu__logo
+    width: 30%
+    height: auto
+    margin-right: 1em
+    align-self: baseline
+
+  .menu__header__wrapper
+    flex: 1 0 60%
+
+  .menu__headline
     margin: 0
+    text-shadow: 0 0 18px rgba(255,255,255,0.50)
 
-  .menu-item
-    display block
-
+  .menu__subheadline
+    font-size: 14px
+  .menu__inner
+    padding: 1em
   .slide-enter
     margin-left: -250px
 
@@ -95,10 +114,10 @@
   @media screen and (min-width: 786px)
     .menu
       position: relative
-      flex: 0 0 250px
       align-self: stretch
+      width: 320px
 
     .menu__inner
       position: fixed
-      width: 250px
+      width: 320px
 </style>

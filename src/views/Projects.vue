@@ -1,5 +1,6 @@
 <template>
   <div class="main" v-bind:class="{ 'main__menu--isvisible': menuOpen }">
+    <BackgroundItems />
     <Menu v-if="this.sliderValue"
       :menu-open="menuOpen"
       :slider-update="onSlide"
@@ -25,12 +26,14 @@
   import Menu from '../components/Menu';
   import Header from '../components/Header';
   import ProjectList from '../components/ProjectList';
+  import BackgroundItems from '../components/BackgroundItems';
 
   export default {
     components: {
       Menu,
       ProjectList,
       Header,
+      BackgroundItems,
     },
     data() {
       return {
@@ -85,7 +88,6 @@
 
 <style scoped lang='stylus'>
   .main__content
-    background-color: #343158
     position: relative
     min-height: 100vh
     padding: 1em

@@ -26,6 +26,6 @@
     display: grid
     grid-template-columns: repeat(auto-fit, minmax(220px, max-content))
 
-    justify-content: space-between
+    justify-content: start
     grid-gap: 1em 2em
 </style>
