@@ -1,14 +1,14 @@
 <template>
   <div class="main" v-bind:class="{ 'main__menu--isvisible': menuOpen }">
     <BackgroundItems />
-    <Menu v-if="this.sliderValue"
+    <!-- <Menu v-if="this.sliderValue"
       :menu-open="menuOpen"
       :slider-update="onSlide"
       :slider-value="this.sliderValue"
       :sort-stars="onSortStars"
       :update="onCheck"
       :data="projects"
-    />
+    /> -->
     <div class="main__content">
       <Header :on-menu-button-click="onMenuButtonClick" :on-search-change="onSearchChange" :menu-open="menuOpen" />
       <div class="content__info">
@@ -90,7 +90,6 @@
   .main__content
     position: relative
     min-height: 100vh
-    padding: 1em
     flex-grow: 1
 
   .content__info
