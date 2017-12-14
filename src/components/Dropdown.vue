@@ -2,7 +2,7 @@
   <v-select
     v-model="selected"
     :options="options"
-    searchable="false"
+    :searchable="false"
     placeholder="Latest Commits"
   ></v-select>
 </template>

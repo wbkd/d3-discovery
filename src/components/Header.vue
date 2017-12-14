@@ -23,7 +23,6 @@
   export default {
     props: {
       onMenuButtonClick: Function,
-      onSearchChange: Function,
       menuOpen: Boolean,
     },
     data() {

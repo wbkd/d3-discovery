@@ -3,13 +3,16 @@
     <BackgroundItems />
     <div class="main__content">
       <Header :on-menu-button-click="onMenuButtonClick" :on-search-change="onSearchChange" :menu-open="menuOpen" />
-        <Menu v-if="this.sliderValue"
+        <Menu v-if="this.sliderContributorValue.length"
           :menu-open="menuOpen"
-          :slider-update="onSlide"
-          :slider-value="this.sliderValue"
+          :slider-contributor-update="onSlideContributor"
+          :slider-contributor-value="this.sliderContributorValue"
+          :slider-stars-update="onSlideStars"
+          :slider-stars-value="this.sliderStarsValue"
           :sort-stars="onSortStars"
           :update="onCheck"
           :data="projects"
+          :on-search-change="onSearchChange"
         />
       <div class="content__info">
         <div class="info__filter">No filter selected</div>
@@ -41,7 +44,8 @@
         search: '',
         projects: [],
         checkLicense: false,
-        sliderValue: null,
+        sliderContributorValue: [],
+        sliderStarsValue: [],
         menuOpen: window.innerWidth > 768,
       };
     },
@@ -51,7 +55,8 @@
           this.projects = response.data;
           const max = Math.max(...this.projects.map(d => d.stars));
           const min = Math.min(...this.projects.map(d => d.stars));
-          this.sliderValue = [min, max];
+          this.sliderContributorValue = [min, max];
+          this.sliderStarsValue = [min, max];
         });
     },
     computed: {
@@ -62,7 +67,7 @@
         }).filter((project) => {
           if (!this.checkLicense) return true;
           return project.license === 'MIT License';
-        }).filter(project => project.stars > this.sliderValue[0] && project.stars < this.sliderValue[1],
+        }).filter(project => project.stars > this.sliderContributorValue[0] && project.stars < this.sliderContributorValue[1],
         );
       },
     },
@@ -76,8 +81,11 @@
       onCheck(input) {
         this.checkLicense = input;
       },
-      onSlide(value) {
-        this.sliderValue = value;
+      onSlideContributor(value) {
+        this.sliderContributorValue = value;
+      },
+      onSlideStars(value) {
+        this.sliderStarsValue = value;
       },
       onMenuButtonClick() {
         this.menuOpen = !this.menuOpen;

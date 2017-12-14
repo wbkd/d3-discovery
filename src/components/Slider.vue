@@ -1,6 +1,6 @@
 <template>
   <div class="slider">
-    <div class="slider-title">Titel</div>
+    <div class="slider-title">{{sliderTitle}}</div>
     <vue-slider v-model="value" v-bind="this.options" @input="onChange"></vue-slider>
     {{value}}
   </div>
