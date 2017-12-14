@@ -1,5 +1,5 @@
 <template>
-  <div class="menu-slider">
+  <div class="slider">
     <div class="slider-title">Titel</div>
     <vue-slider v-model="value" v-bind="this.options" @input="onChange"></vue-slider>
     {{value}}
@@ -33,6 +33,6 @@
 </script>
 
 <style scoped lang="stylus">
-  .menu-slider
-    margin: 10px
+  .slider
+    overflow: hidden
 </style>

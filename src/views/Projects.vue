@@ -1,16 +1,16 @@
 <template>
   <div class="main" v-bind:class="{ 'main__menu--isvisible': menuOpen }">
     <BackgroundItems />
-    <!-- <Menu v-if="this.sliderValue"
-      :menu-open="menuOpen"
-      :slider-update="onSlide"
-      :slider-value="this.sliderValue"
-      :sort-stars="onSortStars"
-      :update="onCheck"
-      :data="projects"
-    /> -->
     <div class="main__content">
       <Header :on-menu-button-click="onMenuButtonClick" :on-search-change="onSearchChange" :menu-open="menuOpen" />
+        <Menu v-if="this.sliderValue"
+          :menu-open="menuOpen"
+          :slider-update="onSlide"
+          :slider-value="this.sliderValue"
+          :sort-stars="onSortStars"
+          :update="onCheck"
+          :data="projects"
+        />
       <div class="content__info">
         <div class="info__filter">No filter selected</div>
         <div class="info__search">{{filteredProjects.length || 0}} plugins found</div>

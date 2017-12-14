@@ -12,22 +12,15 @@
         <button class="button__submit-new">Submit</button>
       </div>
     </div>
-    <!-- <Search :update="this.onSearchChange" /> -->
-
-    <!-- <div v-show="isVisible" class="button button__menu" v-bind:class="{ 'button__menu--active': this.menuOpen }" @click="this.onMenuButtonClick">
+     <!-- <div v-show="isVisible" class="button button__menu" v-bind:class="{ 'button__menu--active': this.menuOpen }" @click="this.onMenuButtonClick">
       <div class="button__menu__bar bar1"></div>
       <div class="button__menu__bar bar2"></div>
       <div class="button__menu__bar bar3"></div>
-    </div> -->
+    </div>  -->
   </div>
 </template>
 <script>
-  import Search from '../components/Search';
-
   export default {
-    components: {
-      Search,
-    },
     props: {
       onMenuButtonClick: Function,
       onSearchChange: Function,

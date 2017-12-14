@@ -18,6 +18,7 @@
     "stylus-loader": "^3.0.1",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1",
+    "vue-select": "^2.3.1",
     "vue-slider-component": "^2.4.7"
   },
   "devDependencies": {
