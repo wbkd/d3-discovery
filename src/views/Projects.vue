@@ -53,10 +53,15 @@
       axios.get('../../static/data.json')
         .then((response) => {
           this.projects = response.data;
-          const max = Math.max(...this.projects.map(d => d.stars));
-          const min = Math.min(...this.projects.map(d => d.stars));
-          this.sliderContributorValue = [min, max];
-          this.sliderStarsValue = [min, max];
+
+          // REFACTOR: use contributors instead of watchers value
+          const maxContributors = Math.max(...this.projects.map(d => d.watchers));
+          const minContributors = Math.min(...this.projects.map(d => d.watchers));
+
+          const maxStars = Math.max(...this.projects.map(d => d.stars));
+          const minStars = Math.min(...this.projects.map(d => d.stars));
+          this.sliderContributorValue = [minContributors, maxContributors];
+          this.sliderStarsValue = [minStars, maxStars];
         });
     },
     computed: {
@@ -64,11 +69,17 @@
         return this.projects.filter((project) => {
           const inDescr = project.description ? project.description.toLowerCase().indexOf(this.search.toLowerCase()) > -1 : false;
           return project.name.toLowerCase().indexOf(this.search.toLowerCase()) > -1 || inDescr;
-        }).filter((project) => {
+        })
+        .filter((project) => {
           if (!this.checkLicense) return true;
           return project.license === 'MIT License';
-        }).filter(project => project.stars > this.sliderContributorValue[0] && project.stars < this.sliderContributorValue[1],
-        );
+        })
+        .filter((project) => {
+          return project.stars > this.sliderStarsValue[0] && project.stars < this.sliderStarsValue[1];
+        })
+        .filter((project) => {
+          return project.watchers > this.sliderContributorValue[0] && project.watchers < this.sliderContributorValue[1];
+        });
       },
     },
     methods: {

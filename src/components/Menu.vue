@@ -56,7 +56,6 @@
           options: {
             min: this.sliderContributorValue[0],
             max: this.sliderContributorValue[1],
-            tooltip: false,
           },
         },
         stars: {
@@ -64,7 +63,6 @@
           options: {
             min: this.sliderStarsValue[0],
             max: this.sliderStarsValue[1],
-            tooltip: false,
           },
         },
         width: 'auto',

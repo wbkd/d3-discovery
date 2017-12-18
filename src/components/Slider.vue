@@ -1,8 +1,12 @@
 <template>
   <div class="slider">
-    <div class="slider-title">{{sliderTitle}}</div>
-    <vue-slider v-model="value" v-bind="this.options" @input="onChange"></vue-slider>
-    {{value}}
+    <div class="slider__title">{{sliderTitle}}</div>
+    <vue-slider
+      v-model="value"
+      v-bind="Object.assign(this.options, this.styles)"
+      @input="onChange"
+    >
+    </vue-slider>
   </div>
 </template>
 
@@ -22,6 +26,22 @@
     data() {
       return {
         value: this.sliderValue,
+        styles: {
+          dotSize: 12,
+          tooltipDir: ['bottom', 'bottom'],
+          tooltipStyle: {
+            background: 'none',
+            border: 'none',
+            color: '#CED6DC',
+          },
+          bgStyle: {
+            backgroundColor: '#49426D',
+            boxShadow: 'inset 0.2px 0.2px 2px 0px rgba(255, 255, 255 , .5)',
+          },
+          processStyle: {
+            backgroundColor: '#49426D',
+          },
+        },
       };
     },
     methods: {
@@ -34,5 +54,8 @@
 
 <style scoped lang="stylus">
   .slider
-    overflow: hidden
+    padding-bottom: 2em
+  .slider__title
+    color: #CED6DC
+    text-align: left
 </style>
