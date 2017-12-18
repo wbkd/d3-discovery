@@ -42,10 +42,10 @@
       />
       <Dropdown class="menu__item"
         :dropdown-title="'License'"
-        :value="this.activeUpdateFilter"
+        :value="this.activeLicenseFilter"
         :placeholder="'Any license'"
-        :options="this.latestUpdateOptions"
-        :on-change="this.onSelectLatestUpdate"
+        :options="this.licenseOptions"
+        :on-change="this.onLicenseFilterChanged"
       />
 
     </div>
@@ -71,6 +71,9 @@
       onSelectLatestUpdate: Function,
       activeUpdateFilter: String,
       latestUpdateOptions: Array,
+      onLicenseFilterChanged: Function,
+      licenseOptions: Array,
+      activeLicenseFilter: String,
     },
     components: {
       VueSlider,

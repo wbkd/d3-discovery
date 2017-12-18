@@ -16,9 +16,12 @@
           :on-select-latest-update="onSelectLatestUpdate"
           :active-update-filter="this.activeUpdateFilter"
           :latest-update-options="Object.keys(this.latestUpdateFilterList)"
+          :active-license-filter="this.activeLicenseFilter"
+          :license-options="this.licenseFilters"
+          :on-license-filter-changed="onSelectLicense"
         />
       <div class="content__info">
-        <div class="info__filter">No filter selected</div>
+        <div class="info__filter">{{`${activeFilter.size} filter selected`}}</div>
         <div class="info__search">{{filteredProjects.length || 0}} plugins found</div>
       </div>
       <ProjectList :projects="filteredProjects" />
@@ -50,13 +53,14 @@
         sliderContributorValue: [],
         sliderStarsValue: [],
         latestUpdateFilterList: {
-          'Any Time': 0,
           'This week': 604800000,
           'This month': 2628000000,
           'This year': 31536000000,
-        }, // ms for applying filters
+        }, // in ms
         activeUpdateFilter: '',
-        activeFilter: [],
+        licenseFilters: [],
+        activeLicenseFilter: '',
+        activeFilter: new Set(),
         menuOpen: window.innerWidth > 768,
       };
     },
@@ -75,6 +79,11 @@
           const minStars = Math.min(...this.projects.map(d => d.stars));
           this.sliderContributorValue = [minContributors, maxContributors];
           this.sliderStarsValue = [minStars, maxStars];
+
+          this.licenseFilters = this.projects.map(d => d.license).reduce((res, license) => {
+            if (res.indexOf(license) === -1 && license !== null) res.push(license);
+            return res;
+          }, []);
         });
     },
     computed: {
@@ -84,22 +93,22 @@
           return project.name.toLowerCase().indexOf(this.search.toLowerCase()) > -1 || inDescr;
         })
         .filter((project) => {
-          if (!this.checkLicense) return true;
-          return project.license === 'MIT License';
-        })
-        .filter((project) => {
           return project.stars > this.sliderStarsValue[0] && project.stars < this.sliderStarsValue[1];
         })
         .filter((project) => {
           return project.watchers > this.sliderContributorValue[0] && project.watchers < this.sliderContributorValue[1];
         })
         .filter((project) => {
-          if (!this.activeUpdateFilter || this.activeUpdateFilter === 'Any Time') return true;
+          if (!this.activeUpdateFilter) return true;
 
           const now = Date.now();
           const projectUpdate = Date.parse(project.lastUpdate);
           const diff = Math.abs(now - projectUpdate);
           return diff < this.latestUpdateFilterList[this.activeUpdateFilter];
+        })
+        .filter((project) => {
+          if (!this.activeLicenseFilter) return true;
+          return project.license === this.activeLicenseFilter;
         });
       },
     },
@@ -123,8 +132,22 @@
         this.menuOpen = !this.menuOpen;
       },
       onSelectLatestUpdate(event) {
+        if (event.target.value !== '' && !this.activeFilter.has('latestUpdate')) {
+          this.activeFilter.add('latestUpdate');
+        } else {
+          this.activeFilter.delete('latestUpdate');
+        }
+
         this.activeUpdateFilter = event.target.value;
       },
+      onSelectLicense(event) {
+        if (event.target.value !== '' && !this.activeFilter.has('licenseFilter')) {
+          this.activeFilter.add('licenseFilter');
+        } else {
+          this.activeFilter.delete('licenseFilter');
+        }
+        this.activeLicenseFilter = event.target.value;
+      }
     },
   };
 </script>

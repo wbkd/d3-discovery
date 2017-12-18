@@ -2,7 +2,8 @@
   <div class="dropdown">
     <div class="dropdown__title">{{dropdownTitle}}</div>
     <div class="dropdown__select">
-      <select @change="this.onChange" v-model="selected" :placeholder="placeholder">
+      <select @change="this.onChange" v-model="selected">
+        <option value="">{{this.placeholder}}</option>
         <option v-for="option in this.options" :key="option">
           {{ option }}
         </option>
