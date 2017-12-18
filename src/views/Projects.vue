@@ -13,6 +13,9 @@
           :update="onCheck"
           :data="projects"
           :on-search-change="onSearchChange"
+          :on-select-latest-update="onSelectLatestUpdate"
+          :active-update-filter="this.activeUpdateFilter"
+          :latest-update-options="Object.keys(this.latestUpdateFilterList)"
         />
       <div class="content__info">
         <div class="info__filter">No filter selected</div>
@@ -46,6 +49,14 @@
         checkLicense: false,
         sliderContributorValue: [],
         sliderStarsValue: [],
+        latestUpdateFilterList: {
+          'Any Time': 0,
+          'This week': 604800000,
+          'This month': 2628000000,
+          'This year': 31536000000,
+        }, // ms for applying filters
+        activeUpdateFilter: '',
+        activeFilter: [],
         menuOpen: window.innerWidth > 768,
       };
     },
@@ -53,7 +64,9 @@
       axios.get('../../static/data.json')
         .then((response) => {
           this.projects = response.data;
-
+          console.log('------------------------------------');
+          console.log(this.projects);
+          console.log('------------------------------------');
           // REFACTOR: use contributors instead of watchers value
           const maxContributors = Math.max(...this.projects.map(d => d.watchers));
           const minContributors = Math.min(...this.projects.map(d => d.watchers));
@@ -63,6 +76,9 @@
           this.sliderContributorValue = [minContributors, maxContributors];
           this.sliderStarsValue = [minStars, maxStars];
         });
+    },
+    filter: {
+
     },
     computed: {
       filteredProjects() {
@@ -79,6 +95,14 @@
         })
         .filter((project) => {
           return project.watchers > this.sliderContributorValue[0] && project.watchers < this.sliderContributorValue[1];
+        })
+        .filter((project) => {
+          if (!this.activeUpdateFilter || this.activeUpdateFilter === 'Any Time') return true;
+
+          const now = Date.now();
+          const projectUpdate = Date.parse(project.lastUpdate);
+          const diff = Math.abs(now - projectUpdate);
+          return diff < this.latestUpdateFilterList[this.activeUpdateFilter];
         });
       },
     },
@@ -100,6 +124,9 @@
       },
       onMenuButtonClick() {
         this.menuOpen = !this.menuOpen;
+      },
+      onSelectLatestUpdate(value) {
+        this.activeUpdateFilter = value;
       },
     },
   };

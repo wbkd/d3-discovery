@@ -18,10 +18,36 @@
         :options="stars.options"
         :slider-update="this.sliderStarsUpdate"
       />
-      <Dropdown class="menu__item" />
-      <Dropdown class="menu__item" />
-      <Dropdown class="menu__item" />
-      <Dropdown class="menu__item" />
+
+      <Dropdown class="menu__item"
+        :dropdown-title="'Latest Update:'"
+        :value="this.activeUpdateFilter"
+        :placeholder="'Any time'"
+        :options="this.latestUpdateOptions"
+        :on-change="this.onSelectLatestUpdate"
+      />
+      <Dropdown class="menu__item"
+        :dropdown-title="'Category:'"
+        :value="this.activeUpdateFilter"
+        :placeholder="'All Categories'"
+        :options="this.latestUpdateOptions"
+        :on-change="this.onSelectLatestUpdate"
+      />
+      <Dropdown class="menu__item"
+        :dropdown-title="'Version'"
+        :value="this.activeUpdateFilter"
+        :placeholder="'All versions'"
+        :options="this.latestUpdateOptions"
+        :on-change="this.onSelectLatestUpdate"
+      />
+      <Dropdown class="menu__item"
+        :dropdown-title="'License'"
+        :value="this.activeUpdateFilter"
+        :placeholder="'Any license'"
+        :options="this.latestUpdateOptions"
+        :on-change="this.onSelectLatestUpdate"
+      />
+
     </div>
   </div>
 </template>
@@ -42,6 +68,9 @@
       update: Function,
       menuOpen: Boolean,
       data: Array,
+      onSelectLatestUpdate: Function,
+      activeUpdateFilter: String,
+      latestUpdateOptions: Array,
     },
     components: {
       VueSlider,

@@ -58,4 +58,7 @@
   .slider__title
     color: #CED6DC
     text-align: left
+
+  .slider >>> .vue-slider-tooltip:before
+    display: none
 </style>
