@@ -77,9 +77,6 @@
           this.sliderStarsValue = [minStars, maxStars];
         });
     },
-    filter: {
-
-    },
     computed: {
       filteredProjects() {
         return this.projects.filter((project) => {
@@ -125,8 +122,8 @@
       onMenuButtonClick() {
         this.menuOpen = !this.menuOpen;
       },
-      onSelectLatestUpdate(value) {
-        this.activeUpdateFilter = value;
+      onSelectLatestUpdate(event) {
+        this.activeUpdateFilter = event.target.value;
       },
     },
   };
