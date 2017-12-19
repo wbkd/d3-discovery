@@ -21,7 +21,7 @@
           :on-license-filter-changed="onSelectLicense"
         />
       <div class="content__info">
-        <div class="info__filter">{{`${activeFilter.size} filter selected`}}</div>
+        <div class="info__filter">{{activeFilter.size ? `${activeFilter.size} filter selected`: ''}}</div>
         <div class="info__search">{{filteredProjects.length || 0}} plugins found</div>
       </div>
       <ProjectList :projects="filteredProjects" />
@@ -147,7 +147,7 @@
           this.activeFilter.delete('licenseFilter');
         }
         this.activeLicenseFilter = event.target.value;
-      }
+      },
     },
   };
 </script>
