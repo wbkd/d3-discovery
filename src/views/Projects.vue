@@ -45,6 +45,8 @@
   import BackgroundItems from '../components/BackgroundItems';
   import Modal from '../components/Modal';
 
+  import { inRange, byDate, searchBy } from '../utils/filter';
+
   export default {
     components: {
       Menu,
@@ -93,28 +95,12 @@
     },
     computed: {
       filteredProjects() {
-        return this.projects.filter((project) => {
-          const inDescr = project.description ? project.description.toLowerCase().indexOf(this.search.toLowerCase()) > -1 : false;
-          return project.name.toLowerCase().indexOf(this.search.toLowerCase()) > -1 || inDescr;
-        })
-        .filter((project) => {
-          return project.stars > this.sliderStarsValue[0] && project.stars < this.sliderStarsValue[1];
-        })
-        .filter((project) => {
-          return project.watchers > this.sliderContributorValue[0] && project.watchers < this.sliderContributorValue[1];
-        })
-        .filter((project) => {
-          if (!this.activeUpdateFilter) return true;
-
-          const now = Date.now();
-          const projectUpdate = Date.parse(project.lastUpdate);
-          const diff = Math.abs(now - projectUpdate);
-          return diff < this.latestUpdateFilterList[this.activeUpdateFilter];
-        })
-        .filter((project) => {
-          if (!this.activeLicenseFilter) return true;
-          return project.license === this.activeLicenseFilter;
-        });
+        const now = Date.now();
+        return this.projects.filter(project => !this.search || searchBy(this.search, [project.description, project.name, project.license]))
+          .filter(project => inRange(project.stars, this.sliderStarsValue[0], this.sliderStarsValue[1]))
+          .filter(project => inRange(project.watchers, this.sliderContributorValue[0], this.sliderContributorValue[1]))
+          .filter(project => !this.activeUpdateFilter || byDate(now, project.lastUpdate, this.latestUpdateFilterList[this.activeUpdateFilter]))
+          .filter(project => !this.activeLicenseFilter || project.license === this.activeLicenseFilter);
       },
     },
     methods: {
