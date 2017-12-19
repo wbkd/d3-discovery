@@ -36,10 +36,10 @@
           },
           bgStyle: {
             backgroundColor: '#49426D',
-            boxShadow: 'inset 0.2px 0.2px 2px 0px rgba(255, 255, 255 , .5)',
           },
           processStyle: {
             backgroundColor: '#49426D',
+            boxShadow: 'inset 0.2px 0.2px 2px 0px rgba(255, 255, 255 , .5)',
           },
         },
       };
