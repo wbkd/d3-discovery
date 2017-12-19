@@ -9,7 +9,7 @@
           </div>
         </div>
       <div class="header__buttons">
-        <button class="button__submit-new">Submit</button>
+        <button class="button__submit-new" @click="this.onSubmit">+ Submit</button>
       </div>
     </div>
      <!-- <div v-show="isVisible" class="button button__menu" v-bind:class="{ 'button__menu--active': this.menuOpen }" @click="this.onMenuButtonClick">
@@ -24,6 +24,7 @@
     props: {
       onMenuButtonClick: Function,
       menuOpen: Boolean,
+      onSubmit: Function,
     },
     data() {
       return {
@@ -78,10 +79,23 @@
   .button__submit-new
     padding: 0.4em 1em
     background: rgba(225,193,225,0.08)
+    box-shadow: 0px 0px 4px 1px rgba(0,0,0,.2)
     font-size: 14px
+    font-weight: bold
     color: #B2B7C5
-    border: 1px solid rgba(255,255,255,0.20)
-    border-radius: 100px
+    border: none
+    border-radius: 50px
+    transition: all .3s ease
+    cursor: pointer
+
+    &:hover
+      box-shadow: 0px 0px 4px 1px rgba(255,255,255,0.2)
+
+    &:focus
+      outline: none
+
+    &:active
+      background: #38345D
 </style>
 
 

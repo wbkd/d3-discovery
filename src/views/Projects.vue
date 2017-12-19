@@ -1,25 +1,32 @@
 <template>
   <div class="main" v-bind:class="{ 'main__menu--isvisible': menuOpen }">
     <BackgroundItems />
+    <Modal :is-modal-visible="isModalVisible" :on-click="closeModal" />
     <div class="main__content">
-      <Header :on-menu-button-click="onMenuButtonClick" :on-search-change="onSearchChange" :menu-open="menuOpen" />
-        <Menu v-if="this.sliderContributorValue.length"
-          :menu-open="menuOpen"
-          :slider-contributor-update="onSlideContributor"
-          :slider-contributor-value="this.sliderContributorValue"
-          :slider-stars-update="onSlideStars"
-          :slider-stars-value="this.sliderStarsValue"
-          :sort-stars="onSortStars"
-          :update="onCheck"
-          :data="projects"
-          :on-search-change="onSearchChange"
-          :on-select-latest-update="onSelectLatestUpdate"
-          :active-update-filter="this.activeUpdateFilter"
-          :latest-update-options="Object.keys(this.latestUpdateFilterList)"
-          :active-license-filter="this.activeLicenseFilter"
-          :license-options="this.licenseFilters"
-          :on-license-filter-changed="onSelectLicense"
-        />
+      <Header
+        :on-menu-button-click="onMenuButtonClick"
+        :on-search-change="onSearchChange"
+        :menu-open="menuOpen"
+        :is-modal-visible="isModalVisible"
+        :on-submit="showModal"
+      />
+      <Menu v-if="sliderContributorValue.length"
+        :menu-open="menuOpen"
+        :slider-contributor-update="onSlideContributor"
+        :slider-contributor-value="sliderContributorValue"
+        :slider-stars-update="onSlideStars"
+        :slider-stars-value="sliderStarsValue"
+        :sort-stars="onSortStars"
+        :update="onCheck"
+        :data="projects"
+        :on-search-change="onSearchChange"
+        :on-select-latest-update="onSelectLatestUpdate"
+        :active-update-filter="activeUpdateFilter"
+        :latest-update-options="Object.keys(this.latestUpdateFilterList)"
+        :active-license-filter="activeLicenseFilter"
+        :license-options="licenseFilters"
+        :on-license-filter-changed="onSelectLicense"
+      />
       <div class="content__info">
         <div class="info__filter">{{activeFilter.size ? `${activeFilter.size} filter selected`: ''}}</div>
         <div class="info__search">{{filteredProjects.length || 0}} plugins found</div>
@@ -36,6 +43,7 @@
   import Header from '../components/Header';
   import ProjectList from '../components/ProjectList';
   import BackgroundItems from '../components/BackgroundItems';
+  import Modal from '../components/Modal';
 
   export default {
     components: {
@@ -43,13 +51,14 @@
       ProjectList,
       Header,
       BackgroundItems,
+      Modal,
     },
     data() {
       return {
-        sort: null,
-        search: '',
+        menuOpen: false,
+        isModalVisible: false,
         projects: [],
-        checkLicense: false,
+        search: '',
         sliderContributorValue: [],
         sliderStarsValue: [],
         latestUpdateFilterList: {
@@ -61,16 +70,12 @@
         licenseFilters: [],
         activeLicenseFilter: '',
         activeFilter: new Set(),
-        menuOpen: window.innerWidth > 768,
       };
     },
     mounted() {
       axios.get('../../static/data.json')
         .then((response) => {
           this.projects = response.data;
-          console.log('------------------------------------');
-          console.log(this.projects);
-          console.log('------------------------------------');
           // REFACTOR: use contributors instead of watchers value
           const maxContributors = Math.max(...this.projects.map(d => d.watchers));
           const minContributors = Math.min(...this.projects.map(d => d.watchers));
@@ -147,6 +152,12 @@
           this.activeFilter.delete('licenseFilter');
         }
         this.activeLicenseFilter = event.target.value;
+      },
+      showModal() {
+        this.isModalVisible = true;
+      },
+      closeModal() {
+        this.isModalVisible = false;
       },
     },
   };
