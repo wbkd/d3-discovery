@@ -96,11 +96,17 @@
     computed: {
       filteredProjects() {
         const now = Date.now();
-        return this.projects.filter(project => !this.search || searchBy(this.search, [project.description, project.name, project.license]))
-          .filter(project => inRange(project.stars, this.sliderStarsValue[0], this.sliderStarsValue[1]))
-          .filter(project => inRange(project.watchers, this.sliderContributorValue[0], this.sliderContributorValue[1]))
-          .filter(project => !this.activeUpdateFilter || byDate(now, project.lastUpdate, this.latestUpdateFilterList[this.activeUpdateFilter]))
-          .filter(project => !this.activeLicenseFilter || project.license === this.activeLicenseFilter);
+        return this.projects.filter(project =>
+          !this.search || searchBy(this.search, [project.description, project.name, project.license]))
+          .filter(project =>
+            inRange(project.stars, this.sliderStarsValue[0], this.sliderStarsValue[1]))
+          .filter(project =>
+            inRange(project.watchers, this.sliderContributorValue[0], this.sliderContributorValue[1]))
+          .filter(project =>
+            !this.activeUpdateFilter
+            || byDate(now, project.lastUpdate, this.latestUpdateFilterList[this.activeUpdateFilter]))
+          .filter(project =>
+            !this.activeLicenseFilter || project.license === this.activeLicenseFilter);
       },
     },
     methods: {

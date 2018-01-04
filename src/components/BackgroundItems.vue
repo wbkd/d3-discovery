@@ -27,11 +27,7 @@
 </template>
 
 <script>
-
   export default {
-    props: {
-      items: Array,
-    },
     methods: {
       randomNumber(min, max) {
         return (Math.random() * (max - min)) + min;
