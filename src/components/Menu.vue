@@ -1,60 +1,101 @@
 <template>
-  <transition name="slide">
-    <nav class="menu" v-if="this.menuOpen">
-      <div class="menu__inner">
-        <a class="menu-item menu__header">
-          <img class="menu__logo" src="../assets/tele.png" />
-          <div class="menu__header__wrapper">
-            <h1 class="menu__headline">D3 Discovery</h1>
-            <div class="menu__subheadline">Finding D3 plugins with ease.</div>
-          </div>
+  <div class="menu">
+    <div class="menu__inner">
+      <Search class="menu__item" :update="this.onSearchChange" />
 
-        </a>
+      <Slider
+        class="menu__item"
+        :slider-title="'Contributors:'"
+        :slider-value="contributor.value"
+        :options="contributor.options"
+        :slider-update="this.sliderContributorUpdate"
+      />
 
-        <SortButton :sort-stars="this.sortStars" :label="'Sort By Stars'" />
-        <CheckBox :update="this.update" />
-        <Slider
-          :slider-title="'Filter by Stars...'"
-          :slider-value="value"
-          :options="options"
-          :slider-update="this.sliderUpdate"
-        />
-        <Histogram :data="this.data" :max-value="sliderValue[1]" :min-value="sliderValue[0]" />
-      </div>
-    </nav>
-  </transition>
+       <Slider
+        class="menu__item"
+        :slider-title="'Stars:'"
+        :slider-value="stars.value"
+        :options="stars.options"
+        :slider-update="this.sliderStarsUpdate"
+      />
+
+      <Dropdown class="menu__item"
+        :dropdown-title="'Latest Update:'"
+        :value="this.activeUpdateFilter"
+        :placeholder="'Any time'"
+        :options="this.latestUpdateOptions"
+        :on-change="this.onSelectLatestUpdate"
+      />
+      <Dropdown class="menu__item"
+        :dropdown-title="'Category:'"
+        :value="this.activeUpdateFilter"
+        :placeholder="'All Categories'"
+        :options="this.latestUpdateOptions"
+        :on-change="this.onSelectLatestUpdate"
+      />
+      <Dropdown class="menu__item"
+        :dropdown-title="'Version'"
+        :value="this.activeUpdateFilter"
+        :placeholder="'All versions'"
+        :options="this.latestUpdateOptions"
+        :on-change="this.onSelectLatestUpdate"
+      />
+      <Dropdown class="menu__item"
+        :dropdown-title="'License'"
+        :value="this.activeLicenseFilter"
+        :placeholder="'Any license'"
+        :options="this.licenseOptions"
+        :on-change="this.onLicenseFilterChanged"
+      />
+
+    </div>
+  </div>
 </template>
 
 <script>
   import VueSlider from 'vue-slider-component';
-  import SortButton from './SortButton';
-  import CheckBox from './CheckBox';
   import Slider from './Slider';
-  import Histogram from './Histogram';
+  import Search from '../components/Search';
+  import Dropdown from '../components/Dropdown';
 
   export default {
     props: {
-      sliderUpdate: Function,
-      sortStars: Function,
+      sliderContributorUpdate: Function,
+      sliderContributorValue: Array,
+      sliderStarsUpdate: Function,
+      sliderStarsValue: Array,
+      onSearchChange: Function,
       update: Function,
       menuOpen: Boolean,
-      sliderValue: Array,
       data: Array,
+      onSelectLatestUpdate: Function,
+      activeUpdateFilter: String,
+      latestUpdateOptions: Array,
+      onLicenseFilterChanged: Function,
+      licenseOptions: Array,
+      activeLicenseFilter: String,
     },
     components: {
       VueSlider,
-      SortButton,
-      CheckBox,
       Slider,
-      Histogram,
+      Search,
+      Dropdown,
     },
     data() {
       return {
-        value: this.sliderValue,
-        options: {
-          min: this.sliderValue[0],
-          max: this.sliderValue[1],
-          tooltip: false,
+        contributor: {
+          value: this.sliderContributorValue,
+          options: {
+            min: this.sliderContributorValue[0],
+            max: this.sliderContributorValue[1],
+          },
+        },
+        stars: {
+          value: this.sliderStarsValue,
+          options: {
+            min: this.sliderStarsValue[0],
+            max: this.sliderStarsValue[1],
+          },
         },
         width: 'auto',
       };
@@ -64,60 +105,17 @@
 
 <style scoped lang="stylus">
   .menu
-    position: fixed
-    top: 0
-    left: 0
-    bottom: 0
+    position: relative
+    margin: 0 auto
     z-index: 10
-    width: 250px
-    background: rgba(255, 255, 255, .05)
-    color: #fff
-    transition: all .4s cubic-bezier(0.770, 0.000, 0.175, 1.000)
+    width: 100%
+    max-width: 980px
 
-  .menu__header
-    padding: 1em 0
-    color: #fff
-    display: flex
-    flex-flow: row wrap
-    align-items: flex-end
-    text-align: left
-
-  .menu__logo
-    width: 30%
-    height: auto
-    margin-right: 1em
-    align-self: baseline
-
-  .menu__header__wrapper
-    flex: 1 0 60%
-
-  .menu__headline
-    margin: 0
-    text-shadow: 0 0 18px rgba(255,255,255,0.50)
-
-  .menu__subheadline
-    font-size: 14px
   .menu__inner
-    padding: 1em
-  .slide-enter
-    margin-left: -250px
+    padding: 1em 0
 
-  .slide-enter-active
-    margin-left: 0px
-
-  .slide-leave-to
-    margin-left: -250px
-
-  .slide-leave-active
-    margin-left: -250px
-
-  @media screen and (min-width: 786px)
-    .menu
-      position: relative
-      align-self: stretch
-      width: 320px
-
-    .menu__inner
-      position: fixed
-      width: 320px
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    grid-gap: 1em 2em
+    align-items: center
 </style>

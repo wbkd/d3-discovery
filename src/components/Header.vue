@@ -1,25 +1,30 @@
 <template>
   <div class="header">
-    <Search :update="this.onSearchChange" />
-
-    <div v-show="isVisible" class="button button__menu" v-bind:class="{ 'button__menu--active': this.menuOpen }" @click="this.onMenuButtonClick">
+    <div class="header__content">
+      <div class="header__logo">
+          <img class="logo__image" src="../assets/tele.png" />
+          <div class="logo__wrapper">
+            <div class="logo__headline">D3 Discovery</div>
+            <div class="logo__subheadline">Finding D3 plugins with ease.</div>
+          </div>
+        </div>
+      <div class="header__buttons">
+        <button class="button__submit-new" @click="this.onSubmit">+ Submit</button>
+      </div>
+    </div>
+     <!-- <div v-show="isVisible" class="button button__menu" v-bind:class="{ 'button__menu--active': this.menuOpen }" @click="this.onMenuButtonClick">
       <div class="button__menu__bar bar1"></div>
       <div class="button__menu__bar bar2"></div>
       <div class="button__menu__bar bar3"></div>
-    </div>
+    </div>  -->
   </div>
 </template>
 <script>
-  import Search from '../components/Search';
-
   export default {
-    components: {
-      Search,
-    },
     props: {
       onMenuButtonClick: Function,
-      onSearchChange: Function,
       menuOpen: Boolean,
+      onSubmit: Function,
     },
     data() {
       return {
@@ -33,32 +38,64 @@
   .header
     width: 100%
     padding: 1em 0
+    margin: 0 auto
 
+    background-color: rgba(225, 193, 225, .08)
+
+  .header__content
+    max-width: 980px
+    margin: 0 auto
     display: flex
-    justify-content: flex-start
-    align-items center
+    flex-flow: row nowrap
 
-  .button__menu
-    flex: 0 0 auto
+  .header__logo
+    width: 50%
+    display: flex
+    flex-flow: row nowrap
+    align-items: flex-end
+    text-align: left
 
-    display: inline-block
+  .logo__image
+    width: 80px
+    align-self: baseline
+
+  .logo__wrapper
+    flex: 0 0 60%
+
+  .logo__headline
+    font-size: 26px
+    color: #fff
+    text-shadow: 0 0 4px rgba(255,255,255,0.50)
+
+  .logo__subheadline
+    color: #fff
+
+  .header__buttons
+    width: 50%
+    display: flex
+    justify-content: flex-end
+    align-items: center
+
+  .button__submit-new
+    padding: 0.4em 1em
+    background: rgba(225,193,225,0.08)
+    box-shadow: 0px 0px 4px 1px rgba(0,0,0,.2)
+    font-size: 14px
+    font-weight: bold
+    color: #B2B7C5
+    border: none
+    border-radius: 50px
+    transition: all .3s ease
     cursor: pointer
 
-  .button__menu__bar
-    width: 30px
-    height: 3px
-    background-color: #eee
-    margin: 6px 0
-    transition: 0.4s
+    &:hover
+      box-shadow: 0px 0px 4px 1px rgba(255,255,255,0.2)
 
-  .button__menu--active
-    .bar1
-      transform: rotate(-45deg) translate(-5px, 6px)
-    .bar2
-      opacity: 0
-    .bar3
-      transform: rotate(45deg) translate(-7px, -8px)
+    &:focus
+      outline: none
 
+    &:active
+      background: #38345D
 </style>
 
 

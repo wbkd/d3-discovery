@@ -42,9 +42,6 @@
         }
       },
       getFormattedDate() {
-        console.log('------------------------------------');
-        console.log(this.item);
-        console.log('------------------------------------');
         const day = new Date(Date.parse(this.item.lastUpdate)).getDay();
         const month = new Date(Date.parse(this.item.lastUpdate)).getMonth();
         const year = new Date(Date.parse(this.item.lastUpdate)).getFullYear();
