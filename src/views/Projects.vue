@@ -16,7 +16,6 @@
         :slider-contributor-value="sliderContributorValue"
         :slider-stars-update="onSlideStars"
         :slider-stars-value="sliderStarsValue"
-        :sort-stars="onSortStars"
         :update="onCheck"
         :data="projects"
         :on-search-change="onSearchChange"
@@ -28,7 +27,10 @@
         :on-license-filter-changed="onSelectLicense"
       />
       <div class="content__info">
-        <div class="info__filter">{{activeFilter.size ? `${activeFilter.size} filter selected`: ''}}</div>
+        <div class="info__sort">
+          <SortButton :label="'name'" :handler="(val) => this.onSortBy(val, 'string')" :sort-key="'name'" v-bind:is-active="this.activeSortKey === 'name'" />
+          <SortButton :label="'stars'" :handler="(val) => this.onSortBy(val, 'number')" :sort-key="'stars'" v-bind:is-active="this.activeSortKey === 'stars'" />
+        </div>
         <div class="info__search">{{filteredProjects.length || 0}} plugins found</div>
       </div>
       <ProjectList :projects="filteredProjects" />
@@ -44,6 +46,7 @@
   import ProjectList from '../components/ProjectList';
   import BackgroundItems from '../components/BackgroundItems';
   import Modal from '../components/Modal';
+  import SortButton from '../components/SortButton';
 
   import { inRange, byDate, searchBy } from '../utils/filter';
 
@@ -54,6 +57,7 @@
       Header,
       BackgroundItems,
       Modal,
+      SortButton,
     },
     data() {
       return {
@@ -72,6 +76,8 @@
         licenseFilters: [],
         activeLicenseFilter: '',
         activeFilter: new Set(),
+        sortAsc: true,
+        activeSortKey: null,
       };
     },
     mounted() {
@@ -110,8 +116,29 @@
       },
     },
     methods: {
-      onSortStars() {
-        this.projects.sort((a, b) => b.stars - a.stars);
+      onSortBy(sortKey, sortValueType) {
+        // reset sort, default to ascending sort
+        if (this.activeSortKey !== sortKey) {
+          this.activeSortKey = null;
+          this.sortAsc = true;
+        }
+
+        switch (sortValueType) {
+          case 'string':
+            this.projects.sort((a, b) =>
+              (this.sortAsc ?
+                a[sortKey].localeCompare(b[sortKey]) : b[sortKey].localeCompare(a[sortKey])));
+            break;
+          case 'number':
+            this.projects.sort((a, b) =>
+              (this.sortAsc ? b.stars - a.stars : a.stars - b.stars));
+            break;
+          default:
+            break;
+        }
+
+        this.sortAsc = !this.sortAsc;
+        this.activeSortKey = sortKey;
       },
       onSearchChange(input) {
         this.search = input;
@@ -171,6 +198,10 @@
     color: #eee
     margin-bottom: 1em
 
+  .info__sort
+    flex-grow: 2
+    display: flex
+    align-content: flex-start
   .info__filter
   .info__search
     width: 50%
