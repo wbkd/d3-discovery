@@ -35,6 +35,7 @@
     position: relative
     padding: .5em 1.2em .5em 0
     margin-right: .5em
+    cursor: pointer
 
     &:after
       position: absolute
@@ -42,16 +43,15 @@
       right: 0
       width: 20px
       height: 20px
-      font-size: 15px
+      font-size: 13px
       top: 50%
-      transform: translateY(-50%)
 
   .sort__button--active
     font-weight: bold
     &:after
-      transform: translateY(-50%) rotate(180deg)
+      transform: translateY(-55%) rotate(180deg)
       content: "\25BC"
   .asc
     &:after
-      transform: translateY(-50%) rotate(0deg)
+      transform: translateY(-40%) rotate(0deg)
 </style>

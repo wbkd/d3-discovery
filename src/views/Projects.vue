@@ -28,8 +28,8 @@
       />
       <div class="content__info">
         <div class="info__sort">
-          <SortButton :label="'name'" :handler="(val) => this.onSortBy(val, 'string')" :sort-key="'name'" v-bind:is-active="this.activeSortKey === 'name'" />
-          <SortButton :label="'stars'" :handler="(val) => this.onSortBy(val, 'number')" :sort-key="'stars'" v-bind:is-active="this.activeSortKey === 'stars'" />
+          <SortButton :label="'Name'" :handler="(val) => this.onSortBy(val, 'string')" :sort-key="'name'" v-bind:is-active="this.activeSortKey === 'name'" />
+          <SortButton :label="'Stars'" :handler="(val) => this.onSortBy(val, 'number')" :sort-key="'stars'" v-bind:is-active="this.activeSortKey === 'stars'" />
         </div>
         <div class="info__search">{{filteredProjects.length || 0}} plugins found</div>
       </div>
@@ -192,11 +192,14 @@
     display: flex
     justify-content: flex-start
     flex-flow: row nowrap
+    align-items center
     max-width: 980px
     margin: 0 auto
 
     color: #eee
-    margin-bottom: 1em
+    margin-bottom: 2em
+    border-bottom: 1px solid rgba(255,255,255,0.2)
+    font-size: 14px
 
   .info__sort
     flex-grow: 2
