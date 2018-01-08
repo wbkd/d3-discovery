@@ -35,6 +35,8 @@
       </div>
       <ProjectList :projects="filteredProjects" />
     </div>
+    <footer class="footer">Made with 📠 by <a href="https://webkid.io" target="_blank">webkid.io</a></footer>
+
   </div>
 </template>
 
@@ -102,6 +104,7 @@
     computed: {
       filteredProjects() {
         const now = Date.now();
+
         return this.projects.filter(project =>
           !this.search || searchBy(this.search, [project.description, project.name, project.license]))
           .filter(project =>
@@ -183,10 +186,14 @@
 </script>
 
 <style scoped lang='stylus'>
+  .main
+    position relative
+    min-height: 100vh
+
   .main__content
     position: relative
-    min-height: 100vh
     flex-grow: 1
+    margin-bottom: 5em
 
   .content__info
     display: flex
@@ -218,4 +225,17 @@
     .main
       display: flex
       align-items: stretch
+
+  .footer
+    position: absolute
+    bottom: 0
+    left: 0
+    width: 100%
+    padding: 1em
+    background-color: rgba(225,193,225,0.08)
+    color: white
+    a
+      color: white
+
+
 </style>

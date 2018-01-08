@@ -34,7 +34,7 @@
   .sort__button
     position: relative
     padding: .5em 1.2em .5em 0
-    margin-right: .5em
+    margin-right: .8em
     cursor: pointer
 
     &:after

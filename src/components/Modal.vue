@@ -7,7 +7,7 @@
         </div>
         <div class="modal__body">
           <a class="modal__link" href="https://github.com/wbkd/awesome-d3/issues/new">
-            Create an issue and pr in our awesome d3 list on github and we will add it here.
+            Something missing? Create an issue and pr in our awesome d3-list on github and we will add your project here.
           </a>
         </div>
       </div>

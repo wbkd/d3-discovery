@@ -1,4 +1,4 @@
-export const inRange = (val, min, max) => val > min && val < max;
+export const inRange = (val, min, max) => val >= min && val <= max;
 
 export const byDate = (refTs, valTs, maxDiff) => {
   const diff = Math.abs(refTs - Date.parse(valTs));
