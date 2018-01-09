@@ -36,6 +36,9 @@
         <div class="info__search">{{filteredProjects.length || 0}} plugins found</div>
       </div>
       <ProjectList :projects="filteredProjects" />
+      <div v-if="!filteredProjects.length">
+        no plugins found
+      </div>
     </div>
     <footer class="footer">Made with 📠 by <a href="https://webkid.io" target="_blank">webkid.io</a></footer>
 
@@ -72,9 +75,9 @@
         sliderContributorValue: [],
         sliderStarsValue: [],
         latestUpdateFilterList: {
-          'This week': 604800000,
-          'This month': 2628000000,
-          'This year': 31536000000,
+          'Last week': 604800000,
+          'Last month': 2628000000,
+          'Last year': 31536000000,
         }, // in ms
         activeUpdateFilter: '',
         licenseFilters: [],
