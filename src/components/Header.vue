@@ -12,18 +12,11 @@
         <button class="button__submit-new" @click="this.onSubmit">+ Submit</button>
       </div>
     </div>
-     <!-- <div v-show="isVisible" class="button button__menu" v-bind:class="{ 'button__menu--active': this.menuOpen }" @click="this.onMenuButtonClick">
-      <div class="button__menu__bar bar1"></div>
-      <div class="button__menu__bar bar2"></div>
-      <div class="button__menu__bar bar3"></div>
-    </div>  -->
   </div>
 </template>
 <script>
   export default {
     props: {
-      onMenuButtonClick: Function,
-      menuOpen: Boolean,
       onSubmit: Function,
     },
     data() {
@@ -44,10 +37,10 @@
 
   .header__content
     display: flex
-    flex-flow: row nowrap
+    flex-flow: row wrap
+    justify-content: space-between
 
   .header__logo
-    width: 50%
     display: flex
     flex-flow: row nowrap
     align-items: flex-end
@@ -58,8 +51,8 @@
     align-self: baseline
     margin-right: 5px
 
-  .logo__wrapper
-    flex: 0 0 60%
+  // .logo__wrapper
+  //   flex: 0 0 60%
 
   .logo__headline
     font-size: 26px
@@ -71,7 +64,6 @@
     font-size: 15px
 
   .header__buttons
-    width: 50%
     display: flex
     justify-content: flex-end
     align-items: center

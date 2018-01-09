@@ -1,17 +1,14 @@
 <template>
-  <div class="main" v-bind:class="{ 'main__menu--isvisible': menuOpen }">
+  <div class="main">
     <BackgroundItems />
     <Modal :is-modal-visible="isModalVisible" :on-click="closeModal" />
     <div class="main__content">
       <Header
-        :on-menu-button-click="onMenuButtonClick"
         :on-search-change="onSearchChange"
-        :menu-open="menuOpen"
         :is-modal-visible="isModalVisible"
         :on-submit="showModal"
       />
-      <Menu v-if="sliderContributorValue.length"
-        :menu-open="menuOpen"
+      <FilterList v-if="sliderContributorValue.length"
         :slider-contributor-update="onSlideContributor"
         :slider-contributor-value="sliderContributorValue"
         :slider-stars-update="onSlideStars"
@@ -48,7 +45,7 @@
 <script>
   import axios from 'axios';
 
-  import Menu from '../components/Menu';
+  import FilterList from '../components/FilterList';
   import Header from '../components/Header';
   import ProjectList from '../components/ProjectList';
   import BackgroundItems from '../components/BackgroundItems';
@@ -59,7 +56,7 @@
 
   export default {
     components: {
-      Menu,
+      FilterList,
       ProjectList,
       Header,
       BackgroundItems,
@@ -68,7 +65,6 @@
     },
     data() {
       return {
-        menuOpen: false,
         isModalVisible: false,
         projects: [],
         search: '',
@@ -160,9 +156,6 @@
       onSlideStars(value) {
         this.sliderStarsValue = value;
       },
-      onMenuButtonClick() {
-        this.menuOpen = !this.menuOpen;
-      },
       onSelectLatestUpdate(event) {
         if (event.target.value !== '' && !this.activeFilter.has('latestUpdate')) {
           this.activeFilter.add('latestUpdate');
@@ -209,10 +202,9 @@
 
     color: #eee
     margin-bottom: 2em
-    font-size: 14px
+    font-size: 13px
 
   .info__sort
-    flex-grow: 2
     display: flex
     justify-content: flex-start
     align-items: center
@@ -221,29 +213,27 @@
     margin-right .8em
 
   .info__filter
-  .info__search
-    width: 50%
-
-  .info__filter
     text-align: left
 
   .info__search
     text-align: right
+    flex-grow: 1
   @media screen and (min-width: 786px)
     .main
       display: flex
       align-items: stretch
 
-  .footer
-    position: absolute
-    bottom: 0
-    left: 0
-    width: 100%
-    padding: 1em
-    background-color: rgba(225,193,225,0.08)
-    color: white
-    a
+    .footer
+      position: absolute
+      bottom: 0
+      left: 0
+      width: 100%
+      padding: 1em
+      background-color: rgba(225,193,225,0.08)
       color: white
+      a
+        color: white
 
-
+    .content__info
+      font-size: 14px
 </style>

@@ -44,7 +44,7 @@
       display: block
       right: 0
       width: 20px
-      height: 16px
+      height: 20px
       font-size: 10px
       top: 50%
 
@@ -55,5 +55,5 @@
       content: "\25BC"
   .asc
     &:after
-      transform: translateY(-40%) rotate(0deg)
+      transform: translateY(-20%) rotate(0deg)
 </style>
