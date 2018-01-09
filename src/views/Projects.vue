@@ -28,9 +28,11 @@
       />
       <div class="content__info">
         <div class="info__sort">
+          <div class="sort__label">Sort by: </div>
           <SortButton :label="'Name'" :handler="(val) => this.onSortBy(val, 'string')" :sort-key="'name'" v-bind:is-active="this.activeSortKey === 'name'" />
           <SortButton :label="'Stars'" :handler="(val) => this.onSortBy(val, 'number')" :sort-key="'stars'" v-bind:is-active="this.activeSortKey === 'stars'" />
         </div>
+
         <div class="info__search">{{filteredProjects.length || 0}} plugins found</div>
       </div>
       <ProjectList :projects="filteredProjects" />
@@ -79,7 +81,7 @@
         activeLicenseFilter: '',
         activeFilter: new Set(),
         sortAsc: true,
-        activeSortKey: null,
+        activeSortKey: 'name',
       };
     },
     mounted() {
@@ -198,7 +200,7 @@
   .content__info
     display: flex
     justify-content: flex-start
-    flex-flow: row nowrap
+    flex-flow: row wrap
     align-items center
     max-width: 980px
     margin: 0 auto
@@ -211,7 +213,12 @@
   .info__sort
     flex-grow: 2
     display: flex
-    align-content: flex-start
+    justify-content: flex-start
+    align-items: center
+
+  .sort__label
+    margin-right .8em
+
   .info__filter
   .info__search
     width: 50%

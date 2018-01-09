@@ -34,16 +34,18 @@
   .sort__button
     position: relative
     padding: .5em 1.2em .5em 0
-    margin-right: .8em
+    margin-right: .5em
     cursor: pointer
+    user-select: none
+    font-weight: bold
 
     &:after
       position: absolute
       display: block
       right: 0
       width: 20px
-      height: 20px
-      font-size: 13px
+      height: 16px
+      font-size: 10px
       top: 50%
 
   .sort__button--active
