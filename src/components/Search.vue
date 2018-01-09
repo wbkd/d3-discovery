@@ -31,7 +31,7 @@
     width: 100%
     height: 40px
 
-    background: rgba(255, 255, 255,0.60)
+    background: rgba(238,238,238,1)
     border-radius: 2px
     border: none
 

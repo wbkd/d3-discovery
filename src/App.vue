@@ -11,24 +11,24 @@ export default {
 };
 </script>
 
-<style>
-  @import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
-  * {
-    box-sizing: border-box;
-  }
+<style lang='stylus'>
+  @import url('https://fonts.googleapis.com/css?family=Roboto+Mono')
+  *
+    box-sizing: border-box
 
-  body {
-    margin: 0;
-    padding: 0;
-  }
+  body
+    margin: 0
+    padding: 0
 
-  #app {
-    font-family: 'Roboto Mono', Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #737373;
-    font-size: 16px;
-    line-height: 1.33;
-  }
+  #app
+    font-family: 'Roboto Mono', Helvetica, Arial, sans-serif
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+    text-align: center
+    color: #737373
+    font-size: 16px
+    line-height: 1.25
+
+  input, select, option
+    font-family: 'Roboto Mono', Helvetica, Arial, sans-serif
 </style>
