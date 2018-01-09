@@ -2,13 +2,17 @@
   <div v-if="isModalVisible" class="modal" @click="this.onClick">
     <div class="modal__overlay">
       <div class="modal__container">
+        <div class="button close__button"></div>
+
         <div class="modal__header">
          🚀 Extend the exploration!
         </div>
         <div class="modal__body">
+          Something missing?
           <a class="modal__link" href="https://github.com/wbkd/awesome-d3/issues/new">
-            Something missing? Create an issue and pr in our awesome d3-list on github and we will add your project here.
+            Make a pull request
           </a>
+          in our awesome d3-list on github and we will add your project here.
         </div>
       </div>
     </div>
@@ -46,6 +50,29 @@
     margin: 20% auto
     border-radius: 2px
     background-color: #fff
+
+  .close__button
+    position: absolute
+    right: 0
+    top: 0
+    width: 30px
+    height: 30px
+    border-radius: 50%
+    background-color: #fff
+    transform: translate(50%, -50%)
+    cursor: pointer
+
+    &:after
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-45%, -55%)
+      content: 'x'
+      font-size: 20px
+      font-weight: bold
+
+    &:hover
+      color: darken(#737373, 50%)
 
   .modal__header
     font-weight: bold
