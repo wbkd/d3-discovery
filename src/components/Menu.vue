@@ -3,20 +3,20 @@
     <div class="menu__inner">
       <Search class="menu__item" :update="this.onSearchChange" />
 
-      <Slider
-        class="menu__item"
-        :slider-title="'Contributors:'"
-        :slider-value="contributor.value"
-        :options="contributor.options"
-        :slider-update="this.sliderContributorUpdate"
-      />
-
        <Slider
         class="menu__item"
         :slider-title="'Stars:'"
         :slider-value="stars.value"
         :options="stars.options"
         :slider-update="this.sliderStarsUpdate"
+      />
+
+      <Slider
+        class="menu__item"
+        :slider-title="'Contributors:'"
+        :slider-value="contributor.value"
+        :options="contributor.options"
+        :slider-update="this.sliderContributorUpdate"
       />
 
       <Dropdown class="menu__item"
