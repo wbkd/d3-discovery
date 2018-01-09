@@ -194,6 +194,7 @@
   .main
     position relative
     min-height: 100vh
+    overflow: hidden
 
   .main__content
     position: relative
