@@ -37,7 +37,7 @@
 <style scoped lang='stylus'>
   .header
     width: 100%
-    padding: 1em 0
+    padding: 0.4em 0 1em 0
     margin: 0 auto
 
     background-color: rgba(225, 193, 225, .08)
@@ -56,8 +56,9 @@
     text-align: left
 
   .logo__image
-    width: 80px
+    width: 70px
     align-self: baseline
+    margin-right: 5px
 
   .logo__wrapper
     flex: 0 0 60%
@@ -68,13 +69,15 @@
     text-shadow: 0 0 4px rgba(255,255,255,0.50)
 
   .logo__subheadline
-    color: #fff
+    color: #e6e6e6
+    font-size: 15px
 
   .header__buttons
     width: 50%
     display: flex
     justify-content: flex-end
     align-items: center
+    margin-top: 13px
 
   .button__submit-new
     padding: 0.4em 1em
