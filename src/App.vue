@@ -31,4 +31,11 @@ export default {
 
   input, select, option
     font-family: 'Roboto Mono', Helvetica, Arial, sans-serif
+
+  .container
+    max-width: 1200px
+    margin: 0 auto
+    width: 100%
+    padding: 0 1em
+
 </style>

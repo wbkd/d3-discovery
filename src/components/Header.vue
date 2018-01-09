@@ -1,6 +1,6 @@
 <template>
   <div class="header">
-    <div class="header__content">
+    <div class="header__content container">
       <div class="header__logo">
           <img class="logo__image" src="../assets/tele.png" />
           <div class="logo__wrapper">
@@ -43,8 +43,6 @@
     background-color: rgba(225, 193, 225, .08)
 
   .header__content
-    max-width: 980px
-    margin: 0 auto
     display: flex
     flex-flow: row nowrap
 

@@ -26,7 +26,7 @@
         :license-options="licenseFilters"
         :on-license-filter-changed="onSelectLicense"
       />
-      <div class="content__info">
+      <div class="content__info container">
         <div class="info__sort">
           <div class="sort__label">Sort by: </div>
           <SortButton :label="'Name'" :handler="(val) => this.onSortBy(val, 'string')" :sort-key="'name'" v-bind:is-active="this.activeSortKey === 'name'" />
@@ -202,12 +202,9 @@
     justify-content: flex-start
     flex-flow: row wrap
     align-items center
-    max-width: 980px
-    margin: 0 auto
 
     color: #eee
     margin-bottom: 2em
-    border-bottom: 1px solid rgba(255,255,255,0.2)
     font-size: 14px
 
   .info__sort

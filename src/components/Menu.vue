@@ -1,5 +1,5 @@
 <template>
-  <div class="menu">
+  <div class="menu container">
     <div class="menu__inner">
       <Search class="menu__item" :update="this.onSearchChange" />
 
@@ -106,10 +106,7 @@
 <style scoped lang="stylus">
   .menu
     position: relative
-    margin: 0 auto
     z-index: 10
-    width: 100%
-    max-width: 980px
 
   .menu__inner
     padding: 1em 0

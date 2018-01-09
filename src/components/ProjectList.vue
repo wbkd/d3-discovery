@@ -1,5 +1,5 @@
 <template>
-  <div class="project-list">
+  <div class="project-list container">
     <ProjectItem v-for="project in projects" :key="project.name" :item="project" />
   </div>
 </template>
@@ -20,9 +20,6 @@
 
 <style scoped lang="stylus">
   .project-list
-    max-width: 980px
-    margin: 0 auto
-
     display: grid
     grid-template-columns: repeat(auto-fit, minmax(220px, max-content))
 
