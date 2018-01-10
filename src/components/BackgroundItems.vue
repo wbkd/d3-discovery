@@ -3,24 +3,14 @@
     <div class="background__gradient"/>
     <div
       class="background__item"
-      v-for="index in 40"
+      v-for="index in 20"
       :key="index"
       v-bind:style="{
         top: `${randomNumber(0, 100)}%`,
         left: `${randomNumber(0, 100)}%`,
         transform: `scale(${randomNumber(0, 1.5)})`,
         animationDelay: `${randomNumber(0, 5)}s`,
-        animationDuration: `${randomNumber(4, 8)}s`,
-        }"
-    />
-    <div
-      class="shooting-star"
-      v-for="shootingindex in 4"
-      :key="shootingindex"
-      v-bind:style="{
-        top: `${randomNumber(0, 100)}%`,
-        left: `${randomNumber(0, 100)}%`,
-        animationDelay: `${randomNumber(0, 15)}s`,
+        animationDuration: `${randomNumber(4, 15)}s`,
       }"
     />
   </div>
@@ -38,7 +28,7 @@
 
 <style scoped lang="stylus">
   random(min, max)
-	  math(math(0, 'random')*(max - min + 1) + min, 'floor')
+	  (math(0, 'random')*(max - min + 1) + min)
 
   .main__background
     position: fixed
@@ -52,45 +42,23 @@
     position: fixed
     background: url('../assets/stars_pattern.png')
 
-
-  .shooting-star
-    position: fixed
-    z-index: 100
-    width: 1px
-    height: 1px
-    background-color: #fff
-    box-shadow: 0px 0px 1px 2px rgba(255, 255, 255, .6)
-    animation-name: shootingStar
-    animation-timing-function: ease-in
-    animation-duration: 5s
-
   .background__item
-    z-index: 100
+    z-index: 101
+    will-change: transform
     position: fixed
     width: 1px
     height: 1px
     background-color: #fff
 
-    box-shadow: 0px 0px 2px 2px rgba(255, 255, 255, .6)
+    box-shadow: 0px 0px 2px 2px rgba(255, 255, 255, .45)
     animation: animStar 5s ease-in infinite
+    transition: transform random(0, 3s) ease-in-out
 
   @keyframes animStar
     0%
-      box-shadow: 0px 0px 2px 2px rgba(255, 255, 255, .6)
-    70%
-      box-shadow: 0px 0px 2px 3px rgba(255, 255, 255, 0.1)
+      transform: scale(1)
+    50%
+      transform: scale(random(1, 2))
     100%
-      box-shadow: 0px 0px 2px 2px rgba(255, 255, 255, .6)
-
-  @keyframes shootingStar
-    0%
-      left: random(0% , 100%)
-      opacity: 0.5
-    70%
-      opacity: 0.5
-    100%
-      left: random(0% , 100%)
-      top: random(0% , 100%)
-      box-shadow: 0px 0px 2px 3px rgba(255, 255, 255, .6)
-      opacity: 0
+      transform: scale(random(1, 3))
 </style>
