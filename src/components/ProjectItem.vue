@@ -2,7 +2,7 @@
   <div class="project-list__item project">
     <div class="project__image__wrapper">
       <a v-bind:href="item.url" target="_blank">
-        <div class="project__image" v-bind:style="{'background-image': `url(${path})`}" />
+        <div class="project__image" v-lazy:background-image="imgObj" />
       </a>
       <div class="project__info">
         <div class="project__stars">
@@ -37,14 +37,16 @@
     props: {
       item: Object,
     },
+    data() {
+      return {
+        imgObj: {
+          src: `../../images/${this.item.name}.jpeg`,
+          error: require('../assets/placeholder.png'),
+          loading: require('../assets/loader.gif'),
+        },
+      };
+    },
     computed: {
-      path() {
-        try {
-          return require(`../../images/${this.item.name}.jpeg`);
-        } catch (err) {
-          return require('../assets/placeholder.png');
-        }
-      },
       getFormattedDate() {
         const day = new Date(Date.parse(this.item.lastUpdate)).getDay();
         const month = new Date(Date.parse(this.item.lastUpdate)).getMonth();
@@ -81,6 +83,11 @@
     box-shadow: 0 1px 4px 0px rgba(0, 0, 0, 0.1)
     background-size: cover
     background-repeat: no-repeat
+    background-position: auto
+
+  .project__image[lazy=loading]
+    background-position: center center
+    background-size: auto
 
   .project__stars
   .project__issues
