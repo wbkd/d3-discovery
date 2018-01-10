@@ -44,7 +44,6 @@
     background: #49426D
     border: 1px solid rgba(255,255,255,0.20)
     border-radius: 2px
-    color: #CED6DC
 
     select
       padding: .5em .8em
@@ -55,18 +54,25 @@
       box-shadow: none
       background: transparent
       background-image: none
-      -webkit-appearance: none
+      appearance: none
       &:focus
         outline: none
+
+    option
+      color: #737373
+
+    select:-moz-focusring
+      color: transparent
+      text-shadow: 0 0 0 #CED6DC
 
  .dropdown__select:after
     content: "▼"
     position: absolute
-    top: 0
+    top: 50%
+    transform: translateY(-50%)
     right: 0
     bottom: 0
-    font-size: 60%
-    line-height: 30px
+    font-size: 12px
     padding: 0 5px
     color: #CED6DC
     pointer-events: none
