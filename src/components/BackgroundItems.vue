@@ -48,9 +48,9 @@
     position: fixed
     width: 1px
     height: 1px
-    background-color: #fff
+    background-color: rgba(255, 255, 255, .80)
 
-    box-shadow: 0px 0px 2px 2px rgba(255, 255, 255, .45)
+    box-shadow: 0px 0px 3px 1px rgba(255, 255, 255, .40)
     animation: animStar 5s ease-in infinite
     transition: transform random(0, 3s) ease-in-out
 
