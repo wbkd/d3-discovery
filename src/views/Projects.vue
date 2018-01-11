@@ -84,7 +84,7 @@
       };
     },
     mounted() {
-      axios.get('../../static/data.json')
+      axios.get('http://api.d3-discovery.net/api/github')
         .then((response) => {
           this.projects = response.data;
           // REFACTOR: use contributors instead of watchers value
