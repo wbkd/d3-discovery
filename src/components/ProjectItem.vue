@@ -40,7 +40,7 @@
     data() {
       return {
         imgObj: {
-          src: `http://api.d3-discovery.net/images/${this.item.name}.jpeg`,
+          src: `https://api.d3-discovery.net/images/${this.item.name}.jpeg`,
           error: require('../assets/placeholder.png'),
           loading: require('../assets/loader.gif'),
         },
