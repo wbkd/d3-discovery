@@ -100,6 +100,7 @@
             if (res.indexOf(license) === -1 && license !== null) res.push(license);
             return res;
           }, []);
+          this.onSortBy(this.activeSortKey, 'string');
         });
     },
     computed: {
