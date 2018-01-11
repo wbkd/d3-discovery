@@ -3,7 +3,7 @@
     <div class="background__gradient"/>
     <div
       class="background__item"
-      v-for="index in 20"
+      v-for="index in 10"
       :key="index"
       v-bind:style="{
         top: `${randomNumber(0, 100)}%`,
