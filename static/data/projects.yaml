@@ -42,11 +42,11 @@ projects:
     homepage: c3js.org
     url: 'https://github.com/c3js/c3'
   - name: dagre-d3
-    repo: 'https://github.com/cpettitt/dagre-d3'
-    description: A D3-based renderer for Dagre
+    repo: 'https://github.com/dagrejs/dagre-d3'
+    description: Layout directed graphs on the client-side
     category: charts
     homepage: null
-    url: 'https://github.com/cpettitt/dagre-d3'
+    url: 'https://github.com/dagrejs/dagre-d3'
   - name: dc.js
     repo: 'https://github.com/dc-js/dc.js'
     description: For heavy amounts of data
@@ -295,12 +295,6 @@ projects:
     category: charts
     homepage: 'http://plottablejs.org/'
     url: 'https://github.com/palantir/plottable'
-  - name: pykcharts
-    repo: 'https://github.com/pykih/PykCharts.js'
-    description: Redefined chart library built with React and D3
-    category: charts
-    homepage: 'http://recharts.org'
-    url: 'https://github.com/pykih/pykcharts'
   - name: radar-chart-d3
     repo: 'https://github.com/alangrafu/radar-chart-d3'
     description: Radar chart module
@@ -513,12 +507,14 @@ projects:
     category: maps
     homepage: null
     url: 'https://github.com/sebastian-meier/d3.geo2rect'
-  - name: earthjsjs
+  - name: earthjs
     repo: 'https://github.com/earthjs/earthjs'
     description: >-
       Easy building orthographic globe, using D3v4 with SVG, Canvas &
       WebGL(Threejs)
     category: maps
+    homepage: null
+    url: 'https://github.com/earthjs/earthjs'
   - name: mapmap.js
     repo: 'https://github.com/floledermann/mapmap.js'
     description: A data-driven API for interactive thematic maps
@@ -849,10 +845,12 @@ projects:
     category: miscellaneous
     homepage: null
     url: 'https://github.com/1wheel/graph-scroll'
-  - name: jsdocs2diagram
+  - name: jsdoc2diagram
     repo: 'https://github.com/amcmillan01/jsdoc2diagram'
     description: Create tree diagram from jsdoc
     category: miscellaneous
+    homepage: ''
+    url: 'https://github.com/amcmillan01/jsdoc2diagram'
   - name: mermaid
     repo: 'https://github.com/knsv/mermaid'
     description: >-
