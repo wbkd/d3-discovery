@@ -23,6 +23,10 @@
     display: grid
     grid-template-columns: repeat(auto-fit, minmax(220px, max-content))
 
-    justify-content: start
+    justify-content: center
     grid-gap: 1em 2em
+
+  @media screen and (min-width: 768px)
+    .project-list
+      justify-content: start
 </style>

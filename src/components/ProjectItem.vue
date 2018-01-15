@@ -66,6 +66,7 @@
     border-radius: 2px
     overflow: hidden
     font-size: 14px
+    max-width: 268px
 
   .project__image__wrapper
     position: relative
