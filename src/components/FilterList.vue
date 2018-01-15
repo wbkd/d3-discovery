@@ -30,8 +30,8 @@
         :dropdown-title="'Category:'"
         :value="this.activeUpdateFilter"
         :placeholder="'All Categories'"
-        :options="this.latestUpdateOptions"
-        :on-change="this.onSelectLatestUpdate"
+        :options="this.categoryOptions"
+        :on-change="this.onCategoryFilterChanged"
       />
       <Dropdown class="filterList__item"
         :dropdown-title="'Version'"
@@ -74,6 +74,9 @@
       onLicenseFilterChanged: Function,
       licenseOptions: Array,
       activeLicenseFilter: String,
+      onCategoryFilterChanged: Function,
+      categoryOptions: Array,
+      activeCategoryFilter: String,
     },
     components: {
       VueSlider,

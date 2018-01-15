@@ -22,6 +22,9 @@
         :active-license-filter="activeLicenseFilter"
         :license-options="licenseFilters"
         :on-license-filter-changed="onSelectLicense"
+        :active-category-filter="activeCategoryFilter"
+        :category-options="categoryFilters"
+        :on-category-filter-changed="onSelectCategory"
       />
       <div class="content__info container">
         <div class="info__sort">
@@ -81,6 +84,8 @@
         activeFilter: new Set(),
         sortAsc: true,
         activeSortKey: 'name',
+        categoryFilters: [],
+        activeCategoryFilter: '',
       };
     },
     mounted() {
@@ -100,6 +105,12 @@
             if (res.indexOf(license) === -1 && license !== null) res.push(license);
             return res;
           }, []);
+
+          this.categoryFilters = this.projects.map(d => d.category).reduce((res, category) => {
+            if (res.indexOf(category) === -1 && category !== null) res.push(category);
+            return res;
+          }, []);
+
           this.onSortBy(this.activeSortKey, 'string');
         });
     },
@@ -117,7 +128,9 @@
             !this.activeUpdateFilter
             || byDate(now, project.lastUpdate, this.latestUpdateFilterList[this.activeUpdateFilter]))
           .filter(project =>
-            !this.activeLicenseFilter || project.license === this.activeLicenseFilter);
+            !this.activeLicenseFilter || project.license === this.activeLicenseFilter)
+          .filter(project =>
+            !this.activeCategoryFilter || project.category === this.activeCategoryFilter);
       },
     },
     methods: {
@@ -173,6 +186,14 @@
           this.activeFilter.delete('licenseFilter');
         }
         this.activeLicenseFilter = event.target.value;
+      },
+      onSelectCategory(event) {
+        if (event.target.value !== '' && !this.activeFilter.has('categoryFilter')) {
+          this.activeFilter.add('categoryFilter');
+        } else {
+          this.activeFilter.delete('categoryFilter');
+        }
+        this.activeCategoryFilter = event.target.value;
       },
       showModal() {
         this.isModalVisible = true;
