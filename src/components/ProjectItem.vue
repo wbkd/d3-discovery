@@ -127,7 +127,7 @@
   .project__title
     font-size: 16px
     font-weight: bold
-    color: #323233
+    color: #49426d
     margin-bottom: 5px
     text-decoration: none
     display: block
