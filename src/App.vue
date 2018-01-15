@@ -24,6 +24,7 @@ export default {
   body
     margin: 0
     padding: 0
+    overflow-y: scroll
 
   #app
     font-family: 'Roboto Mono', Helvetica, Arial, sans-serif
