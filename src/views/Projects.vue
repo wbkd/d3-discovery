@@ -87,9 +87,9 @@
       axios.get('https://api.d3-discovery.net/api/github')
         .then((response) => {
           this.projects = response.data;
-          // REFACTOR: use contributors instead of watchers value
-          const maxContributors = Math.max(...this.projects.map(d => d.watchers));
-          const minContributors = Math.min(...this.projects.map(d => d.watchers));
+
+          const maxContributors = Math.max(...this.projects.map(d => d.mentionableUsers));
+          const minContributors = Math.min(...this.projects.map(d => d.mentionableUsers));
 
           const maxStars = Math.max(...this.projects.map(d => d.stars));
           const minStars = Math.min(...this.projects.map(d => d.stars));
@@ -112,7 +112,7 @@
           .filter(project =>
             inRange(project.stars, this.sliderStarsValue[0], this.sliderStarsValue[1]))
           .filter(project =>
-            inRange(project.watchers, this.sliderContributorValue[0], this.sliderContributorValue[1]))
+            inRange(project.mentionableUsers, this.sliderContributorValue[0], this.sliderContributorValue[1]))
           .filter(project =>
             !this.activeUpdateFilter
             || byDate(now, project.lastUpdate, this.latestUpdateFilterList[this.activeUpdateFilter]))

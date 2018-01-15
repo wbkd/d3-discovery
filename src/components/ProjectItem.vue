@@ -97,7 +97,7 @@
 
   .project__info
     position: absolute
-    top: 5px
+    top: 15px
     right: 0
     font-size: 11px
     line-height: 0
