@@ -107,7 +107,7 @@
           }, []);
 
           this.categoryFilters = this.projects.map(d => d.category).reduce((res, category) => {
-            if (res.indexOf(category) === -1 && category !== null) res.push(category);
+            if (res.indexOf(category) === -1 && category !== null && category) res.push(category);
             return res;
           }, []);
 
