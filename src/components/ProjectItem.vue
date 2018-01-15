@@ -77,6 +77,10 @@
     a
       width: 100%
 
+    &:hover
+      .project__image
+        transform: scale(1.1)
+
   .project__image
     width: 100%
     height: 124.25px
@@ -85,6 +89,7 @@
     background-size: cover
     background-repeat: no-repeat
     background-position: auto
+    transition: transform .3s
 
   .project__image[lazy=loading]
     background-position: center center
