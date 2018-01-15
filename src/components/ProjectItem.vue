@@ -27,7 +27,7 @@
         <div class="project__license__label">License</div>
         <div class="project__license__value">{{item.license || '-'}}</div>
       </div>
-      <a class="project__website" v-if="item.homepage" v-bind:href="item.homepage" target="_blank">Website</a>
+      <a class="project__website" v-if="item.homepage" v-bind:href="item.homepage" target="_blank">Official Website</a>
     </div>
   </div>
 </template>
