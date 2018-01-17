@@ -20,7 +20,7 @@
       <a class="project__title" v-bind:href="item.url" target="_blank">{{item.name}}</a>
       <div class="project__description">{{item.description}}</div>
       <div class="project__latest">
-        <div class="project__latest__label">Latest commit</div>
+        <div class="project__latest__label">Latest update</div>
         <div class="project__latest__value">{{getFormattedDate}}</div>
       </div>
       <div class="project__license">
@@ -67,12 +67,23 @@
     overflow: hidden
     font-size: 14px
     max-width: 268px
+    transition: box-shadow .3s ease-in-out
+    box-shadow: 0 1px 3px 0 rgba(255,255,255,0.16)
+
+    &:hover
+      box-shadow: 0 2px 5px 4px rgba(255,255,255,0.16)
+
+      .project__website,
+      .project__title
+        color: lighten(#49426d, 25%)
 
   .project__image__wrapper
     position: relative
     display: flex
     flex-flow: row wrap
     justify-content: flex-end
+    border-radius: 2px 2px 0 0
+    overflow: hidden
 
     a
       width: 100%
@@ -82,10 +93,9 @@
         transform: scale(1.1)
 
   .project__image
-    width: 100%
-    height: 124.25px
+    width: 101%
+    height: 125px
     cursor: pointer
-    box-shadow: 0 1px 4px 0px rgba(0, 0, 0, 0.1)
     background-size: cover
     background-repeat: no-repeat
     background-position: auto
@@ -130,7 +140,8 @@
     color: #49426d
     margin-bottom: 5px
     text-decoration: none
-    display: block
+    display: inline-block
+    transition: color .3s ease-in-out
 
     &:hover
       text-decoration: underline
@@ -152,6 +163,8 @@
     text-decoration: none
     color: #323233
     font-size: 12px
+    color: #49426d
+    transition: color .3s ease-in-out
 
     &:hover
       text-decoration: underline
