@@ -48,9 +48,9 @@
     },
     computed: {
       getFormattedDate() {
-        const day = new Date(Date.parse(this.item.lastUpdate)).getDay();
-        const month = new Date(Date.parse(this.item.lastUpdate)).getMonth();
-        const year = new Date(Date.parse(this.item.lastUpdate)).getFullYear();
+        const day = new Date(this.item.lastUpdate).getDate();
+        const month = new Date(this.item.lastUpdate).getMonth() + 1;
+        const year = new Date(this.item.lastUpdate).getFullYear();
 
         const dateString = `${day < 10 ? `0${day}` : day}.${month < 10 ? `0${month}` : month}.${year}`;
         return dateString;

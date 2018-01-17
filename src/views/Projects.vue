@@ -29,8 +29,9 @@
       <div class="content__info container">
         <div class="info__sort">
           <div class="sort__label">Sort by: </div>
-          <SortButton :label="'Name'" :handler="(val) => this.onSortBy(val, 'string')" :sort-key="'name'" v-bind:is-active="this.activeSortKey === 'name'" />
-          <SortButton :label="'Stars'" :handler="(val) => this.onSortBy(val, 'number')" :sort-key="'stars'" v-bind:is-active="this.activeSortKey === 'stars'" />
+          <SortButton :label="'Name'" :handler="this.onSortBy" :sort-key="'name'" v-bind:is-active="this.activeSortKey === 'name'" />
+          <SortButton :label="'Stars'" :handler="this.onSortBy" :sort-key="'stars'" v-bind:is-active="this.activeSortKey === 'stars'" />
+          <SortButton :label="'Latest Update'" :handler="this.onSortBy" :sort-key="'lastUpdate'" v-bind:is-active="this.activeSortKey === 'lastUpdate'" />
         </div>
 
         <div class="info__search">{{filteredProjects.length || 0}} plugins found</div>
@@ -153,22 +154,29 @@
       },
     },
     methods: {
-      onSortBy(sortKey, sortValueType) {
+      onSortBy(sortKey) {
         // reset sort, default to ascending sort
         if (this.activeSortKey !== sortKey) {
           this.activeSortKey = null;
           this.sortAsc = true;
         }
 
-        switch (sortValueType) {
-          case 'string':
+        switch (sortKey) {
+          case 'name':
             this.projects.sort((a, b) =>
               (this.sortAsc ?
                 a[sortKey].localeCompare(b[sortKey]) : b[sortKey].localeCompare(a[sortKey])));
             break;
-          case 'number':
+          case 'stars':
             this.projects.sort((a, b) =>
               (this.sortAsc ? b.stars - a.stars : a.stars - b.stars));
+            break;
+          case 'lastUpdate':
+            this.projects.sort((a, b) => {
+              const aToDateObj = new Date(a.lastUpdate);
+              const bToDateObj = new Date(b.lastUpdate);
+              return (this.sortAsc ? bToDateObj - aToDateObj : aToDateObj - bToDateObj);
+            });
             break;
           default:
             break;
