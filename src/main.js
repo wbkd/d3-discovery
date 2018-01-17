@@ -7,7 +7,10 @@ import App from './App';
 
 Vue.config.productionTip = false;
 
-Vue.use(VueLazyload);
+Vue.use(VueLazyload, {
+  preLoad: 1.3,
+  attempt: 1
+});
 
 /* eslint-disable no-new */
 new Vue({
