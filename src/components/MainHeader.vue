@@ -1,14 +1,14 @@
 <template>
-  <div class="header">
-    <div class="header__content container">
-      <div class="header__logo">
+  <div class="main_header">
+    <div class="main_header__content container">
+      <div class="main_header__logo">
           <img class="logo__image" src="../assets/tele.png" />
           <div class="logo__wrapper">
             <div class="logo__headline">D3 Discovery</div>
             <div class="logo__subheadline">Finding D3 plugins with ease.</div>
           </div>
         </div>
-      <div class="header__buttons">
+      <div class="main_header__buttons">
         <button class="button__submit-new" @click="this.onSubmit">+ Submit</button>
       </div>
     </div>
@@ -28,19 +28,19 @@
 </script>
 
 <style scoped lang='stylus'>
-  .header
+  .main_header
     width: 100%
     padding: 0.4em 0 1em 0
     margin: 0 auto
 
     background-color: rgba(225, 193, 225, .08)
 
-  .header__content
+  .main_header__content
     display: flex
     flex-flow: row wrap
     justify-content: space-between
 
-  .header__logo
+  .main_header__logo
     display: flex
     flex-flow: row nowrap
     align-items: flex-end
@@ -63,7 +63,7 @@
     color: #e6e6e6
     font-size: 15px
 
-  .header__buttons
+  .main_header__buttons
     display: flex
     justify-content: flex-end
     align-items: center

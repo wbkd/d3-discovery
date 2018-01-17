@@ -3,7 +3,7 @@
     <BackgroundItems />
     <Modal :is-modal-visible="isModalVisible" :on-click="closeModal" />
     <div class="main__content">
-      <Header
+      <MainHeader
         :on-search-change="onSearchChange"
         :is-modal-visible="isModalVisible"
         :on-submit="showModal"
@@ -49,7 +49,7 @@
   import axios from 'axios';
 
   import FilterList from '../components/FilterList';
-  import Header from '../components/Header';
+  import MainHeader from '../components/MainHeader';
   import ProjectList from '../components/ProjectList';
   import BackgroundItems from '../components/BackgroundItems';
   import Modal from '../components/Modal';
@@ -61,7 +61,7 @@
     components: {
       FilterList,
       ProjectList,
-      Header,
+      MainHeader,
       BackgroundItems,
       Modal,
       SortButton,
