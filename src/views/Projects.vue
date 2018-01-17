@@ -119,17 +119,35 @@
       filteredProjects() {
         const now = Date.now();
 
-        return this.projects.filter(project =>
-          !this.search || searchBy(this.search, [project.description, project.name, project.license]))
+        return this.projects
           .filter(project =>
-            inRange(project.stars, this.sliderStarsValue[0], this.sliderStarsValue[1]))
+            !this.search ||
+              searchBy(
+                this.search,
+                [project.description, project.githubDescription, project.name, project.license],
+              ),
+          )
           .filter(project =>
-            inRange(project.contributors, this.sliderContributorValue[0], this.sliderContributorValue[1]))
+            inRange(
+              project.stars,
+              this.sliderStarsValue[0],
+              this.sliderStarsValue[1],
+            ),
+          )
           .filter(project =>
-            !this.activeUpdateFilter
-            || byDate(now, project.lastUpdate, this.latestUpdateFilterList[this.activeUpdateFilter]))
+            inRange(
+              project.contributors,
+              this.sliderContributorValue[0],
+              this.sliderContributorValue[1],
+            ),
+          )
           .filter(project =>
-            !this.activeLicenseFilter || project.license === this.activeLicenseFilter)
+            !this.activeUpdateFilter ||
+            byDate(now, project.lastUpdate, this.latestUpdateFilterList[this.activeUpdateFilter]),
+          )
+          .filter(project =>
+            !this.activeLicenseFilter || project.license === this.activeLicenseFilter,
+          )
           .filter(project =>
             !this.activeCategoryFilter || project.category === this.activeCategoryFilter);
       },
