@@ -27,7 +27,7 @@
         <div class="project__license__label">License</div>
         <div class="project__license__value">{{item.license || '-'}}</div>
       </div>
-      <a class="project__website" v-if="item.homepage" v-bind:href="item.homepage" target="_blank">Official Website</a>
+      <a class="project__website" v-if="item.homepage" v-bind:href="item.homepage" target="_blank">official website</a>
     </div>
   </div>
 </template>
@@ -84,6 +84,7 @@
     justify-content: flex-end
     border-radius: 2px 2px 0 0
     overflow: hidden
+    border-bottom: 1px solid #ddd
 
     a
       width: 100%
@@ -132,7 +133,7 @@
       margin-right: .2em
 
   .project__container
-    padding: 10px
+    padding: 20px 15px
 
   .project__title
     font-size: 16px
@@ -147,13 +148,16 @@
       text-decoration: underline
 
   .project__description
-    margin: 0 0 15px 0
+    margin: 0 0 25px 0
+    color: #555
 
   .project__license
   .project__latest
     display: flex
     justify-content: space-between
     font-size: 12px
+    line-height: 18px
+    color: #555
 
   .project__license__value
     width: 50%
@@ -161,8 +165,8 @@
 
   .project__website
     text-decoration: none
-    color: #323233
     font-size: 12px
+    line-height: 18px
     color: #49426d
     transition: color .3s ease-in-out
 

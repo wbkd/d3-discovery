@@ -61,6 +61,7 @@
     background-color: #fff
     transform: translate(50%, -50%)
     cursor: pointer
+    box-shadow: 2px 2px 4px 2px rgba(0,0,0,.1)
 
     &:after
       position: absolute

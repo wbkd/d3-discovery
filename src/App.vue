@@ -31,7 +31,7 @@ export default {
     -webkit-font-smoothing: antialiased
     -moz-osx-font-smoothing: grayscale
     text-align: center
-    color: #737373
+    color: #555
     font-size: 16px
     line-height: 1.25
 
