@@ -93,8 +93,8 @@
         .then((response) => {
           this.projects = response.data;
 
-          const maxContributors = Math.max(...this.projects.map(d => d.mentionableUsers));
-          const minContributors = Math.min(...this.projects.map(d => d.mentionableUsers));
+          const maxContributors = Math.max(...this.projects.map(d => d.contributors));
+          const minContributors = Math.min(...this.projects.map(d => d.contributors));
 
           const maxStars = Math.max(...this.projects.map(d => d.stars));
           const minStars = Math.min(...this.projects.map(d => d.stars));
@@ -112,7 +112,8 @@
           }, []);
 
           this.onSortBy(this.activeSortKey, 'string');
-        });
+        })
+        .catch(error => console.log(error));
     },
     computed: {
       filteredProjects() {
@@ -123,7 +124,7 @@
           .filter(project =>
             inRange(project.stars, this.sliderStarsValue[0], this.sliderStarsValue[1]))
           .filter(project =>
-            inRange(project.mentionableUsers, this.sliderContributorValue[0], this.sliderContributorValue[1]))
+            inRange(project.contributors, this.sliderContributorValue[0], this.sliderContributorValue[1]))
           .filter(project =>
             !this.activeUpdateFilter
             || byDate(now, project.lastUpdate, this.latestUpdateFilterList[this.activeUpdateFilter]))
