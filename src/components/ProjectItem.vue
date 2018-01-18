@@ -1,7 +1,7 @@
 <template>
   <div class="project-list__item project">
     <div class="project__image__wrapper">
-      <a v-bind:href="item.url" target="_blank">
+      <a class="project__image__link" v-bind:href="item.url" target="_blank">
         <div class="project__image" v-lazy:background-image="imgObj" />
       </a>
       <div class="project__info">
@@ -17,7 +17,7 @@
     </div>
 
     <div class="project__container">
-      <a class="project__title" v-bind:href="item.url" target="_blank">{{item.name}}</a>
+      <a class="project__title project__link" v-bind:href="item.url" target="_blank">{{item.name}}</a>
       <div class="project__description">{{item.description}}</div>
       <div class="project__latest">
         <div class="project__latest__label">Latest update</div>
@@ -25,14 +25,17 @@
       </div>
       <div class="project__license">
         <div class="project__license__label">License</div>
-        <div class="project__license__value">{{item.license || '-'}}</div>
+        <a v-if="item.license" class="project__license__value project__link" href="getLicenseUrl">{{getLicenseLabel}}</a>
+        <div v-else class="project__license__value">-</div>
       </div>
-      <a class="project__website" v-if="item.homepage" v-bind:href="item.homepage" target="_blank">official website</a>
+      <a class="project__website project__link" v-if="item.homepage" v-bind:href="item.homepage" target="_blank">official website</a>
     </div>
   </div>
 </template>
 
 <script>
+  import licenseTranslations from '../utils/licenseTranslations';
+
   export default {
     props: {
       item: Object,
@@ -55,6 +58,13 @@
         const dateString = `${day < 10 ? `0${day}` : day}.${month < 10 ? `0${month}` : month}.${year}`;
         return dateString;
       },
+      getLicenseLabel() {
+        return licenseTranslations[this.item.license].label;
+      },
+      getLicenseUrl() {
+        return licenseTranslations[this.item.license].url ?
+          licenseTranslations[this.item.license].url : this.item.url;
+      },
     },
   };
 </script>
@@ -73,8 +83,7 @@
     &:hover
       box-shadow: 0 2px 5px 4px rgba(255,255,255,0.16)
 
-      .project__website,
-      .project__title
+      .project__link
         color: lighten(#49426d, 25%)
 
   .project__image__wrapper
@@ -86,7 +95,7 @@
     overflow: hidden
     border-bottom: 1px solid #ddd
 
-    a
+    .project__image__link
       width: 100%
 
     &:hover
@@ -106,11 +115,13 @@
     background-position: center center
     background-size: auto
 
-  .project__stars
-  .project__issues
-    display: flex
-    align-items: center
-    margin-right: .5em
+  .project__link
+    color: #49426d
+    text-decoration: none
+    transition: all .3s ease-in-out
+
+    &:hover
+      text-decoration: underline
 
   .project__info
     position: absolute
@@ -133,19 +144,19 @@
       margin-right: .2em
 
   .project__container
-    padding: 20px 15px
+    padding: 10px 20px 20px 20px
+
+  .project__stars
+  .project__issues
+    display: flex
+    align-items: center
+    margin-right: .5em
 
   .project__title
     font-size: 16px
     font-weight: bold
-    color: #49426d
     margin-bottom: 5px
-    text-decoration: none
     display: inline-block
-    transition: color .3s ease-in-out
-
-    &:hover
-      text-decoration: underline
 
   .project__description
     margin: 0 0 25px 0
@@ -164,12 +175,6 @@
     text-align: right
 
   .project__website
-    text-decoration: none
     font-size: 12px
     line-height: 18px
-    color: #49426d
-    transition: color .3s ease-in-out
-
-    &:hover
-      text-decoration: underline
 </style>
