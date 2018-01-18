@@ -84,6 +84,9 @@
     transition: box-shadow .3s ease-in-out
     box-shadow: 0 1px 3px 0 rgba(255,255,255,0.16)
 
+    display: flex
+    flex-direction: column
+
     &:hover
       box-shadow: 0 2px 5px 4px rgba(255,255,255,0.16)
 
@@ -148,19 +151,22 @@
 
   .project__content
     padding: 0
-
-  .project__meta2
-    padding: 10px 15px 20px 15px
-    line-height: 1.4
+    display: flex
+    flex-grow: 1
+    flex-direction: column
+    justify-content: space-between
 
   .project__meta1
-    min-height: 70px
     padding: 20px 15px 10px 15px
-
+    
   .project__meta2
+    min-height: 79px
+    padding: 10px 15px 20px 15px
     border-top: 1px solid #eee
+    
     font-family: 'Lato', sans-serif
     font-size: 12px
+    line-height: 1.4
 
   .project__stars
   .project__issues
@@ -169,10 +175,10 @@
     margin-right: .5em
 
   .project__title
+    display: block
+    margin-bottom: .3em
     font-size: 19px
     font-weight: bold
-    margin-bottom: .3em
-    display: inline-block
 
   .project__description
     color: #555
