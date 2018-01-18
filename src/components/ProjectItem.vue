@@ -81,7 +81,6 @@
     border-radius: 2px
     overflow: hidden
     font-size: 14px
-    width: 268px
     transition: box-shadow .3s ease-in-out
     box-shadow: 0 1px 3px 0 rgba(255,255,255,0.16)
 

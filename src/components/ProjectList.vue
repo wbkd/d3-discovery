@@ -20,13 +20,9 @@
 
 <style scoped lang="stylus">
   .project-list
+    position: relative
     display: grid
-    grid-template-columns: repeat(auto-fit, minmax(220px, max-content))
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr))
 
-    justify-content: center
-    grid-gap: 1em 2em
-
-  @media screen and (min-width: 768px)
-    .project-list
-      justify-content: start
+    grid-gap: 1.5em 2em
 </style>
