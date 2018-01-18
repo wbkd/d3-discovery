@@ -16,8 +16,8 @@ export default {
     url: 'https://opensource.org/licenses/BSD-3-Clause',
   },
   'Do What The F*ck You Want To Public License': {
-    label: 'dwtftopl',
-    url: '',
+    label: 'WTFPL',
+    url: 'http://www.wtfpl.net/',
   },
   'The Unlicense': {
     label: 'The Unlicense',

@@ -16,20 +16,25 @@
       </div>
     </div>
 
-    <div class="project__container">
-      <a class="project__title project__link" v-bind:href="item.url" target="_blank">{{item.name}}</a>
-      <div class="project__description">{{item.description}}</div>
-      <div class="project__latest">
-        <div class="project__latest__label">Latest update</div>
-        <div class="project__latest__value">{{getFormattedDate}}</div>
+    <div class="project__content">
+      <div class="project__meta1">
+        <a class="project__title project__link" v-bind:href="item.url" target="_blank">{{item.name}}</a>
+        <div class="project__description">{{item.description}}</div>
       </div>
-      <div class="project__license">
-        <div class="project__license__label">License</div>
-        <a v-if="item.license" class="project__license__value project__link" href="getLicenseUrl">{{getLicenseLabel}}</a>
-        <div v-else class="project__license__value">-</div>
-      </div>
-      <a class="project__website project__link" v-if="item.homepage" v-bind:href="item.homepage" target="_blank">official website</a>
+
+      <div class="project__meta2">
+        <div class="project__latest">
+          <div class="project__latest__label">Latest update</div>
+          <div class="project__latest__value">{{getFormattedDate}}</div>
+        </div>
+        <div class="project__license">
+          <div class="project__license__label">License</div>
+          <a v-if="item.license" class="project__license__value project__link" v-bind:href="this.getLicenseUrl">{{getLicenseLabel}}</a>
+          <div v-else class="project__license__value">-</div>
+        </div>
+        <a class="project__website project__link" v-if="item.homepage" v-bind:href="item.homepage" target="_blank">official website</a>
     </div>
+   </div>
   </div>
 </template>
 
@@ -76,7 +81,7 @@
     border-radius: 2px
     overflow: hidden
     font-size: 14px
-    max-width: 268px
+    width: 268px
     transition: box-shadow .3s ease-in-out
     box-shadow: 0 1px 3px 0 rgba(255,255,255,0.16)
 
@@ -93,7 +98,7 @@
     justify-content: flex-end
     border-radius: 2px 2px 0 0
     overflow: hidden
-    border-bottom: 1px solid #ddd
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.10)
 
     .project__image__link
       width: 100%
@@ -143,8 +148,18 @@
       width: 11px
       margin-right: .2em
 
-  .project__container
-    padding: 10px 20px 20px 20px
+  .project__content
+    padding: 0
+
+  .project__meta1
+  .project__meta2
+    padding: 10px 15px
+
+  .project__meta1
+    min-height: 80px
+
+  .project__meta2
+    border-top: 1px solid #eee
 
   .project__stars
   .project__issues
@@ -159,14 +174,14 @@
     display: inline-block
 
   .project__description
-    margin: 0 0 25px 0
     color: #555
+    font-size: 13px
 
   .project__license
   .project__latest
     display: flex
     justify-content: space-between
-    font-size: 12px
+    font-size: 13px
     line-height: 18px
     color: #555
 
@@ -175,6 +190,6 @@
     text-align: right
 
   .project__website
-    font-size: 12px
+    font-size: 13px
     line-height: 18px
 </style>
