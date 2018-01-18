@@ -12,7 +12,7 @@
           <a class="modal__link" href="https://github.com/wbkd/awesome-d3/issues/new">
             Make a pull request
           </a>
-          in our awesome d3-list on github and we will add your project here.
+          in our Awesome D3 list on github and we will add your project here.
         </div>
       </div>
     </div>
@@ -46,7 +46,7 @@
     max-width: 500px
     min-height: 100px
     transform: translate3d(0,0,0);
-    padding: 2em 3em
+    padding: 2em 1.5em
     margin: 20% auto
     border-radius: 2px
     background-color: #fff
@@ -77,8 +77,13 @@
 
   .modal__header
     font-weight: bold
-    font-size: 1.6em
-    margin-bottom: .5em
+    font-size: 22px
+    margin-bottom: .3em
+
+  .modal__body
+    color: #555
+    font-size: 18px
+    font-family: 'Lato', sans-serif
 
   .modal__link
     text-decoration: none
