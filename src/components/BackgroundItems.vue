@@ -1,6 +1,6 @@
 <template>
-  <div class="main__background">
-    <div class="background__gradient"/>
+  <div class="main__background background__fixed">
+    <div class="background__gradient background__fixed" />
     <div
       class="background__item"
       v-for="index in 20"
@@ -25,21 +25,31 @@
 </script>
 
 <style scoped lang="stylus">
+  .background__fixed
+    position: relative
+    &:before
+      content: ' '
+      position: fixed
+      width: 100%
+      height: 100%
+      top: 0
+      left: 0
+      will-change: transform
+      z-index: -1
+
   .main__background
-    position: fixed
-    background-image: linear-gradient(-180deg, #3C3863 3%, #0A081E 96%)
-    width: 100%
-    height: 100%
+    &:before
+      background-color: white
+      background-image: linear-gradient(-180deg, #3C3863 3%, #0A081E 96%)
 
   .background__gradient
-    width: 100%
-    height: 100%
-    position: fixed
-    background: url('../assets/stars_pattern.png')
+    &:before
+      background-image: url('../assets/stars_pattern.png')
+      background-repeat: repeat
 
   .background__item
-    z-index: 101
     position: fixed
+    z-index: 101
     width: 1px
     height: 1px
     background-color: rgba(255, 255, 255, .80)
