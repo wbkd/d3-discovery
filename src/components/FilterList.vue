@@ -34,13 +34,6 @@
         :on-change="this.onCategoryFilterChanged"
       />
       <Dropdown class="filterList__item"
-        :dropdown-title="'Version'"
-        :value="this.activeUpdateFilter"
-        :placeholder="'All versions'"
-        :options="this.latestUpdateOptions"
-        :on-change="this.onSelectLatestUpdate"
-      />
-      <Dropdown class="filterList__item"
         :dropdown-title="'License'"
         :value="this.activeLicenseFilter"
         :placeholder="'Any license'"

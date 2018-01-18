@@ -74,6 +74,7 @@
     background: rgba(225,193,225,0.08)
     box-shadow: 0px 0px 4px 1px rgba(0,0,0,.2)
     font-size: 14px
+    line-height: 1
     font-weight: bold
     color: #B2B7C5
     border: none
