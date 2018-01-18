@@ -51,7 +51,7 @@
   .sort__button--active
     font-weight: bold
     &:after
-      transform: translateY(-55%) rotate(180deg)
+      transform: translateY(-70%) rotate(180deg)
       content: "\25BC"
   .asc
     &:after
