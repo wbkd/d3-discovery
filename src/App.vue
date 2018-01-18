@@ -18,6 +18,8 @@ export default {
 
 <style lang='stylus'>
   @import url('https://fonts.googleapis.com/css?family=Roboto+Mono')
+    @import url('https://fonts.googleapis.com/css?family=Lato:400')
+
   *
     box-sizing: border-box
 

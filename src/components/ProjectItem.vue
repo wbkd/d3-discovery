@@ -122,7 +122,7 @@
   .project__link
     color: #49426d
     text-decoration: none
-    transition: all .3s ease-in-out
+    transition: color .3s ease-in-out
 
     &:hover
       text-decoration: underline
@@ -131,12 +131,11 @@
     position: absolute
     top: 15px
     right: 0
-    font-size: 11px
+    font-size: 12px
     line-height: 0
     color: #24292e
     background-color: #fff
     box-shadow: 0 1px 4px 0px rgba(0, 0, 0, 0.1)
-
     display: flex
     flex-flow: row wrap
     justify-content: space-between
@@ -150,15 +149,18 @@
   .project__content
     padding: 0
 
-  .project__meta1
   .project__meta2
-    padding: 10px 15px
+    padding: 10px 15px 20px 15px
+    line-height: 1.4
 
   .project__meta1
-    min-height: 80px
+    min-height: 70px
+    padding: 20px 15px 10px 15px
 
   .project__meta2
     border-top: 1px solid #eee
+    font-family: 'Lato', sans-serif
+    font-size: 12px
 
   .project__stars
   .project__issues
@@ -167,28 +169,23 @@
     margin-right: .5em
 
   .project__title
-    font-size: 16px
+    font-size: 19px
     font-weight: bold
-    margin-bottom: 5px
+    margin-bottom: .3em
     display: inline-block
 
   .project__description
     color: #555
-    font-size: 13px
+    font-size: 15px
+    font-family: 'Lato', sans-serif
 
   .project__license
   .project__latest
     display: flex
     justify-content: space-between
-    font-size: 13px
-    line-height: 18px
     color: #555
 
   .project__license__value
     width: 50%
     text-align: right
-
-  .project__website
-    font-size: 13px
-    line-height: 18px
 </style>
