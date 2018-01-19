@@ -270,7 +270,7 @@
     text-align: left
     flex-grow: 1
     font-size: 12px
-    
+
   @media screen and (min-width: 498px)
     .info__search
       text-align: right
@@ -300,7 +300,7 @@
 
     .info__sort
       justify-content: flex-start
-    
+
     .sort__label
       margin-right: .5em
 </style>

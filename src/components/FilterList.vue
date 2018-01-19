@@ -117,7 +117,7 @@
       grid-template-columns: repeat(2, 1fr)
       grid-gap: 1em 2em
       align-items: center
-    
+
     .filterList__item
       margin: 0
 

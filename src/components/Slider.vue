@@ -19,6 +19,7 @@
       sliderValue: Array,
       sliderUpdate: Function,
       options: Object,
+      sliderRange: Array,
     },
     components: {
       VueSlider,
@@ -41,12 +42,27 @@
             backgroundColor: '#49426D',
             boxShadow: 'inset 0.2px 0.2px 2px 0px rgba(255, 255, 255 , .5)',
           },
+          formatter: v => this.logValue(v),
         },
       };
     },
     methods: {
       onChange(value) {
-        this.sliderUpdate(value);
+        const newVal = [];
+        newVal[0] = this.logValue(value[0]);
+        newVal[1] = this.logValue(value[1]);
+        this.sliderUpdate(newVal);
+      },
+      logValue(value) {
+        const minpos = this.sliderValue[0];
+        const maxpos = this.sliderValue[1];
+        const minval = this.sliderValue[0] === 0 ? Math.log(0.00001) : Math.log(this.sliderValue[0]);
+        const maxval = Math.log(this.sliderValue[1]);
+
+        const scale = (maxval - minval) / (maxpos - minpos);
+        const newVal = Math.round(Math.exp(((value - minpos) * scale) + minval));
+
+        return newVal;
       },
     },
   };
@@ -60,7 +76,7 @@
     color: #CED6DC
     text-align: left
     font-size: 13px
-  
+
   .slider >>> .vue-slider-tooltip
     font-size: 11px
 
