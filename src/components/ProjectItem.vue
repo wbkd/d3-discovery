@@ -19,7 +19,7 @@
     <div class="project__content">
       <div class="project__meta1">
         <a class="project__title project__link" v-bind:href="item.url" target="_blank">{{item.name}}</a>
-        <div class="project__description">{{item.description}}</div>
+        <div class="project__description">{{getDescription}}</div>
       </div>
 
       <div class="project__meta2">
@@ -70,6 +70,9 @@
         return licenseTranslations[this.item.license].url ?
           licenseTranslations[this.item.license].url : this.item.url;
       },
+      getDescription() {
+        return this.item.description.replace(/\[.*\]/g, '');
+      }
     },
   };
 </script>
