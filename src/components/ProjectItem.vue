@@ -83,7 +83,6 @@
     font-size: 14px
     transition: box-shadow .3s ease-in-out
     box-shadow: 0 1px 3px 0 rgba(255,255,255,0.16)
-
     display: flex
     flex-direction: column
 
@@ -138,7 +137,7 @@
     line-height: 0
     color: #24292e
     background-color: #fff
-    box-shadow: 0 1px 4px 0px rgba(0, 0, 0, 0.1)
+    box-shadow: 0 1px 4px 0px rgba(0, 0, 0, 0.25)
     display: flex
     flex-flow: row wrap
     justify-content: space-between
@@ -158,12 +157,11 @@
 
   .project__meta1
     padding: 20px 15px 10px 15px
-    
+
   .project__meta2
     min-height: 79px
     padding: 10px 15px 20px 15px
     border-top: 1px solid #eee
-    
     font-family: 'Lato', sans-serif
     font-size: 12px
     line-height: 1.4
