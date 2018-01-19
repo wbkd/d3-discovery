@@ -80,6 +80,7 @@
     transition: all .3s ease
     cursor: pointer
     font-family: 'Source Code Pro', Helvetica, Arial, sans-serif
+    user-select: none
 
     &:hover
       box-shadow: 0px 0px 4px 1px rgba(255,255,255,0.2)

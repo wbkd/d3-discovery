@@ -1,18 +1,18 @@
 <template>
-  <div v-if="isModalVisible" class="modal" @click="this.onClick">
+  <div v-if="isModalVisible" class="modal" >
     <div class="modal__overlay">
       <div class="modal__container">
-        <div class="button close__button"></div>
+        <div class="button close__button" @click="this.onClick"></div>
 
         <div class="modal__header">
          🚀 Extend the exploration!
         </div>
         <div class="modal__body">
           Something missing?
-          <a class="modal__link" href="https://github.com/wbkd/awesome-d3/issues/new">
-            Make a pull request
-          </a>
-          in our Awesome D3 list on github and we will add your project here.
+          <a class="modal__link" href="https://github.com/wbkd/awesome-d3/issues/new">Make a pull request</a>
+          in our awesome-D3 list on GitHub and we will add your project here.
+
+          <button class="modal__button">Open a pull request</button>
         </div>
       </div>
     </div>
@@ -36,13 +36,11 @@
     left: 0
     right: 0
     bottom: 0
-
     background-color: rgba(0, 0, 0, .35)
     transition: opacity .3s ease
 
   .modal__container
     width: 100%
-    text-align: left
     max-width: 500px
     min-height: 100px
     transform: translate3d(0,0,0);
@@ -77,18 +75,43 @@
 
   .modal__header
     font-weight: 700
-    font-size: 22px
+    font-size: 26px
     margin-bottom: .3em
 
   .modal__body
     color: #555
     font-size: 18px
     font-family: 'Lato', sans-serif
+    line-height: 1.5
 
   .modal__link
     text-decoration: none
+
     &:hover
       text-decoration: underline
+
+  .modal__button
+    padding: .8em 1em
+    background: rgb(47, 44, 70)
+    box-shadow: 0px 0px 4px 1px rgba(0,0,0,.2)
+    font-size: 15px
+    line-height: 1
+    font-weight: 700
+    color: #B2B7C5
+    border: none
+    border-radius: 50px
+    transition: all .3s ease
+    cursor: pointer
+    font-family: 'Source Code Pro', Helvetica, Arial, sans-serif
+    user-select: none
+    margin: 1.5em auto 0 auto
+    width: 220px
+    display: block
+    transition: background .4s, boxShadow .4s
+
+    &:hover
+      background: #5e5984
+      box-shadow: 0px 0px 2px 1px rgba(0,0,0,.12)
 </style>
 
 
