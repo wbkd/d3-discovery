@@ -36,6 +36,7 @@
 
         <div class="info__search">{{filteredProjects.length || 0}} plugins found</div>
       </div>
+
       <ProjectList :projects="filteredProjects" />
       <div v-if="!filteredProjects.length">
         no plugins found
@@ -251,22 +252,29 @@
 
     color: #eee
     margin-bottom: 2em
-    font-size: 13px
+    padding-left: 2em
+    font-size: 12px
 
   .info__sort
     display: flex
-    justify-content: flex-start
     align-items: center
+    flex-flow: row wrap
+    align-content: center
+    text-align: center
 
   .sort__label
-    margin-right .8em
-
-  .info__filter
+    margin-right: .3em
     text-align: left
 
   .info__search
-    text-align: right
+    text-align: left
     flex-grow: 1
+    font-size: 12px
+    
+  @media screen and (min-width: 498px)
+    .info__search
+      text-align: right
+
   @media screen and (min-width: 786px)
     .main
       display: flex
@@ -283,6 +291,16 @@
       a
         color: white
 
+    .info__search
     .content__info
       font-size: 14px
+
+    .content__info
+      padding-left: 1em
+
+    .info__sort
+      justify-content: flex-start
+    
+    .sort__label
+      margin-right: .5em
 </style>

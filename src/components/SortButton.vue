@@ -33,8 +33,8 @@
 <style scoped lang="stylus">
   .sort__button
     position: relative
-    padding: .5em 1.2em .5em 0
-    margin-right: .5em
+    padding: .5em .8em .5em 0
+    margin-right: .3em
     cursor: pointer
     user-select: none
     font-weight: bold
@@ -43,17 +43,21 @@
       position: absolute
       display: block
       right: 0
-      width: 20px
-      height: 20px
-      font-size: 10px
+      font-size: 9px
       top: 50%
 
   .sort__button--active
-    font-weight: bold
     &:after
-      transform: translateY(-70%) rotate(180deg)
+      transform: translateY(-50%) rotate(180deg)
       content: "\25BC"
   .asc
     &:after
-      transform: translateY(-20%) rotate(0deg)
+      transform: translateY(-35%) rotate(0deg)
+
+  @media screen and (min-width: 786px)
+    .sort__button
+      margin-right: .5em
+
+      &:after
+        font-size: 10px
 </style>

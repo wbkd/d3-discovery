@@ -47,24 +47,23 @@
     text-align: left
 
   .logo__image
-    width: 70px
+    width: 50px
     align-self: baseline
     margin-right: 5px
 
-  // .logo__wrapper
-  //   flex: 0 0 60%
-
   .logo__headline
-    font-size: 26px
+    font-size: 18px
+    // font-size: 26px
     color: #fff
     text-shadow: 0 0 4px rgba(255,255,255,0.50)
 
   .logo__subheadline
     color: #e6e6e6
-    font-size: 15px
+    font-size: 12px
+    // font-size: 15px
 
   .main_header__buttons
-    display: flex
+    display: none
     justify-content: flex-end
     align-items: center
     margin-top: 13px
@@ -90,6 +89,19 @@
 
     &:active
       background: #38345D
+
+  @media screen and (min-width: 768px)
+    .logo__headline
+      font-size: 26px
+
+    .logo__subheadline
+      font-size: 15px
+
+    .logo__image
+      width: 70px
+      
+    .main_header__buttons
+      display: flex
 </style>
 
 

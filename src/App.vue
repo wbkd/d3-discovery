@@ -44,6 +44,9 @@ export default {
     max-width: 1200px
     margin: 0 auto
     width: 100%
-    padding: 0 1em
+    padding: 0 1.5em
 
+  @media screen and (min-width: 768px)
+    .container
+      padding: 0 1em
 </style>

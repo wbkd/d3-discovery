@@ -105,17 +105,23 @@
     z-index: 10
 
   .filterList__inner
-    padding: 1em 0
+    padding: 0
+
+  .filterList__item
+    margin: 1em 0
 
   @media screen and (min-width: 414px)
     .filterList__inner
+      padding: 1em 0
       display: grid
       grid-template-columns: repeat(2, 1fr)
       grid-gap: 1em 2em
       align-items: center
+    
+    .filterList__item
+      margin: 0
 
   @media screen and (min-width: 768px)
     .filterList__inner
       grid-template-columns: repeat(4, 1fr)
-
 </style>

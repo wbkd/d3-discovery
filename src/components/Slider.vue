@@ -54,11 +54,23 @@
 
 <style scoped lang="stylus">
   .slider
-    padding-bottom: 2em
+    padding-bottom: 1em
+
   .slider__title
     color: #CED6DC
     text-align: left
+    font-size: 13px
+  
+  .slider >>> .vue-slider-tooltip
+    font-size: 11px
 
   .slider >>> .vue-slider-tooltip:before
     display: none
+
+  @media screen and (min-width: 768px)
+    .slider__title
+      font-size: 16px
+
+    .slider >>> .vue-slider-tooltip
+        font-size: 14px
 </style>

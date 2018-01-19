@@ -36,6 +36,7 @@
   .dropdown__title
     margin-bottom: .5em
     color: #CED6DC
+    font-size: 13px
 
   .dropdown__select
     position: relative
@@ -46,8 +47,8 @@
     border-radius: 2px
 
     select
-      padding: .5em .8em
-      font-size: 14px
+      padding: 10px 8px
+      font-size: 11px
       color: #CED6DC
       width: 100%
       border: none
@@ -70,10 +71,21 @@
     position: absolute
     top: 50%
     transform: translateY(-50%)
-    right: 0
+    right: 5px
     bottom: 0
-    font-size: 12px
-    padding: 0 5px
+    font-size: 10px
+    padding: 5px
     color: #CED6DC
     pointer-events: none
+
+  @media screen and (min-width: 768px)
+    .dropdown__title
+      font-size: 16px
+
+    .dropdown__select
+      select
+        font-size: 14px
+
+    .dropdown__select:after
+      font-size: 12px
 </style>
