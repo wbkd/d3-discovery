@@ -178,7 +178,7 @@
     display: block
     margin-bottom: .3em
     font-size: 19px
-    font-weight: bold
+    font-weight: 700
 
   .project__description
     color: #555

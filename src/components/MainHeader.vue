@@ -53,14 +53,13 @@
 
   .logo__headline
     font-size: 18px
-    // font-size: 26px
+    font-weight: 700
     color: #fff
     text-shadow: 0 0 4px rgba(255,255,255,0.50)
 
   .logo__subheadline
     color: #e6e6e6
     font-size: 12px
-    // font-size: 15px
 
   .main_header__buttons
     display: none
@@ -72,14 +71,15 @@
     padding: 0.4em 1em
     background: rgba(225,193,225,0.08)
     box-shadow: 0px 0px 4px 1px rgba(0,0,0,.2)
-    font-size: 14px
+    font-size: 15px
     line-height: 1
-    font-weight: bold
+    font-weight: 500
     color: #B2B7C5
     border: none
     border-radius: 50px
     transition: all .3s ease
     cursor: pointer
+    font-family: 'Source Code Pro', Helvetica, Arial, sans-serif
 
     &:hover
       box-shadow: 0px 0px 4px 1px rgba(255,255,255,0.2)

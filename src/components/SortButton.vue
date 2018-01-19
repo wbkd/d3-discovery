@@ -37,7 +37,7 @@
     margin-right: .3em
     cursor: pointer
     user-select: none
-    font-weight: bold
+    font-weight: 700
 
     &:after
       position: absolute

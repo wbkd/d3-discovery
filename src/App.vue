@@ -17,8 +17,8 @@ export default {
 </script>
 
 <style lang='stylus'>
-  @import url('https://fonts.googleapis.com/css?family=Roboto+Mono')
-    @import url('https://fonts.googleapis.com/css?family=Lato:400')
+  @import url('https://fonts.googleapis.com/css?family=Lato:400')
+  @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:500,700')
 
   *
     box-sizing: border-box
@@ -29,16 +29,17 @@ export default {
     overflow-y: scroll
 
   #app
-    font-family: 'Roboto Mono', Helvetica, Arial, sans-serif
+    font-family: 'Source Code Pro', Helvetica, Arial, sans-serif
     -webkit-font-smoothing: antialiased
     -moz-osx-font-smoothing: grayscale
     text-align: center
     color: #555
+    font-weight: 500
     font-size: 16px
     line-height: 1.25
 
   input, select, option
-    font-family: 'Roboto Mono', Helvetica, Arial, sans-serif
+    font-family: 'Source Code Pro', Helvetica, Arial, sans-serif
 
   .container
     max-width: 1200px
