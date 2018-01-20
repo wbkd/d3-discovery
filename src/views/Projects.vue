@@ -152,7 +152,7 @@
             !this.activeLicenseFilter || project.license === this.activeLicenseFilter,
           )
           .filter(project =>
-            !this.activeCategoryFilter || project.category === this.activeCategoryFilter);
+            !this.activeCategoryFilter || (project.category || '').toLowerCase() === (this.activeCategoryFilter || '').toLowerCase());
       },
     },
     methods: {
