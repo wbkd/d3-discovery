@@ -38,7 +38,10 @@
       </div>
 
       <ProjectList :projects="filteredProjects" />
-      <div v-if="!filteredProjects.length">
+      <div v-if="!projects.length">
+        loading data ...
+      </div>
+      <div v-else-if="!filteredProjects.length">
         no plugins found
       </div>
     </div>
