@@ -14,8 +14,16 @@ export const searchBy = (query, content) => {
   return searchBody.indexOf(query.toLowerCase()) > -1;
 };
 
+export const uniqueByKey = (list, key) =>
+  list.map(d => d[key])
+    .reduce((res, item) => {
+      if (res.indexOf(item) === -1 && item !== null && item) res.push(item);
+      return res;
+    }, []);
+
 export default {
   inRange,
   byDate,
   searchBy,
+  uniqueByKey,
 };

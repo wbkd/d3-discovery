@@ -60,7 +60,8 @@
   import Modal from '../components/Modal';
   import SortButton from '../components/SortButton';
 
-  import { inRange, byDate, searchBy } from '../utils/filter';
+  import { inRange, byDate, searchBy, uniqueByKey } from '../utils/filter';
+  import { capitalizeFirstLetter } from '../utils/strings';
 
   export default {
     components: {
@@ -106,15 +107,12 @@
           this.sliderContributorValue = [minContributors, maxContributors];
           this.sliderStarsValue = [minStars, maxStars];
 
-          this.licenseFilters = this.projects.map(d => d.license).reduce((res, license) => {
-            if (res.indexOf(license) === -1 && license !== null) res.push(license);
-            return res;
-          }, []);
+          this.licenseFilters = uniqueByKey(this.projects, 'license')
+            .sort((a, b) => a.localeCompare(b));
 
-          this.categoryFilters = this.projects.map(d => d.category).reduce((res, category) => {
-            if (res.indexOf(category) === -1 && category !== null && category) res.push(category);
-            return res;
-          }, []);
+          this.categoryFilters = uniqueByKey(this.projects, 'category')
+            .map(d => capitalizeFirstLetter(d))
+            .sort((a, b) => a.localeCompare(b));
 
           this.onSortBy(this.activeSortKey, 'string');
         })

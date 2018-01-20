@@ -71,8 +71,8 @@
           licenseTranslations[this.item.license].url : this.item.url;
       },
       getDescription() {
-        return this.item.description.replace(/\[.*\]/g, '');
-      }
+        return this.item.description ? this.item.description.replace(/\[.*\]/g, '') : '';
+      },
     },
   };
 </script>
