@@ -50,7 +50,7 @@
         imgObj: {
           src: `https://api.d3-discovery.net/images/${this.item.name}.jpeg`,
           error: require('../assets/placeholder.png'),
-          loading: require('../assets/loader.gif'),
+          loading: require('../assets/teleloader.gif'),
         },
       };
     },
@@ -107,10 +107,6 @@
     .project__image__link
       width: 100%
 
-    &:hover
-      .project__image
-        transform: scale(1.1)
-
   .project__image
     width: 101%
     height: 125px
@@ -120,9 +116,15 @@
     background-position: auto
     transition: transform .3s
 
+    &:hover
+      transform: scale(1.1)
+
   .project__image[lazy=loading]
     background-position: center center
-    background-size: auto
+    background-size: 75px
+
+    &:hover
+      transform: none
 
   .project__link
     color: #49426d
