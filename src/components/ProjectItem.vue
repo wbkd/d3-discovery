@@ -121,7 +121,7 @@
 
   .project__image[lazy=loading]
     background-position: center center
-    background-size: 75px
+    background-size: 45px
 
     &:hover
       transform: none
