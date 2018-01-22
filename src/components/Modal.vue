@@ -9,10 +9,11 @@
         </div>
         <div class="modal__body">
           Something missing?
-          <a class="modal__link" href="https://github.com/wbkd/awesome-d3/issues/new">Make a pull request</a>
-          in our awesome-D3 list on GitHub and we will add your project here.
+          Make a pull request in our awesome-D3 list on GitHub and we will add your project here.
 
-          <button class="modal__button">Open a pull request</button>
+          <a class="modal__link" href="https://github.com/wbkd/awesome-d3/issues/new">
+            <button class="modal__button">Open a pull request</button>
+          </a>
         </div>
       </div>
     </div>
@@ -88,7 +89,7 @@
     text-decoration: none
 
     &:hover
-      text-decoration: underline
+      text-decoration: none
 
   .modal__button
     padding: .8em 1em
@@ -108,10 +109,11 @@
     width: 220px
     display: block
     transition: background .4s, boxShadow .4s
+    text-decoration: none
+    outline: none
 
     &:hover
       background: #5e5984
       box-shadow: 0px 0px 2px 1px rgba(0,0,0,.12)
+
 </style>
-
-
