@@ -11,7 +11,7 @@
           Something missing?
           Make a pull request in our awesome-D3 list on GitHub and we will add your project here.
 
-          <a class="modal__link" href="https://github.com/wbkd/awesome-d3/issues/new">
+          <a class="modal__link" href="https://github.com/wbkd/awesome-d3/pulls">
             <button class="modal__button">Open a pull request</button>
           </a>
         </div>

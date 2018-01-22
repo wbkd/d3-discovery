@@ -87,7 +87,6 @@
         activeUpdateFilter: '',
         licenseFilters: [],
         activeLicenseFilter: '',
-        activeFilter: new Set(),
         sortAsc: true,
         activeSortKey: 'name',
         categoryFilters: [],
@@ -144,15 +143,19 @@
               this.sliderContributorValue[1],
             ),
           )
-          .filter(project =>
-            !this.activeUpdateFilter ||
-            byDate(now, project.lastUpdate, this.latestUpdateFilterList[this.activeUpdateFilter]),
-          )
-          .filter(project =>
-            !this.activeLicenseFilter || project.license === this.activeLicenseFilter,
-          )
-          .filter(project =>
-            !this.activeCategoryFilter || (project.category || '').toLowerCase() === (this.activeCategoryFilter || '').toLowerCase());
+          .filter((project) => {
+            const update = project.lastUpdate ? project.lastUpdate.trim() : null;
+            return !this.activeUpdateFilter ||
+             byDate(now, update, this.latestUpdateFilterList[this.activeUpdateFilter.trim()]);
+          })
+          .filter((project) => {
+            const license = project.license ? project.license.trim() : null;
+            return !this.activeLicenseFilter || license === this.activeLicenseFilter.trim();
+          })
+          .filter((project) => {
+            const category = project.category ? project.category.trim() : null;
+            return !this.activeCategoryFilter || (category || '').toLowerCase() === (this.activeCategoryFilter.trim() || '').toLowerCase();
+          });
       },
     },
     methods: {
@@ -200,28 +203,12 @@
         this.sliderStarsValue = value;
       },
       onSelectLatestUpdate(event) {
-        if (event.target.value !== '' && !this.activeFilter.has('latestUpdate')) {
-          this.activeFilter.add('latestUpdate');
-        } else {
-          this.activeFilter.delete('latestUpdate');
-        }
-
         this.activeUpdateFilter = event.target.value;
       },
       onSelectLicense(event) {
-        if (event.target.value !== '' && !this.activeFilter.has('licenseFilter')) {
-          this.activeFilter.add('licenseFilter');
-        } else {
-          this.activeFilter.delete('licenseFilter');
-        }
         this.activeLicenseFilter = event.target.value;
       },
       onSelectCategory(event) {
-        if (event.target.value !== '' && !this.activeFilter.has('categoryFilter')) {
-          this.activeFilter.add('categoryFilter');
-        } else {
-          this.activeFilter.delete('categoryFilter');
-        }
         this.activeCategoryFilter = event.target.value;
       },
       showModal() {
