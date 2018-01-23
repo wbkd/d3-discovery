@@ -25,7 +25,7 @@ export default {
   @import url('https://fonts.googleapis.com/css?family=Lato:400')
   @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:500,700')
 
-  bgurl = url(/images/bg.png)
+  bgurl = url(/static/images/bg.png)
   bgspeed = 60s
 
   *
