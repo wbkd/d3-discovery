@@ -123,8 +123,21 @@
     background-position: center center
     background-size: 45px
 
+  .project__image[lazy=loaded]
+    opacity: 1
+    transform: scale(1)
+    animation: image-loaded .3s linear 1
+
     &:hover
       transform: none
+
+  @keyframes image-loaded
+    0%
+      opacity: 0
+      transform: scale(.8)
+    100%
+      opacity: 1
+      transform: scale(1)
 
   .project__link
     color: #49426d
