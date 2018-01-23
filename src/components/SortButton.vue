@@ -2,7 +2,7 @@
   <div
     @click="onClick"
     class="button sort__button"
-    v-bind:class="{ 'sort__button--active': this.isActive, asc: this.isActive && this.asc }"
+    v-bind:class="{ 'sort__button--active': this.isActive, asc: this.sortAsc }"
   >
     {{this.label}}
   </div>
@@ -16,16 +16,11 @@
       label: String,
       sortKey: String,
       isActive: Boolean,
-    },
-    data() {
-      return {
-        asc: false,
-      };
+      sortAsc: Boolean,
     },
     methods: {
       onClick() {
         this.handler(this.sortKey);
-        this.asc = !this.asc;
       },
     },
   };
