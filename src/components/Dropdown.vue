@@ -42,8 +42,7 @@
     position: relative
     display: inline-block
     width: 100%
-    background: rgba(225,193,225,0.16)
-    // border: 1px solid rgba(255,255,255,0.20)
+    background: rgba(225, 193, 225, .16)
     border-radius: 2px
 
     select

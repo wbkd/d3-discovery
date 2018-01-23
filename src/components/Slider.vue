@@ -36,10 +36,10 @@
             color: '#CED6DC',
           },
           bgStyle: {
-            backgroundColor: 'rgba(225,193,225,0.16)',
+            backgroundColor: 'rgba(225, 193, 225, .16)',
           },
           processStyle: {
-            backgroundColor: 'rgba(225,193,225,0.16)',
+            backgroundColor: 'rgba(225, 193, 225, .16)',
           },
           formatter: v => this.logValue(v),
         },

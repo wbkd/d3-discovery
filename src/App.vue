@@ -56,11 +56,11 @@ export default {
 
   #layer1
     background-size: 200px
-    animation: move bgspeed*4 linear infinite
+    animation: move bgspeed * 4 linear infinite
 
   #layer2
     background-size: 400px
-    animation: move bgspeed*2 linear infinite
+    animation: move bgspeed * 2 linear infinite
 
   #layer3
     background-size: 800px
@@ -70,9 +70,9 @@ export default {
 
 @keyframes move
   0%
-    transform: translate3d(0,0,0)
+    transform: translate3d(0, 0, 0)
   100%
-    transform: translate3d(-800px,0,0)
+    transform: translate3d(-800px, 0, 0)
 
 
 #app
