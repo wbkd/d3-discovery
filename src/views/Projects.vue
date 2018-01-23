@@ -157,9 +157,7 @@
     },
     methods: {
       onSortBy(sortKey) {
-        console.log(this.activeSortKey, sortKey)
-        if (this.activeSortKey === sortKey) {
-          console.log('flip')
+       if (this.activeSortKey === sortKey) {
           this.sortAsc = !this.sortAsc;
         }
 
@@ -181,7 +179,6 @@
               return (this.sortAsc ? bToDateObj - aToDateObj : aToDateObj - bToDateObj);
             });
         }
-            console.log(this.sortAsc);
       },
       onSearchChange(input) {
         this.search = input;
