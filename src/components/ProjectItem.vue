@@ -39,198 +39,175 @@
 </template>
 
 <script>
-import licenseTranslations from '../utils/licenseTranslations';
+  import licenseTranslations from '../utils/licenseTranslations';
 
-export default {
-  props: {
-    item: Object
-  },
-  data() {
-    return {
-      imgObj: {
-        src: `https://api.d3-discovery.net/images/${this.item.name}.jpeg`,
-        error: require('../assets/placeholder.png'),
-        loading: require('../assets/teleloader.gif')
-      }
-    };
-  },
-  computed: {
-    getFormattedDate() {
-      const day = new Date(this.item.lastUpdate).getDate();
-      const month = new Date(this.item.lastUpdate).getMonth() + 1;
-      const year = new Date(this.item.lastUpdate).getFullYear();
+  export default {
+    props: {
+      item: Object,
+    },
+    data() {
+      return {
+        imgObj: {
+          src: `https://api.d3-discovery.net/images/${this.item.name}.jpeg`,
+          error: require('../assets/placeholder.png'),
+          loading: require('../assets/teleloader.gif'),
+        },
+      };
+    },
+    computed: {
+      getFormattedDate() {
+        const day = new Date(this.item.lastUpdate).getDate();
+        const month = new Date(this.item.lastUpdate).getMonth() + 1;
+        const year = new Date(this.item.lastUpdate).getFullYear();
 
-      const dateString = `${day < 10 ? `0${day}` : day}.${month < 10 ? `0${month}` : month}.${year}`;
-      return dateString;
+        const dateString = `${day < 10 ? `0${day}` : day}.${month < 10 ? `0${month}` : month}.${year}`;
+        return dateString;
+      },
+      getLicenseLabel() {
+        return licenseTranslations[this.item.license].label;
+      },
+      getLicenseUrl() {
+        return licenseTranslations[this.item.license].url ?
+          licenseTranslations[this.item.license].url : this.item.url;
+      },
+      getDescription() {
+        return this.item.description ? this.item.description.replace(/\[.*\]/g, '') : '';
+      },
     },
-    getLicenseLabel() {
-      return licenseTranslations[this.item.license].label;
-    },
-    getLicenseUrl() {
-      return licenseTranslations[this.item.license].url ? licenseTranslations[this.item.license].url : this.item.url;
-    },
-    getDescription() {
-      return this.item.description ? this.item.description.replace(/\[.*\]/g, '') : '';
-    }
-  }
-};
+  };
 </script>
 
 <style scoped lang="stylus">
-.project-list__item {
-  background: #fff;
-  text-align: left;
-  border-radius: 2px;
-  overflow: hidden;
-  font-size: 14px;
-  transition: box-shadow 0.3s ease-in-out;
-  box-shadow: 0 1px 3px 0 rgba(255, 255, 255, 0.16);
-  display: flex;
-  flex-direction: column;
+  .project-list__item
+    background: #fff
+    text-align: left
+    border-radius: 2px
+    overflow: hidden
+    font-size: 14px
+    transition: box-shadow .3s ease-in-out
+    box-shadow: 0 1px 3px 0 rgba(255,255,255,0.16)
+    display: flex
+    flex-direction: column
 
-  &:hover {
-    box-shadow: 0 2px 5px 4px rgba(255, 255, 255, 0.16);
+    &:hover
+      box-shadow: 0 2px 5px 4px rgba(255,255,255,0.16)
 
-    .project__link {
-      color: lighten(#49426d, 25%);
-    }
-  }
-}
+      .project__link
+        color: lighten(#49426d, 25%)
 
-.project__image__wrapper {
-  position: relative;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-end;
-  border-radius: 2px 2px 0 0;
-  overflow: hidden;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  .project__image__wrapper
+    position: relative
+    display: flex
+    flex-flow: row wrap
+    justify-content: flex-end
+    border-radius: 2px 2px 0 0
+    overflow: hidden
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.10)
 
-  .project__image__link {
-    width: 100%;
-  }
-}
+    .project__image__link
+      width: 100%
 
-.project__image {
-  width: 101%;
-  height: 125px;
-  cursor: pointer;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: auto;
-  transition: transform 0.3s;
+  .project__image
+    width: 101%
+    height: 125px
+    cursor: pointer
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: auto
+    transition: transform .3s
 
-  &:hover {
-    transform: scale(1.1);
-  }
-}
+    &:hover
+      transform: scale(1.1)
 
-.project__image[lazy=loading] {
-  background-position: center center;
-  background-size: 45px;
-}
+  .project__image[lazy=loading]
+    background-position: center center
+    background-size: 45px
 
-.project__image[lazy=loaded] {
-  opacity: 1;
-  transform: scale(1);
-  animation: image-loaded 0.3s linear 1;
+  .project__image[lazy=loaded]
+    opacity: 1
+    transform: scale(1)
+    animation: image-loaded .3s linear 1
 
-  &:hover {
-    transform: none;
-  }
-}
+    &:hover
+      transform: none
 
-@keyframes image-loaded {
-  0% {
-    opacity: 0;
-    transform: scale(0.8);
-  }
+  @keyframes image-loaded
+    0%
+      opacity: 0
+      transform: scale(.8)
+    100%
+      opacity: 1
+      transform: scale(1)
 
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
+  .project__link
+    color: #49426d
+    text-decoration: none
+    transition: color .3s ease-in-out
 
-.project__link {
-  color: #49426d;
-  text-decoration: none;
-  transition: color 0.3s ease-in-out;
+    &:hover
+      text-decoration: underline
 
-  &:hover {
-    text-decoration: underline;
-  }
-}
+  .project__info
+    position: absolute
+    top: 15px
+    right: 0
+    font-size: 12px
+    line-height: 0
+    color: #24292e
+    background-color: #fff
+    box-shadow: 0 1px 4px 0px rgba(0, 0, 0, 0.25)
+    display: flex
+    flex-flow: row wrap
+    justify-content: space-between
+    padding: .2em .4em
 
-.project__info {
-  position: absolute;
-  top: 15px;
-  right: 0;
-  font-size: 12px;
-  line-height: 0;
-  color: #24292e;
-  background-color: #fff;
-  box-shadow: 0 1px 4px 0px rgba(0, 0, 0, 0.25);
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  padding: 0.2em 0.4em;
+    svg
+      vertical-align: sub
+      width: 11px
+      margin-right: .2em
 
-  svg {
-    vertical-align: sub;
-    width: 11px;
-    margin-right: 0.2em;
-  }
-}
+  .project__content
+    padding: 0
+    display: flex
+    flex-grow: 1
+    flex-direction: column
+    justify-content: space-between
 
-.project__content {
-  padding: 0;
-  display: flex;
-  flex-grow: 1;
-  flex-direction: column;
-  justify-content: space-between;
-}
+  .project__meta1
+    padding: 20px 15px 10px 15px
 
-.project__meta1 {
-  padding: 20px 15px 10px 15px;
-}
+  .project__meta2
+    min-height: 79px
+    padding: 10px 15px 20px 15px
+    border-top: 1px solid #eee
+    font-family: 'Lato', sans-serif
+    font-size: 12px
+    line-height: 1.4
 
-.project__meta2 {
-  min-height: 79px;
-  padding: 10px 15px 20px 15px;
-  border-top: 1px solid #eee;
-  font-family: 'Lato', sans-serif;
-  font-size: 12px;
-  line-height: 1.4;
-}
+  .project__stars
+  .project__issues
+    display: flex
+    align-items: center
+    margin-right: .5em
 
-.project__stars, .project__issues {
-  display: flex;
-  align-items: center;
-  margin-right: 0.5em;
-}
+  .project__title
+    display: block
+    margin-bottom: .3em
+    font-size: 19px
+    font-weight: 700
 
-.project__title {
-  display: block;
-  margin-bottom: 0.3em;
-  font-size: 19px;
-  font-weight: 700;
-}
+  .project__description
+    color: #555
+    font-size: 15px
+    font-family: 'Lato', sans-serif
 
-.project__description {
-  color: #555;
-  font-size: 15px;
-  font-family: 'Lato', sans-serif;
-}
+  .project__license
+  .project__latest
+    display: flex
+    justify-content: space-between
+    color: #555
 
-.project__license, .project__latest {
-  display: flex;
-  justify-content: space-between;
-  color: #555;
-}
-
-.project__license__value {
-  width: 50%;
-  text-align: right;
-}
+  .project__license__value
+    width: 50%
+    text-align: right
 </style>
