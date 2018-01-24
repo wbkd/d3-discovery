@@ -69,7 +69,7 @@
 
   .button__submit-new
     padding: 0.4em 1em
-    background: rgba(225,193,225,0.08)
+    background: rgba(225,193,225,0.16)
     box-shadow: 0px 0px 4px 1px rgba(0,0,0,.2)
     font-size: 15px
     line-height: 1
@@ -100,7 +100,7 @@
 
     .logo__image
       width: 70px
-      
+
     .main_header__buttons
       display: flex
 </style>

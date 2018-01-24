@@ -1,6 +1,5 @@
 <template>
   <div class="main">
-    <BackgroundItems />
     <Modal :is-modal-visible="isModalVisible" :on-click="closeModal" />
     <div class="main__content">
       <MainHeader
@@ -29,9 +28,9 @@
       <div class="content__info container">
         <div class="info__sort">
           <div class="sort__label">Sort by: </div>
-          <SortButton :label="'Name'" :handler="this.onSortBy" :sort-key="'name'" v-bind:is-active="this.activeSortKey === 'name'" />
-          <SortButton :label="'Stars'" :handler="this.onSortBy" :sort-key="'stars'" v-bind:is-active="this.activeSortKey === 'stars'" />
-          <SortButton :label="'Latest Update'" :handler="this.onSortBy" :sort-key="'lastUpdate'" v-bind:is-active="this.activeSortKey === 'lastUpdate'" />
+          <SortButton :label="'Name'" :handler="this.onSortBy" :sort-key="'name'" v-bind:is-active="this.activeSortKey === 'name'" v-bind:sortAsc="this.sortAsc" />
+          <SortButton :label="'Stars'" :handler="this.onSortBy" :sort-key="'stars'" v-bind:is-active="this.activeSortKey === 'stars'" v-bind:sortAsc="this.sortAsc" />
+          <SortButton :label="'Latest Update'" :handler="this.onSortBy" :sort-key="'lastUpdate'" v-bind:is-active="this.activeSortKey === 'lastUpdate'" v-bind:sortAsc="this.sortAsc" />
         </div>
 
         <div class="info__search">{{filteredProjects.length || 0}} plugins found</div>
@@ -56,7 +55,6 @@
   import FilterList from '../components/FilterList';
   import MainHeader from '../components/MainHeader';
   import ProjectList from '../components/ProjectList';
-  import BackgroundItems from '../components/BackgroundItems';
   import Modal from '../components/Modal';
   import SortButton from '../components/SortButton';
 
@@ -68,7 +66,6 @@
       FilterList,
       ProjectList,
       MainHeader,
-      BackgroundItems,
       Modal,
       SortButton,
     },
@@ -87,7 +84,7 @@
         activeUpdateFilter: '',
         licenseFilters: [],
         activeLicenseFilter: '',
-        sortAsc: true,
+        sortAsc: false,
         activeSortKey: 'name',
         categoryFilters: [],
         activeCategoryFilter: '',
@@ -160,12 +157,11 @@
     },
     methods: {
       onSortBy(sortKey) {
-        // reset sort, default to ascending sort
-        if (this.activeSortKey !== sortKey) {
-          this.activeSortKey = null;
-          this.sortAsc = true;
+       if (this.activeSortKey === sortKey) {
+          this.sortAsc = !this.sortAsc;
         }
 
+          this.activeSortKey = sortKey;
         switch (sortKey) {
           case 'name':
             this.projects.sort((a, b) =>
@@ -182,13 +178,7 @@
               const bToDateObj = new Date(b.lastUpdate);
               return (this.sortAsc ? bToDateObj - aToDateObj : aToDateObj - bToDateObj);
             });
-            break;
-          default:
-            break;
         }
-
-        this.sortAsc = !this.sortAsc;
-        this.activeSortKey = sortKey;
       },
       onSearchChange(input) {
         this.search = input;

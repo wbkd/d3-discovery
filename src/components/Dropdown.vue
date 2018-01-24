@@ -42,8 +42,7 @@
     position: relative
     display: inline-block
     width: 100%
-    background: #49426D
-    border: 1px solid rgba(255,255,255,0.20)
+    background: rgba(225, 193, 225, .16)
     border-radius: 2px
 
     select
@@ -69,10 +68,8 @@
  .dropdown__select:after
     content: "▼"
     position: absolute
-    top: 50%
-    transform: translateY(-50%)
     right: 5px
-    bottom: 0
+    bottom: 15%
     font-size: 10px
     padding: 5px
     color: #CED6DC
