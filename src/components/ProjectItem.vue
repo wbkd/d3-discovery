@@ -112,6 +112,7 @@
     background-size: cover
     background-repeat: no-repeat
     background-position: auto
+    transform: translate3d(0,0,0)
     transition: transform .3s ease-in
 
     &:hover
