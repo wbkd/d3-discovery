@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <div id="bg">
+    <div id="bgstars">
       <div id="layer1" />
       <div id="layer2" />
       <div id="layer3" />
@@ -26,7 +26,7 @@ export default {
   @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:500,700')
 
   // bg image creation: http://jsbin.com/sufawuq/edit?js,output
-  bgurl = url(/static/images/bg.png)
+  bgurl = url(assets/bgstars.png)
   bgspeed = 60s
 
   *
@@ -39,7 +39,7 @@ export default {
     background-image: linear-gradient(-180deg, #3C3863 3%, #0A081E 96%)
     background-attachment: fixed
 
-#bg
+#bgstars
   position: fixed
   top: 0
   left: 0
