@@ -1,4 +1,4 @@
-const lookUpTable =  {
+const lookUpTable = {
   'MIT License': {
     label: 'MIT',
     url: 'https://opensource.org/licenses/MIT',
@@ -45,8 +45,8 @@ const lookUpTable =  {
   },
 };
 
-export const getLicenseTranslation = (label) => lookUpTable[label] || { label, url: '' }
+export const getLicenseTranslation = label => lookUpTable[label] || { label, url: '' };
 
 export default {
-  getLicenseTranslation
-}
+  getLicenseTranslation,
+};

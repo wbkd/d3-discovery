@@ -157,11 +157,11 @@
     },
     methods: {
       onSortBy(sortKey) {
-       if (this.activeSortKey === sortKey) {
+        if (this.activeSortKey === sortKey) {
           this.sortAsc = !this.sortAsc;
         }
 
-          this.activeSortKey = sortKey;
+        this.activeSortKey = sortKey;
         switch (sortKey) {
           case 'name':
             this.projects.sort((a, b) =>
@@ -178,6 +178,12 @@
               const bToDateObj = new Date(b.lastUpdate);
               return (this.sortAsc ? bToDateObj - aToDateObj : aToDateObj - bToDateObj);
             });
+            break;
+          default:
+            this.projects.sort((a, b) =>
+              (this.sortAsc ?
+                a[sortKey].localeCompare(b[sortKey]) : b[sortKey].localeCompare(a[sortKey])));
+            break;
         }
       },
       onSearchChange(input) {
