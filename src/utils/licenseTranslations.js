@@ -1,4 +1,4 @@
-export default {
+const lookUpTable =  {
   'MIT License': {
     label: 'MIT',
     url: 'https://opensource.org/licenses/MIT',
@@ -39,5 +39,14 @@ export default {
     label: 'MPL 2.0',
     url: 'https://www.mozilla.org/en-US/MPL/2.0/',
   },
+  'ISC License': {
+    label: 'ISC',
+    url: 'https://opensource.org/licenses/ISC',
+  },
 };
 
+export const getLicenseTranslation = (label) => lookUpTable[label] || { label, url: '' }
+
+export default {
+  getLicenseTranslation
+}

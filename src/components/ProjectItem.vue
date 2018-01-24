@@ -39,7 +39,7 @@
 </template>
 
 <script>
-  import licenseTranslations from '../utils/licenseTranslations';
+  import { getLicenseTranslation } from '../utils/licenseTranslations';
 
   export default {
     props: {
@@ -64,11 +64,10 @@
         return dateString;
       },
       getLicenseLabel() {
-        return licenseTranslations[this.item.license].label;
+        return getLicenseTranslation(this.item.license).label;
       },
       getLicenseUrl() {
-        return licenseTranslations[this.item.license].url ?
-          licenseTranslations[this.item.license].url : this.item.url;
+        return getLicenseTranslation(this.item.license).url || this.item.url;
       },
       getDescription() {
         return this.item.description ? this.item.description.replace(/\[.*\]/g, '') : '';
