@@ -113,7 +113,7 @@
     background-size: cover
     background-repeat: no-repeat
     background-position: auto
-    transition: transform .3s
+    transition: transform .3s ease-in
 
     &:hover
       transform: scale(1.1)
@@ -124,19 +124,13 @@
 
   .project__image[lazy=loaded]
     opacity: 1
-    transform: scale(1)
-    animation: image-loaded .3s linear 1
-
-    &:hover
-      transform: none
+    animation: image-loaded .5s linear 1
 
   @keyframes image-loaded
     0%
       opacity: 0
-      transform: scale(.8)
     100%
       opacity: 1
-      transform: scale(1)
 
   .project__link
     color: #49426d
