@@ -48,7 +48,7 @@
     data() {
       return {
         imgObj: {
-          src: `https://api.d3-discovery.net/images/${this.item.name}.jpeg`,
+          src: `https://d3-discovery-api.netlify.com/images/${this.item.name}.jpeg`,
           error: require('../assets/placeholder.png'),
           loading: require('../assets/teleloader.gif'),
         },

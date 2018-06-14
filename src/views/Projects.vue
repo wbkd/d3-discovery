@@ -91,7 +91,7 @@
       };
     },
     mounted() {
-      axios.get('https://api.d3-discovery.net/api/github')
+      axios.get('https://d3-discovery-api.netlify.com/projects.json')
         .then((response) => {
           this.projects = response.data;
 
