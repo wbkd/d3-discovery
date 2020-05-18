@@ -9,19 +9,18 @@
   </div>
 </template>
 
-
 <script>
-import Projects from './views/Projects';
+import Projects from "./views/Projects";
 
 export default {
-  name: 'app',
+  name: "app",
   components: {
-    Projects,
-  },
+    Projects
+  }
 };
 </script>
 
-<style lang='stylus'>
+<style lang="stylus">
   @import url('https://fonts.googleapis.com/css?family=Lato:400')
   @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:500,700')
 
