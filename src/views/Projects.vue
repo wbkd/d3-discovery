@@ -44,7 +44,7 @@
         no plugins found
       </div>
     </div>
-    <footer class="footer">Made with 📠 by <a href="https://webkid.io" target="_blank">webkid.io</a></footer>
+    <footer class="footer">Made by <a href="https://webkid.io" target="_blank">webkid</a></footer>
 
   </div>
 </template>
