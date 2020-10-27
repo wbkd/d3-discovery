@@ -95,13 +95,8 @@
         .then((response) => {
           this.projects = response.data;
 
-          const maxContributors = Math.max(...this.projects.map(d => d.contributors));
-          const minContributors = Math.min(...this.projects.map(d => d.contributors));
-
-          const maxStars = Math.max(...this.projects.map(d => d.stars));
-          const minStars = Math.min(...this.projects.map(d => d.stars));
-          this.sliderContributorValue = [minContributors, maxContributors];
-          this.sliderStarsValue = [minStars, maxStars];
+          this.sliderContributorValue = [Math.min(...this.projects.map(d => d.contributors)), 100];
+          this.sliderStarsValue = [Math.min(...this.projects.map(d => d.stars)), 10000];
 
           this.licenseFilters = uniqueByKey(this.projects, 'license')
             .sort((a, b) => a.localeCompare(b));

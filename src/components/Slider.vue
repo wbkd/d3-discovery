@@ -4,7 +4,7 @@
     <vue-slider
       v-model="value"
       v-bind="Object.assign(this.options, this.styles)"
-      @input="onChange"
+      @change="onChange"
     >
     </vue-slider>
   </div>
@@ -42,30 +42,12 @@ export default {
         processStyle: {
           backgroundColor: "rgba(225, 193, 225, .16)"
         },
-        formatter: v => this.logValue(v)
       }
     };
   },
   methods: {
     onChange(value) {
-      const newVal = [];
-      newVal[0] = this.logValue(value[0]);
-      newVal[1] = this.logValue(value[1]);
-      this.sliderUpdate(newVal);
-    },
-    logValue(value) {
-      const minpos = this.sliderValue[0];
-      const maxpos = this.sliderValue[1];
-      const minval =
-        this.sliderValue[0] === 0
-          ? Math.log(0.00001)
-          : Math.log(this.sliderValue[0]);
-      const maxval = Math.log(this.sliderValue[1]);
-
-      const scale = (maxval - minval) / (maxpos - minpos);
-      const newVal = Math.round(Math.exp((value - minpos) * scale + minval));
-
-      return newVal;
+      this.sliderUpdate(value);
     }
   }
 };
