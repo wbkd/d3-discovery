@@ -41,7 +41,7 @@ export default {
         },
         processStyle: {
           backgroundColor: "rgba(225, 193, 225, .16)"
-        },
+        }
       }
     };
   },

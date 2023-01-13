@@ -11,14 +11,6 @@
         :slider-update="this.sliderStarsUpdate"
       />
 
-      <Slider
-        class="filterList__item"
-        :slider-title="'Contributors:'"
-        :slider-value="contributor.value"
-        :options="contributor.options"
-        :slider-update="this.sliderContributorUpdate"
-      />
-
       <Dropdown
         class="filterList__item"
         :dropdown-title="'Latest Update:'"
@@ -80,10 +72,10 @@ export default {
   data() {
     return {
       stars: {
-        value: this.sliderStarsValue,
+        value: [2, 10000],
         options: {
-          min: this.sliderStarsValue[0],
-          max: this.sliderStarsValue[1]
+          min: 2,
+          max: 10000
         }
       },
       width: "auto"
